@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, minimum-scale=1.0, user-scalable=yes, target-densitydpi=medium-dpi">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../css/common.css">
+    <script type="text/javascript" src="../js/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="../js/jquery-ui.js"></script>
+    <script type="text/javascript" src="../js/common.js"></script>
+    <title>출결서비스</title>
+</head>
+
+<body>
+
+    <!-- wrap -->
+    <div class="wrap">
+
+        <!-- aside -->
+        <div class="aside">
+            <h1><img src="../images/logo.png" alt="K Tigers"></h1>
+
+            <ul class="gnb">
+                <li>
+                    <a href="#"><img src="../images/gnb_bl01.png" alt=""> 경영</a>
+                    <ul class="lnb">
+                        <li><a href="manage_receive.html">수납현황</a></li>
+                        <li><a href="manage_student.html">원생현황</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><img src="../images/gnb_bl02.png" alt=""> 출결</a>
+                    <ul class="lnb">
+                        <li><a href="attendance_state.html">출결현황</a></li>
+                        <li><a href="attendance_manage.html">출결관리</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><img src="../images/gnb_bl03.png" alt=""> 학생</a>
+                    <ul class="lnb">
+                        <li><a href="student_manage.html">원생관리</a></li>
+                        <li><a href="student_excel.html">엑셀등록</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><img src="../images/gnb_bl04.png" alt=""> 수업관리</a>
+                    <ul class="lnb">
+                        <li><a href="class_manage.html">수업관리</a></li>
+                        <li><a href="class_staff.html">강사(직원)관리</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><img src="../images/gnb_bl05.png" alt=""> 미디어</a>
+                    <ul class="lnb">
+                        <li><a href="media_list.html">공연영상</a></li>
+                        <li><a href="media_list.html">K팝 태권</a></li>
+                        <li><a href="media_list.html">방송활동</a></li>
+                        <li><a href="media_list.html">기술영상</a></li>
+                        <li><a href="media_list.html">활동영상</a></li>
+                        <li><a href="media_list.html" class="on">우리영상</a></li>
+                        <li><a href="media_list.html">우리사진</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><img src="../images/gnb_bl06.png" alt=""> 문자</a>
+                    <ul class="lnb">
+                        <li><a href="sms_send.html">문자발송</a></li>
+                        <li><a href="sms_history.html">발송내역</a></li>
+                        <li><a href="sms_setting.html">문자설정</a></li>
+                        <li><a href="sms_auto.html">자동발송설정</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><img src="../images/gnb_bl07.png" alt=""> 수납관리</a>
+                    <ul class="lnb">
+                        <li><a href="receive_state.html">수납현황</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><img src="../images/gnb_bl08.png" alt=""> 공지사항</a>
+                    <ul class="lnb">
+                        <li><a href="notice_list.html">공지사항</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><img src="../images/gnb_bl09.png" alt=""> 실시간 버스</a>
+                    <ul class="lnb">
+                        <li><a href="bus.html">셔틀버스</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><img src="../images/gnb_bl10.png" alt=""> 설정</a>
+                    <ul class="lnb">
+                        <li><a href="setting_info.html">학원정보</a></li>
+                        <li><a href="setting_receive.html">수납설정</a></li>
+                        <li><a href="setting_point.html">포인트 충전</a></li>
+                        <li><a href="setting_proof.html">선택항목설정</a></li>
+                        <li><a href="setting_option.html">제출증빙서류</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <!--// aside -->
+
+
+        <!-- container -->
+        <div class="container">
+
+            <!-- header -->
+            <div class="header">
+                <span class="name">관장님</span>
+                <a href="login.html" class="btn_logout">로그아웃</a>
+            </div>
+            <!--// header -->
+
+
+            <!-- contents -->
+            <div class="contents">
+
+                <h2>우리영상</h2>
+
+                <!-- inner -->
+                <div class="inner">
+
+                <form action="">
+                    <!-- info -->
+                    <ul class="info">
+                        <li class="left pl10">
+                            <select name="" id="" class="slt">
+                                <option value="">수업명</option>
+                                <option value="">유치부</option>
+                                <option value="">초등저학년</option>
+                                <option value="">초등고학년</option>
+                                <option value="">중등부</option>
+                                <option value="">고등부</option>
+                            </select>
+                        </li>
+                        <li class="right">
+                            　<label class="ckb" for="all_check"><input type="checkbox" id="all_check"><span class="checkmark">전체선택</span></label>
+                        </li>
+                    </ul>
+                    <!--// info -->
+
+
+                    <!-- media_list -->
+                    <ul class="media_list">
+                        <li>
+                            <label class="ckb" for="check1"><input type="checkbox" id="check1"><span class="checkmark"></span></label>
+                            <a href="media_detail.html" class="photo"><img src="http://placehold.it/200x145" alt=""></a>
+                            <h5><a href="media_detail.html">태권 부이!! 달려라 달려 랄라라랄라~ 태권 태꿘!! 빠~ 아자아자~~</a></h5>
+                            <span class="name">홍길동</span>
+                            <span class="date">2020.04.23</span>
+                        </li>
+                        <li>
+                            <label class="ckb" for="check2"><input type="checkbox" id="check2"><span class="checkmark"></span></label>
+                            <a href="media_detail.html" class="photo"><img src="http://placehold.it/200x145" alt=""></a>
+                            <h5><a href="media_detail.html">태권 부이!! 달려라 달려 랄라라랄라~ 태권 태꿘!! 빠~ 아자아자~~</a></h5>
+                            <span class="name">홍길동</span>
+                            <span class="date">2020.04.23</span>
+                        </li>
+                        <li>
+                            <label class="ckb" for="check3"><input type="checkbox" id="check3"><span class="checkmark"></span></label>
+                            <a href="media_detail.html" class="photo"><img src="http://placehold.it/200x145" alt=""></a>
+                            <h5><a href="media_detail.html">태권 부이!! 달려라 달려 랄라라랄라~ 태권 태꿘!! 빠~ 아자아자~~</a></h5>
+                            <span class="name">홍길동</span>
+                            <span class="date">2020.04.23</span>
+                        </li>
+                        <li>
+                            <label class="ckb" for="check4"><input type="checkbox" id="check4"><span class="checkmark"></span></label>
+                            <a href="media_detail.html" class="photo"><img src="http://placehold.it/200x145" alt=""></a>
+                            <h5><a href="media_detail.html">태권 부이!! 달려라 달려 랄라라랄라~ 태권 태꿘!! 빠~ 아자아자~~</a></h5>
+                            <span class="name">홍길동</span>
+                            <span class="date">2020.04.23</span>
+                        </li>
+                        <li>
+                            <label class="ckb" for="check5"><input type="checkbox" id="check5"><span class="checkmark"></span></label>
+                            <a href="media_detail.html" class="photo"><img src="http://placehold.it/200x145" alt=""></a>
+                            <h5><a href="media_detail.html">태권 부이!! 달려라 달려 랄라라랄라~ 태권 태꿘!! 빠~ 아자아자~~</a></h5>
+                            <span class="name">홍길동</span>
+                            <span class="date">2020.04.23</span>
+                        </li>
+                        <li>
+                            <label class="ckb" for="check6"><input type="checkbox" id="check6"><span class="checkmark"></span></label>
+                            <a href="media_detail.html" class="photo"><img src="http://placehold.it/200x145" alt=""></a>
+                            <h5><a href="media_detail.html">태권 부이!! 달려라 달려 랄라라랄라~ 태권 태꿘!! 빠~ 아자아자~~</a></h5>
+                            <span class="name">홍길동</span>
+                            <span class="date">2020.04.23</span>
+                        </li>
+                        <li>
+                            <label class="ckb" for="check7"><input type="checkbox" id="check7"><span class="checkmark"></span></label>
+                            <a href="media_detail.html" class="photo"><img src="http://placehold.it/200x145" alt=""></a>
+                            <h5><a href="media_detail.html">태권 부이!! 달려라 달려 랄라라랄라~ 태권 태꿘!! 빠~ 아자아자~~</a></h5>
+                            <span class="name">홍길동</span>
+                            <span class="date">2020.04.23</span>
+                        </li>
+                        <li>
+                            <label class="ckb" for="check8"><input type="checkbox" id="check8"><span class="checkmark"></span></label>
+                            <a href="media_detail.html" class="photo"><img src="http://placehold.it/200x145" alt=""></a>
+                            <h5><a href="media_detail.html">태권 부이!! 달려라 달려 랄라라랄라~ 태권 태꿘!! 빠~ 아자아자~~</a></h5>
+                            <span class="name">홍길동</span>
+                            <span class="date">2020.04.23</span>
+                        </li>
+                    </ul>
+                    <!--// media_list -->
+
+                    </form>
+
+                    <ul class="info">
+                        <li class="right">
+                            <a href="javascript:;" class="btn_w">삭제</a>
+                            <a href="media_write.html" class="btn_b">글쓰기</a>
+                        </li>
+                    </ul>
+
+
+                    <div class="paging">
+                        <a href="#"><img src="../images/paging_first.png" alt="처음페이지"></a>
+                        <a href="#"><img src="../images/paging_prev.png" alt="이전페이지"></a>
+                        <a href="#" class="on">1</a>
+                        <a href="#">2</a>
+                        <a href="#">3</a>
+                        <a href="#">4</a>
+                        <a href="#">5</a>
+                        <a href="#">6</a>
+                        <a href="#">7</a>
+                        <a href="#">8</a>
+                        <a href="#">9</a>
+                        <a href="#">10</a>
+                        <a href="#"><img src="../images/paging_next.png" alt="다음페이지"></a>
+                        <a href="#"><img src="../images/paging_last.png" alt="마지막페이지"></a>
+                    </div>
+
+
+
+                </div>
+                <!--// inner -->
+
+
+
+
+
+
+            </div>
+            <!--// contents -->
+
+        </div>
+        <!--// container -->
+
+    </div>
+    <!--// wrap -->
+
+
+</body>
+
+</html>

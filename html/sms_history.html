@@ -1,0 +1,2374 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, minimum-scale=1.0, user-scalable=yes, target-densitydpi=medium-dpi">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../css/common.css">
+    <script type="text/javascript" src="../js/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="../js/jquery-ui.js"></script>
+    <script type="text/javascript" src="../js/common.js"></script>
+    <title>출결서비스</title>
+</head>
+
+<body>
+
+    <!-- wrap -->
+    <div class="wrap">
+
+        <!-- aside -->
+        <div class="aside">
+            <h1><img src="../images/logo.png" alt="K Tigers"></h1>
+
+            <ul class="gnb">
+                <li>
+                    <a href="#"><img src="../images/gnb_bl01.png" alt=""> 경영</a>
+                    <ul class="lnb">
+                        <li><a href="manage_receive.html">수납현황</a></li>
+                        <li><a href="manage_student.html">원생현황</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><img src="../images/gnb_bl02.png" alt=""> 출결</a>
+                    <ul class="lnb">
+                        <li><a href="attendance_state.html">출결현황</a></li>
+                        <li><a href="attendance_manage.html">출결관리</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><img src="../images/gnb_bl03.png" alt=""> 학생</a>
+                    <ul class="lnb">
+                        <li><a href="student_manage.html">원생관리</a></li>
+                        <li><a href="student_excel.html">엑셀등록</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><img src="../images/gnb_bl04.png" alt=""> 수업관리</a>
+                    <ul class="lnb">
+                        <li><a href="class_manage.html">수업관리</a></li>
+                        <li><a href="class_staff.html">강사(직원)관리</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><img src="../images/gnb_bl05.png" alt=""> 미디어</a>
+                    <ul class="lnb">
+                        <li><a href="media_list.html">공연영상</a></li>
+                        <li><a href="media_list.html">K팝 태권</a></li>
+                        <li><a href="media_list.html">방송활동</a></li>
+                        <li><a href="media_list.html">기술영상</a></li>
+                        <li><a href="media_list.html">활동영상</a></li>
+                        <li><a href="media_list.html">우리영상</a></li>
+                        <li><a href="media_list.html">우리사진</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><img src="../images/gnb_bl06.png" alt=""> 문자</a>
+                    <ul class="lnb">
+                        <li><a href="sms_send.html">문자발송</a></li>
+                        <li><a href="sms_history.html" class="on">발송내역</a></li>
+                        <li><a href="sms_setting.html">문자설정</a></li>
+                        <li><a href="sms_auto.html">자동발송설정</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><img src="../images/gnb_bl07.png" alt=""> 수납관리</a>
+                    <ul class="lnb">
+                        <li><a href="receive_state.html">수납현황</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><img src="../images/gnb_bl08.png" alt=""> 공지사항</a>
+                    <ul class="lnb">
+                        <li><a href="notice_list.html">공지사항</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><img src="../images/gnb_bl09.png" alt=""> 실시간 버스</a>
+                    <ul class="lnb">
+                        <li><a href="bus.html">셔틀버스</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><img src="../images/gnb_bl10.png" alt=""> 설정</a>
+                    <ul class="lnb">
+                        <li><a href="setting_info.html">학원정보</a></li>
+                        <li><a href="setting_receive.html">수납설정</a></li>
+                        <li><a href="setting_point.html">포인트 충전</a></li>
+                        <li><a href="setting_proof.html">선택항목설정</a></li>
+                        <li><a href="setting_option.html">제출증빙서류</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <!--// aside -->
+
+
+        <!-- container -->
+        <div class="container">
+
+            <!-- header -->
+            <div class="header">
+                <span class="name">관장님</span>
+                <a href="login.html" class="btn_logout">로그아웃</a>
+            </div>
+            <!--// header -->
+
+
+            <!-- contents -->
+            <div class="contents">
+
+                <h2>발송내역</h2>
+
+                <!-- inner -->
+                <div class="inner">
+
+
+                    <!-- history -->
+                    <div class="history">
+
+                        <div class="total">
+                            <h4>총<br />전송 건수</h4>
+                            <span>501</span>
+                        </div>
+
+                        <div class="each">
+                            <h5>앱 푸시</h5>
+                            <ul>
+                                <li>
+                                    <strong>전체</strong>
+                                    <a href="javascript:;" class="btn_modal">123</a>
+
+                                    <!-- 결과 레이어 팝업 -->
+                                    <div class="pop_modal">
+                                        <!-- layer_popup -->
+                                        <div class="layer_popup w400">
+                                            <h4>앱 푸시 전체 (10)건</h4>
+                                            <span class="pop_close">×</span>
+
+                                            <!-- pop_inner -->
+                                            <div class="pop_inner">
+
+                                                <!-- pop_list -->
+                                                <ul class="pop_list">
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                </ul>
+                                                <!--// pop_list -->
+
+                                                <ul class="pop_btn_zone">
+                                                    <li class="right">
+                                                        <a href="#" class="btn_w">취소</a>
+                                                        <a href="#" class="btn_b">확인</a>
+                                                    </li>
+                                                </ul>
+
+                                            </div>
+                                            <!--// pop_inner -->
+                                        </div>
+                                        <!--// layer_popup -->
+                                    </div>
+                                    <!--// 결과 레이어 팝업 -->
+
+
+                                </li>
+                                <li>
+                                    <strong>성공</strong>
+                                    <a href="javascript:;" class="btn_modal">65</a>
+
+                                    <!-- 결과 레이어 팝업 -->
+                                    <div class="pop_modal">
+                                        <!-- layer_popup -->
+                                        <div class="layer_popup w400">
+                                            <h4>앱 푸시 성공 (65)건</h4>
+                                            <span class="pop_close">×</span>
+
+                                            <!-- pop_inner -->
+                                            <div class="pop_inner">
+
+                                                <!-- pop_list -->
+                                                <ul class="pop_list">
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                </ul>
+                                                <!--// pop_list -->
+
+                                                <ul class="pop_btn_zone">
+                                                    <li class="right">
+                                                        <a href="#" class="btn_w">취소</a>
+                                                        <a href="#" class="btn_b">확인</a>
+                                                    </li>
+                                                </ul>
+
+                                            </div>
+                                            <!--// pop_inner -->
+                                        </div>
+                                        <!--// layer_popup -->
+                                    </div>
+                                    <!--// 결과 레이어 팝업 -->
+
+                                </li>
+                                <li>
+                                    <strong>실패</strong>
+                                    <a href="javascript:;" class="btn_modal">1</a>
+
+                                        <!-- 결과 레이어 팝업 -->
+                                        <div class="pop_modal">
+                                            <!-- layer_popup -->
+                                            <div class="layer_popup w400">
+                                                <h4>앱 푸시 실패 (1)건</h4>
+                                                <span class="pop_close">×</span>
+
+                                                <!-- pop_inner -->
+                                                <div class="pop_inner">
+
+                                                    <!-- pop_list -->
+                                                    <ul class="pop_list">
+                                                        <li><label class="ckb" for="stuent01"><input type="checkbox" id="stuent01"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                        <li><label class="ckb" for="stuent02"><input type="checkbox" id="stuent02"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                        <li><label class="ckb" for="stuent03"><input type="checkbox" id="stuent03"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                        <li><label class="ckb" for="stuent04"><input type="checkbox" id="stuent04"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                        <li><label class="ckb" for="stuent05"><input type="checkbox" id="stuent05"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                        <li><label class="ckb" for="stuent06"><input type="checkbox" id="stuent06"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                        <li><label class="ckb" for="stuent07"><input type="checkbox" id="stuent07"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                        <li><label class="ckb" for="stuent08"><input type="checkbox" id="stuent08"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                        <li><label class="ckb" for="stuent09"><input type="checkbox" id="stuent09"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                        <li><label class="ckb" for="stuent10"><input type="checkbox" id="stuent10"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+
+                                                        <li><label class="ckb" for="stuent11"><input type="checkbox" id="stuent11"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                        <li><label class="ckb" for="stuent12"><input type="checkbox" id="stuent12"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                        <li><label class="ckb" for="stuent13"><input type="checkbox" id="stuent13"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                        <li><label class="ckb" for="stuent14"><input type="checkbox" id="stuent14"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                        <li><label class="ckb" for="stuent15"><input type="checkbox" id="stuent15"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                        <li><label class="ckb" for="stuent16"><input type="checkbox" id="stuent16"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                        <li><label class="ckb" for="stuent17"><input type="checkbox" id="stuent17"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                        <li><label class="ckb" for="stuent18"><input type="checkbox" id="stuent18"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                        <li><label class="ckb" for="stuent19"><input type="checkbox" id="stuent19"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                        <li><label class="ckb" for="stuent20"><input type="checkbox" id="stuent20"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    </ul>
+                                                    <!--// pop_list -->
+
+                                                    <ul class="pop_btn_zone">
+                                                        <li class="right">
+                                                            <a href="#" class="btn_w">취소</a>
+                                                            <a href="#" class="btn_b">재전송</a>
+                                                        </li>
+                                                    </ul>
+
+                                                </div>
+                                                <!--// pop_inner -->
+                                            </div>
+                                            <!--// layer_popup -->
+                                        </div>
+                                        <!--// 결과 레이어 팝업 -->
+
+                                    </li>
+                            </ul>
+                        </div>
+
+                        <div class="each">
+                            <h5>단문 메세지</h5>
+                            <ul>
+                                <li>
+                                    <strong>전체</strong>
+                                    <a href="javascript:;" class="btn_modal">123</a>
+                                    <!-- 결과 레이어 팝업 -->
+                                    <div class="pop_modal">
+                                        <!-- layer_popup -->
+                                        <div class="layer_popup w400">
+                                            <h4>단문 메세지 전체 (100)건</h4>
+                                            <span class="pop_close">×</span>
+
+                                            <!-- pop_inner -->
+                                            <div class="pop_inner">
+
+                                                <!-- pop_list -->
+                                                <ul class="pop_list">
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                </ul>
+                                                <!--// pop_list -->
+
+                                                <ul class="pop_btn_zone">
+                                                    <li class="right">
+                                                        <a href="#" class="btn_w">취소</a>
+                                                        <a href="#" class="btn_b">확인</a>
+                                                    </li>
+                                                </ul>
+
+                                            </div>
+                                            <!--// pop_inner -->
+                                        </div>
+                                        <!--// layer_popup -->
+                                    </div>
+                                    <!--// 결과 레이어 팝업 -->
+                                </li>
+                                <li>
+                                    <strong>성공</strong>
+                                    <a href="javascript:;" class="btn_modal">65</a>
+                                    <!-- 결과 레이어 팝업 -->
+                                    <div class="pop_modal">
+                                        <!-- layer_popup -->
+                                        <div class="layer_popup w400">
+                                            <h4>단문 메세지 성공 (90)건</h4>
+                                            <span class="pop_close">×</span>
+
+                                            <!-- pop_inner -->
+                                            <div class="pop_inner">
+
+                                                <!-- pop_list -->
+                                                <ul class="pop_list">
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                </ul>
+                                                <!--// pop_list -->
+
+                                                <ul class="pop_btn_zone">
+                                                    <li class="right">
+                                                        <a href="#" class="btn_w">취소</a>
+                                                        <a href="#" class="btn_b">확인</a>
+                                                    </li>
+                                                </ul>
+
+                                            </div>
+                                            <!--// pop_inner -->
+                                        </div>
+                                        <!--// layer_popup -->
+                                    </div>
+                                    <!--// 결과 레이어 팝업 -->
+                                </li>
+                                <li>
+                                    <strong>실패</strong>
+                                    <a href="javascript:;" class="btn_modal">1</a>
+                                    <!-- 결과 레이어 팝업 -->
+                                    <div class="pop_modal">
+                                        <!-- layer_popup -->
+                                        <div class="layer_popup w400">
+                                            <h4>단문 메세지 실패 (10)건</h4>
+                                            <span class="pop_close">×</span>
+
+                                            <!-- pop_inner -->
+                                            <div class="pop_inner">
+
+                                                <!-- pop_list -->
+                                                <ul class="pop_list">
+                                                    <li><label class="ckb" for="stuent01"><input type="checkbox" id="stuent01"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent02"><input type="checkbox" id="stuent02"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent03"><input type="checkbox" id="stuent03"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent04"><input type="checkbox" id="stuent04"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent05"><input type="checkbox" id="stuent05"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent06"><input type="checkbox" id="stuent06"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent07"><input type="checkbox" id="stuent07"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent08"><input type="checkbox" id="stuent08"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent09"><input type="checkbox" id="stuent09"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent10"><input type="checkbox" id="stuent10"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+
+                                                    <li><label class="ckb" for="stuent11"><input type="checkbox" id="stuent11"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent12"><input type="checkbox" id="stuent12"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent13"><input type="checkbox" id="stuent13"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent14"><input type="checkbox" id="stuent14"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent15"><input type="checkbox" id="stuent15"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent16"><input type="checkbox" id="stuent16"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent17"><input type="checkbox" id="stuent17"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent18"><input type="checkbox" id="stuent18"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent19"><input type="checkbox" id="stuent19"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent20"><input type="checkbox" id="stuent20"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                </ul>
+                                                <!--// pop_list -->
+
+                                                <ul class="pop_btn_zone">
+                                                    <li class="right">
+                                                        <a href="#" class="btn_w">취소</a>
+                                                        <a href="#" class="btn_b">재전송</a>
+                                                    </li>
+                                                </ul>
+
+                                            </div>
+                                            <!--// pop_inner -->
+                                        </div>
+                                        <!--// layer_popup -->
+                                    </div>
+                                    <!--// 결과 레이어 팝업 -->
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="each">
+                            <h5>장문 메세지</h5>
+                            <ul>
+                                <li>
+                                    <strong>전체</strong>
+                                    <a href="javascript:;">123</a>
+                                    <!-- 결과 레이어 팝업 -->
+                                    <div class="pop_modal">
+                                        <!-- layer_popup -->
+                                        <div class="layer_popup w400">
+                                            <h4>장문 메세지 전체 (100)건</h4>
+                                            <span class="pop_close">×</span>
+
+                                            <!-- pop_inner -->
+                                            <div class="pop_inner">
+
+                                                <!-- pop_list -->
+                                                <ul class="pop_list">
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                </ul>
+                                                <!--// pop_list -->
+
+                                                <ul class="pop_btn_zone">
+                                                    <li class="right">
+                                                        <a href="#" class="btn_w">취소</a>
+                                                        <a href="#" class="btn_b">확인</a>
+                                                    </li>
+                                                </ul>
+
+                                            </div>
+                                            <!--// pop_inner -->
+                                        </div>
+                                        <!--// layer_popup -->
+                                    </div>
+                                    <!--// 결과 레이어 팝업 -->
+                                </li>
+                                <li>
+                                    <strong>성공</strong>
+                                    <a href="javascript:;">65</a>
+                                    <!-- 결과 레이어 팝업 -->
+                                    <div class="pop_modal">
+                                        <!-- layer_popup -->
+                                        <div class="layer_popup w400">
+                                            <h4>장문 메세지 성공 (100)건</h4>
+                                            <span class="pop_close">×</span>
+
+                                            <!-- pop_inner -->
+                                            <div class="pop_inner">
+
+                                                <!-- pop_list -->
+                                                <ul class="pop_list">
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                </ul>
+                                                <!--// pop_list -->
+
+                                                <ul class="pop_btn_zone">
+                                                    <li class="right">
+                                                        <a href="#" class="btn_w">취소</a>
+                                                        <a href="#" class="btn_b">확인</a>
+                                                    </li>
+                                                </ul>
+
+                                            </div>
+                                            <!--// pop_inner -->
+                                        </div>
+                                        <!--// layer_popup -->
+                                    </div>
+                                    <!--// 결과 레이어 팝업 -->
+                                </li>
+                                <li>
+                                    <strong>실패</strong>
+                                    <a href="javascript:;">1</a>
+                                    <!-- 결과 레이어 팝업 -->
+                                    <div class="pop_modal">
+                                        <!-- layer_popup -->
+                                        <div class="layer_popup w400">
+                                            <h4>장문 메세지 실패 (100)건</h4>
+                                            <span class="pop_close">×</span>
+
+                                            <!-- pop_inner -->
+                                            <div class="pop_inner">
+
+                                                <!-- pop_list -->
+                                                <ul class="pop_list">
+                                                    <li><label class="ckb" for="stuent01"><input type="checkbox" id="stuent01"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent02"><input type="checkbox" id="stuent02"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent03"><input type="checkbox" id="stuent03"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent04"><input type="checkbox" id="stuent04"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent05"><input type="checkbox" id="stuent05"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent06"><input type="checkbox" id="stuent06"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent07"><input type="checkbox" id="stuent07"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent08"><input type="checkbox" id="stuent08"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent09"><input type="checkbox" id="stuent09"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent10"><input type="checkbox" id="stuent10"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+
+                                                    <li><label class="ckb" for="stuent11"><input type="checkbox" id="stuent11"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent12"><input type="checkbox" id="stuent12"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent13"><input type="checkbox" id="stuent13"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent14"><input type="checkbox" id="stuent14"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent15"><input type="checkbox" id="stuent15"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent16"><input type="checkbox" id="stuent16"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent17"><input type="checkbox" id="stuent17"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent18"><input type="checkbox" id="stuent18"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent19"><input type="checkbox" id="stuent19"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent20"><input type="checkbox" id="stuent20"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                </ul>
+                                                <!--// pop_list -->
+
+                                                <ul class="pop_btn_zone">
+                                                    <li class="right">
+                                                        <a href="#" class="btn_w">취소</a>
+                                                        <a href="#" class="btn_b">재전송</a>
+                                                    </li>
+                                                </ul>
+
+                                            </div>
+                                            <!--// pop_inner -->
+                                        </div>
+                                        <!--// layer_popup -->
+                                    </div>
+                                    <!--// 결과 레이어 팝업 -->
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="each">
+                            <h5>카카오톡</h5>
+                            <ul>
+                                <li>
+                                    <strong>전체</strong>
+                                    <a href="javascript:;" class="btn_modal">123</a>
+                                    <!-- 결과 레이어 팝업 -->
+                                    <div class="pop_modal">
+                                        <!-- layer_popup -->
+                                        <div class="layer_popup w400">
+                                            <h4>카카오톡 전체 (100)건</h4>
+                                            <span class="pop_close">×</span>
+
+                                            <!-- pop_inner -->
+                                            <div class="pop_inner">
+
+                                                <!-- pop_list -->
+                                                <ul class="pop_list">
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                </ul>
+                                                <!--// pop_list -->
+
+                                                <ul class="pop_btn_zone">
+                                                    <li class="right">
+                                                        <a href="#" class="btn_w">취소</a>
+                                                        <a href="#" class="btn_b">확인</a>
+                                                    </li>
+                                                </ul>
+
+                                            </div>
+                                            <!--// pop_inner -->
+                                        </div>
+                                        <!--// layer_popup -->
+                                    </div>
+                                    <!--// 결과 레이어 팝업 -->
+                                </li>
+                                <li>
+                                    <strong>성공</strong>
+                                    <a href="javascript:;" class="btn_modal">65</a>
+                                    <!-- 결과 레이어 팝업 -->
+                                    <div class="pop_modal">
+                                        <!-- layer_popup -->
+                                        <div class="layer_popup w400">
+                                            <h4>카카오톡 성공 (100)건</h4>
+                                            <span class="pop_close">×</span>
+
+                                            <!-- pop_inner -->
+                                            <div class="pop_inner">
+
+                                                <!-- pop_list -->
+                                                <ul class="pop_list">
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                </ul>
+                                                <!--// pop_list -->
+
+                                                <ul class="pop_btn_zone">
+                                                    <li class="right">
+                                                        <a href="#" class="btn_w">취소</a>
+                                                        <a href="#" class="btn_b">확인</a>
+                                                    </li>
+                                                </ul>
+
+                                            </div>
+                                            <!--// pop_inner -->
+                                        </div>
+                                        <!--// layer_popup -->
+                                    </div>
+                                    <!--// 결과 레이어 팝업 -->
+                                </li>
+                                <li>
+                                    <strong>실패</strong>
+                                    <a href="javascript:;" class="btn_modal">1</a>
+                                    <!-- 결과 레이어 팝업 -->
+                                    <div class="pop_modal">
+                                        <!-- layer_popup -->
+                                        <div class="layer_popup w400">
+                                            <h4>카카오톡 실패 (100)건</h4>
+                                            <span class="pop_close">×</span>
+
+                                            <!-- pop_inner -->
+                                            <div class="pop_inner">
+
+                                                <!-- pop_list -->
+                                                <ul class="pop_list">
+                                                    <li><label class="ckb" for="stuent01"><input type="checkbox" id="stuent01"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent02"><input type="checkbox" id="stuent02"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent03"><input type="checkbox" id="stuent03"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent04"><input type="checkbox" id="stuent04"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent05"><input type="checkbox" id="stuent05"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent06"><input type="checkbox" id="stuent06"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent07"><input type="checkbox" id="stuent07"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent08"><input type="checkbox" id="stuent08"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent09"><input type="checkbox" id="stuent09"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent10"><input type="checkbox" id="stuent10"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+
+                                                    <li><label class="ckb" for="stuent11"><input type="checkbox" id="stuent11"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent12"><input type="checkbox" id="stuent12"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent13"><input type="checkbox" id="stuent13"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent14"><input type="checkbox" id="stuent14"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent15"><input type="checkbox" id="stuent15"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent16"><input type="checkbox" id="stuent16"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent17"><input type="checkbox" id="stuent17"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent18"><input type="checkbox" id="stuent18"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent19"><input type="checkbox" id="stuent19"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent20"><input type="checkbox" id="stuent20"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                </ul>
+                                                <!--// pop_list -->
+
+                                                <ul class="pop_btn_zone">
+                                                    <li class="right">
+                                                        <a href="#" class="btn_w">취소</a>
+                                                        <a href="#" class="btn_b">재전송</a>
+                                                    </li>
+                                                </ul>
+
+                                            </div>
+                                            <!--// pop_inner -->
+                                        </div>
+                                        <!--// layer_popup -->
+                                    </div>
+                                    <!--// 결과 레이어 팝업 -->
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                    <!--// history -->
+
+
+
+
+                    <!-- info -->
+                    <ul class="info">
+                        <li class="left">
+                            <select name="" id="" class="slt">
+                                <option value="">구분</option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                            </select>
+                            <select name="" id="" class="slt">
+                                <option value="">수업명</option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                            </select>
+                            <select name="" id="" class="slt">
+                                <option value="">수신대상</option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                            </select>
+                            <input type="text" placeholder="검색어 입력">
+                            <a href="#" class="bt_search">검색</a>
+                        </li>
+                        <li class="right">
+                            <input type="text" class="datepicker"> ~ <input type="text" class="datepicker">
+                        </li>
+                    </ul>
+                    <!--// info -->
+
+
+                    <table class="table-col">
+                        <caption>원생관리 테이블</caption>
+                        <colgroup>
+                            <col width="11%">
+                            <col width="9%">
+                            <col width="13%">
+                            <col width="39%">
+                            <col width="10%">
+                            <col width="18%">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>발송일자</th>
+                                <th>발송인</th>
+                                <th>수신구분</th>
+                                <th>내용</th>
+                                <th>총 발송 건</th>
+                                <th>상태</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>2020.07.20</td>
+                                <td>원장</td>
+                                <td>앱, 카카오톡, 문자</td>
+                                <td class="subject">
+                                    <a href="javascript:;" class="btn_modal">2020년 7월 수업료 안내 2020년 7월 수업료 안내 2020년 7월 수업료 안내  2020년 7월 수업료 안내 </a>
+                                    <!--  내용 레이어 팝업 -->
+                                    <div class="pop_modal">
+                                        <!-- layer_popup -->
+                                        <div class="layer_popup w400">
+                                            <h4>메세지 내용</h4>
+                                            <span class="pop_close">×</span>
+
+                                            <!-- pop_inner -->
+                                            <div class="pop_inner">
+
+                                                <!-- pop_text -->
+                                                <div class="pop_text">
+                                                    2020년 5월 수업료 안내<br /><br />
+                                                    %원생명%의 %수업업%의 수업비 %수강료 %를 <br />
+                                                    4월 30일까지 결제부탁드립니다.<br /><br />
+                                                    http://www.slfjskljflkdjfskljfdlk.comdjflkfsljfkdljskffljfkld결제경로
+
+                                                </div>
+                                                <!--// pop_text -->
+
+                                                <ul class="pop_btn_zone">
+                                                    <li class="right">
+                                                        <a href="#" class="btn_w">취소</a>
+                                                        <a href="#" class="btn_b">확인</a>
+                                                    </li>
+                                                </ul>
+
+                                            </div>
+                                            <!--// pop_inner -->
+                                        </div>
+                                        <!--// layer_popup -->
+                                    </div>
+                                    <!--//  내용 레이어 팝업 -->
+
+                                </td>
+                                <td>100건</td>
+                                <td>
+                                    <a href="javascript:;" class="btn_red btn_modal">성공 (124)</a>
+                                    <!-- 결과 레이어 팝업 -->
+                                    <div class="pop_modal">
+                                        <!-- layer_popup -->
+                                        <div class="layer_popup w400">
+                                            <h4>성공 (100)건</h4>
+                                            <span class="pop_close">×</span>
+
+                                            <!-- pop_inner -->
+                                            <div class="pop_inner">
+
+                                                <!-- pop_list -->
+                                                <ul class="pop_list">
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                </ul>
+                                                <!--// pop_list -->
+
+                                                <ul class="pop_btn_zone">
+                                                    <li class="right">
+                                                        <a href="#" class="btn_w">취소</a>
+                                                        <a href="#" class="btn_b">확인</a>
+                                                    </li>
+                                                </ul>
+
+                                            </div>
+                                            <!--// pop_inner -->
+                                        </div>
+                                        <!--// layer_popup -->
+                                    </div>
+                                    <!--// 결과 레이어 팝업 -->
+
+
+                                    <a href="javascript:;" class="btn_navy btn_modal">실패 (2)</a>
+                                    <!-- 결과 레이어 팝업 -->
+                                    <div class="pop_modal">
+                                        <!-- layer_popup -->
+                                        <div class="layer_popup w400">
+                                            <h4>실패 (100)건</h4>
+                                            <span class="pop_close">×</span>
+
+                                            <!-- pop_inner -->
+                                            <div class="pop_inner">
+
+                                                <!-- pop_list -->
+                                                <ul class="pop_list">
+                                                    <li><label class="ckb" for="stuent01"><input type="checkbox" id="stuent01"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent02"><input type="checkbox" id="stuent02"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent03"><input type="checkbox" id="stuent03"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent04"><input type="checkbox" id="stuent04"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent05"><input type="checkbox" id="stuent05"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent06"><input type="checkbox" id="stuent06"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent07"><input type="checkbox" id="stuent07"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent08"><input type="checkbox" id="stuent08"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent09"><input type="checkbox" id="stuent09"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent10"><input type="checkbox" id="stuent10"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+
+                                                    <li><label class="ckb" for="stuent11"><input type="checkbox" id="stuent11"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent12"><input type="checkbox" id="stuent12"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent13"><input type="checkbox" id="stuent13"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent14"><input type="checkbox" id="stuent14"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent15"><input type="checkbox" id="stuent15"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent16"><input type="checkbox" id="stuent16"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent17"><input type="checkbox" id="stuent17"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent18"><input type="checkbox" id="stuent18"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent19"><input type="checkbox" id="stuent19"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent20"><input type="checkbox" id="stuent20"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                </ul>
+                                                <!--// pop_list -->
+
+                                                <ul class="pop_btn_zone">
+                                                    <li class="right">
+                                                        <a href="#" class="btn_w">취소</a>
+                                                        <a href="#" class="btn_b">재전송</a>
+                                                    </li>
+                                                </ul>
+
+                                            </div>
+                                            <!--// pop_inner -->
+                                        </div>
+                                        <!--// layer_popup -->
+                                    </div>
+                                    <!--// 결과 레이어 팝업 -->
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2020.07.20</td>
+                                <td>원장</td>
+                                <td>앱, 카카오톡, 문자</td>
+                                <td class="subject">
+                                    <a href="javascript:;" class="btn_modal">2020년 7월 수업료 안내 2020년 7월 수업료 안내 2020년 7월 수업료 안내  2020년 7월 수업료 안내 </a>
+                                    <!--  내용 레이어 팝업 -->
+                                    <div class="pop_modal">
+                                        <!-- layer_popup -->
+                                        <div class="layer_popup w400">
+                                            <h4>메세지 내용</h4>
+                                            <span class="pop_close">×</span>
+
+                                            <!-- pop_inner -->
+                                            <div class="pop_inner">
+
+                                                <!-- pop_text -->
+                                                <div class="pop_text">
+                                                    2020년 5월 수업료 안내<br /><br />
+                                                    %원생명%의 %수업업%의 수업비 %수강료 %를 <br />
+                                                    4월 30일까지 결제부탁드립니다.<br /><br />
+                                                    http://www.slfjskljflkdjfskljfdlk.comdjflkfsljfkdljskffljfkld결제경로
+
+                                                </div>
+                                                <!--// pop_text -->
+
+                                                <ul class="pop_btn_zone">
+                                                    <li class="right">
+                                                        <a href="#" class="btn_w">취소</a>
+                                                        <a href="#" class="btn_b">확인</a>
+                                                    </li>
+                                                </ul>
+
+                                            </div>
+                                            <!--// pop_inner -->
+                                        </div>
+                                        <!--// layer_popup -->
+                                    </div>
+                                    <!--//  내용 레이어 팝업 -->
+
+                                </td>
+                                <td>100건</td>
+                                <td>
+                                    <a href="javascript:;" class="btn_red btn_modal">성공 (124)</a>
+                                    <!-- 결과 레이어 팝업 -->
+                                    <div class="pop_modal">
+                                        <!-- layer_popup -->
+                                        <div class="layer_popup w400">
+                                            <h4>성공 (100)건</h4>
+                                            <span class="pop_close">×</span>
+
+                                            <!-- pop_inner -->
+                                            <div class="pop_inner">
+
+                                                <!-- pop_list -->
+                                                <ul class="pop_list">
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                </ul>
+                                                <!--// pop_list -->
+
+                                                <ul class="pop_btn_zone">
+                                                    <li class="right">
+                                                        <a href="#" class="btn_w">취소</a>
+                                                        <a href="#" class="btn_b">확인</a>
+                                                    </li>
+                                                </ul>
+
+                                            </div>
+                                            <!--// pop_inner -->
+                                        </div>
+                                        <!--// layer_popup -->
+                                    </div>
+                                    <!--// 결과 레이어 팝업 -->
+
+
+                                    <a href="javascript:;" class="btn_navy btn_modal">실패 (2)</a>
+                                    <!-- 결과 레이어 팝업 -->
+                                    <div class="pop_modal">
+                                        <!-- layer_popup -->
+                                        <div class="layer_popup w400">
+                                            <h4>실패 (100)건</h4>
+                                            <span class="pop_close">×</span>
+
+                                            <!-- pop_inner -->
+                                            <div class="pop_inner">
+
+                                                <!-- pop_list -->
+                                                <ul class="pop_list">
+                                                    <li><label class="ckb" for="stuent01"><input type="checkbox" id="stuent01"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent02"><input type="checkbox" id="stuent02"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent03"><input type="checkbox" id="stuent03"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent04"><input type="checkbox" id="stuent04"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent05"><input type="checkbox" id="stuent05"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent06"><input type="checkbox" id="stuent06"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent07"><input type="checkbox" id="stuent07"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent08"><input type="checkbox" id="stuent08"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent09"><input type="checkbox" id="stuent09"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent10"><input type="checkbox" id="stuent10"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+
+                                                    <li><label class="ckb" for="stuent11"><input type="checkbox" id="stuent11"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent12"><input type="checkbox" id="stuent12"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent13"><input type="checkbox" id="stuent13"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent14"><input type="checkbox" id="stuent14"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent15"><input type="checkbox" id="stuent15"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent16"><input type="checkbox" id="stuent16"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent17"><input type="checkbox" id="stuent17"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent18"><input type="checkbox" id="stuent18"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent19"><input type="checkbox" id="stuent19"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent20"><input type="checkbox" id="stuent20"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                </ul>
+                                                <!--// pop_list -->
+
+                                                <ul class="pop_btn_zone">
+                                                    <li class="right">
+                                                        <a href="#" class="btn_w">취소</a>
+                                                        <a href="#" class="btn_b">재전송</a>
+                                                    </li>
+                                                </ul>
+
+                                            </div>
+                                            <!--// pop_inner -->
+                                        </div>
+                                        <!--// layer_popup -->
+                                    </div>
+                                    <!--// 결과 레이어 팝업 -->
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2020.07.20</td>
+                                <td>원장</td>
+                                <td>앱, 카카오톡, 문자</td>
+                                <td class="subject">
+                                    <a href="javascript:;" class="btn_modal">2020년 7월 수업료 안내 2020년 7월 수업료 안내 2020년 7월 수업료 안내  2020년 7월 수업료 안내 </a>
+                                    <!--  내용 레이어 팝업 -->
+                                    <div class="pop_modal">
+                                        <!-- layer_popup -->
+                                        <div class="layer_popup w400">
+                                            <h4>메세지 내용</h4>
+                                            <span class="pop_close">×</span>
+
+                                            <!-- pop_inner -->
+                                            <div class="pop_inner">
+
+                                                <!-- pop_text -->
+                                                <div class="pop_text">
+                                                    2020년 5월 수업료 안내<br /><br />
+                                                    %원생명%의 %수업업%의 수업비 %수강료 %를 <br />
+                                                    4월 30일까지 결제부탁드립니다.<br /><br />
+                                                    http://www.slfjskljflkdjfskljfdlk.comdjflkfsljfkdljskffljfkld결제경로
+
+                                                </div>
+                                                <!--// pop_text -->
+
+                                                <ul class="pop_btn_zone">
+                                                    <li class="right">
+                                                        <a href="#" class="btn_w">취소</a>
+                                                        <a href="#" class="btn_b">확인</a>
+                                                    </li>
+                                                </ul>
+
+                                            </div>
+                                            <!--// pop_inner -->
+                                        </div>
+                                        <!--// layer_popup -->
+                                    </div>
+                                    <!--//  내용 레이어 팝업 -->
+
+                                </td>
+                                <td>100건</td>
+                                <td>
+                                    <a href="javascript:;" class="btn_red btn_modal">성공 (124)</a>
+                                    <!-- 결과 레이어 팝업 -->
+                                    <div class="pop_modal">
+                                        <!-- layer_popup -->
+                                        <div class="layer_popup w400">
+                                            <h4>성공 (100)건</h4>
+                                            <span class="pop_close">×</span>
+
+                                            <!-- pop_inner -->
+                                            <div class="pop_inner">
+
+                                                <!-- pop_list -->
+                                                <ul class="pop_list">
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                </ul>
+                                                <!--// pop_list -->
+
+                                                <ul class="pop_btn_zone">
+                                                    <li class="right">
+                                                        <a href="#" class="btn_w">취소</a>
+                                                        <a href="#" class="btn_b">확인</a>
+                                                    </li>
+                                                </ul>
+
+                                            </div>
+                                            <!--// pop_inner -->
+                                        </div>
+                                        <!--// layer_popup -->
+                                    </div>
+                                    <!--// 결과 레이어 팝업 -->
+
+
+                                    <a href="javascript:;" class="btn_navy btn_modal">실패 (2)</a>
+                                    <!-- 결과 레이어 팝업 -->
+                                    <div class="pop_modal">
+                                        <!-- layer_popup -->
+                                        <div class="layer_popup w400">
+                                            <h4>실패 (100)건</h4>
+                                            <span class="pop_close">×</span>
+
+                                            <!-- pop_inner -->
+                                            <div class="pop_inner">
+
+                                                <!-- pop_list -->
+                                                <ul class="pop_list">
+                                                    <li><label class="ckb" for="stuent01"><input type="checkbox" id="stuent01"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent02"><input type="checkbox" id="stuent02"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent03"><input type="checkbox" id="stuent03"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent04"><input type="checkbox" id="stuent04"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent05"><input type="checkbox" id="stuent05"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent06"><input type="checkbox" id="stuent06"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent07"><input type="checkbox" id="stuent07"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent08"><input type="checkbox" id="stuent08"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent09"><input type="checkbox" id="stuent09"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent10"><input type="checkbox" id="stuent10"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+
+                                                    <li><label class="ckb" for="stuent11"><input type="checkbox" id="stuent11"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent12"><input type="checkbox" id="stuent12"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent13"><input type="checkbox" id="stuent13"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent14"><input type="checkbox" id="stuent14"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent15"><input type="checkbox" id="stuent15"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent16"><input type="checkbox" id="stuent16"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent17"><input type="checkbox" id="stuent17"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent18"><input type="checkbox" id="stuent18"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent19"><input type="checkbox" id="stuent19"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent20"><input type="checkbox" id="stuent20"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                </ul>
+                                                <!--// pop_list -->
+
+                                                <ul class="pop_btn_zone">
+                                                    <li class="right">
+                                                        <a href="#" class="btn_w">취소</a>
+                                                        <a href="#" class="btn_b">재전송</a>
+                                                    </li>
+                                                </ul>
+
+                                            </div>
+                                            <!--// pop_inner -->
+                                        </div>
+                                        <!--// layer_popup -->
+                                    </div>
+                                    <!--// 결과 레이어 팝업 -->
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2020.07.20</td>
+                                <td>원장</td>
+                                <td>앱, 카카오톡, 문자</td>
+                                <td class="subject">
+                                    <a href="javascript:;" class="btn_modal">2020년 7월 수업료 안내 2020년 7월 수업료 안내 2020년 7월 수업료 안내  2020년 7월 수업료 안내 </a>
+                                    <!--  내용 레이어 팝업 -->
+                                    <div class="pop_modal">
+                                        <!-- layer_popup -->
+                                        <div class="layer_popup w400">
+                                            <h4>메세지 내용</h4>
+                                            <span class="pop_close">×</span>
+
+                                            <!-- pop_inner -->
+                                            <div class="pop_inner">
+
+                                                <!-- pop_text -->
+                                                <div class="pop_text">
+                                                    2020년 5월 수업료 안내<br /><br />
+                                                    %원생명%의 %수업업%의 수업비 %수강료 %를 <br />
+                                                    4월 30일까지 결제부탁드립니다.<br /><br />
+                                                    http://www.slfjskljflkdjfskljfdlk.comdjflkfsljfkdljskffljfkld결제경로
+
+                                                </div>
+                                                <!--// pop_text -->
+
+                                                <ul class="pop_btn_zone">
+                                                    <li class="right">
+                                                        <a href="#" class="btn_w">취소</a>
+                                                        <a href="#" class="btn_b">확인</a>
+                                                    </li>
+                                                </ul>
+
+                                            </div>
+                                            <!--// pop_inner -->
+                                        </div>
+                                        <!--// layer_popup -->
+                                    </div>
+                                    <!--//  내용 레이어 팝업 -->
+
+                                </td>
+                                <td>100건</td>
+                                <td>
+                                    <a href="javascript:;" class="btn_red btn_modal">성공 (124)</a>
+                                    <!-- 결과 레이어 팝업 -->
+                                    <div class="pop_modal">
+                                        <!-- layer_popup -->
+                                        <div class="layer_popup w400">
+                                            <h4>성공 (100)건</h4>
+                                            <span class="pop_close">×</span>
+
+                                            <!-- pop_inner -->
+                                            <div class="pop_inner">
+
+                                                <!-- pop_list -->
+                                                <ul class="pop_list">
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                </ul>
+                                                <!--// pop_list -->
+
+                                                <ul class="pop_btn_zone">
+                                                    <li class="right">
+                                                        <a href="#" class="btn_w">취소</a>
+                                                        <a href="#" class="btn_b">확인</a>
+                                                    </li>
+                                                </ul>
+
+                                            </div>
+                                            <!--// pop_inner -->
+                                        </div>
+                                        <!--// layer_popup -->
+                                    </div>
+                                    <!--// 결과 레이어 팝업 -->
+
+
+                                    <a href="javascript:;" class="btn_navy btn_modal">실패 (2)</a>
+                                    <!-- 결과 레이어 팝업 -->
+                                    <div class="pop_modal">
+                                        <!-- layer_popup -->
+                                        <div class="layer_popup w400">
+                                            <h4>실패 (100)건</h4>
+                                            <span class="pop_close">×</span>
+
+                                            <!-- pop_inner -->
+                                            <div class="pop_inner">
+
+                                                <!-- pop_list -->
+                                                <ul class="pop_list">
+                                                    <li><label class="ckb" for="stuent01"><input type="checkbox" id="stuent01"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent02"><input type="checkbox" id="stuent02"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent03"><input type="checkbox" id="stuent03"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent04"><input type="checkbox" id="stuent04"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent05"><input type="checkbox" id="stuent05"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent06"><input type="checkbox" id="stuent06"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent07"><input type="checkbox" id="stuent07"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent08"><input type="checkbox" id="stuent08"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent09"><input type="checkbox" id="stuent09"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent10"><input type="checkbox" id="stuent10"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+
+                                                    <li><label class="ckb" for="stuent11"><input type="checkbox" id="stuent11"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent12"><input type="checkbox" id="stuent12"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent13"><input type="checkbox" id="stuent13"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent14"><input type="checkbox" id="stuent14"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent15"><input type="checkbox" id="stuent15"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent16"><input type="checkbox" id="stuent16"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent17"><input type="checkbox" id="stuent17"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent18"><input type="checkbox" id="stuent18"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent19"><input type="checkbox" id="stuent19"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent20"><input type="checkbox" id="stuent20"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                </ul>
+                                                <!--// pop_list -->
+
+                                                <ul class="pop_btn_zone">
+                                                    <li class="right">
+                                                        <a href="#" class="btn_w">취소</a>
+                                                        <a href="#" class="btn_b">재전송</a>
+                                                    </li>
+                                                </ul>
+
+                                            </div>
+                                            <!--// pop_inner -->
+                                        </div>
+                                        <!--// layer_popup -->
+                                    </div>
+                                    <!--// 결과 레이어 팝업 -->
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2020.07.20</td>
+                                <td>원장</td>
+                                <td>앱, 카카오톡, 문자</td>
+                                <td class="subject">
+                                    <a href="javascript:;" class="btn_modal">2020년 7월 수업료 안내 2020년 7월 수업료 안내 2020년 7월 수업료 안내  2020년 7월 수업료 안내 </a>
+                                    <!--  내용 레이어 팝업 -->
+                                    <div class="pop_modal">
+                                        <!-- layer_popup -->
+                                        <div class="layer_popup w400">
+                                            <h4>메세지 내용</h4>
+                                            <span class="pop_close">×</span>
+
+                                            <!-- pop_inner -->
+                                            <div class="pop_inner">
+
+                                                <!-- pop_text -->
+                                                <div class="pop_text">
+                                                    2020년 5월 수업료 안내<br /><br />
+                                                    %원생명%의 %수업업%의 수업비 %수강료 %를 <br />
+                                                    4월 30일까지 결제부탁드립니다.<br /><br />
+                                                    http://www.slfjskljflkdjfskljfdlk.comdjflkfsljfkdljskffljfkld결제경로
+
+                                                </div>
+                                                <!--// pop_text -->
+
+                                                <ul class="pop_btn_zone">
+                                                    <li class="right">
+                                                        <a href="#" class="btn_w">취소</a>
+                                                        <a href="#" class="btn_b">확인</a>
+                                                    </li>
+                                                </ul>
+
+                                            </div>
+                                            <!--// pop_inner -->
+                                        </div>
+                                        <!--// layer_popup -->
+                                    </div>
+                                    <!--//  내용 레이어 팝업 -->
+
+                                </td>
+                                <td>100건</td>
+                                <td>
+                                    <a href="javascript:;" class="btn_red btn_modal">성공 (124)</a>
+                                    <!-- 결과 레이어 팝업 -->
+                                    <div class="pop_modal">
+                                        <!-- layer_popup -->
+                                        <div class="layer_popup w400">
+                                            <h4>성공 (100)건</h4>
+                                            <span class="pop_close">×</span>
+
+                                            <!-- pop_inner -->
+                                            <div class="pop_inner">
+
+                                                <!-- pop_list -->
+                                                <ul class="pop_list">
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                </ul>
+                                                <!--// pop_list -->
+
+                                                <ul class="pop_btn_zone">
+                                                    <li class="right">
+                                                        <a href="#" class="btn_w">취소</a>
+                                                        <a href="#" class="btn_b">확인</a>
+                                                    </li>
+                                                </ul>
+
+                                            </div>
+                                            <!--// pop_inner -->
+                                        </div>
+                                        <!--// layer_popup -->
+                                    </div>
+                                    <!--// 결과 레이어 팝업 -->
+
+
+                                    <a href="javascript:;" class="btn_navy btn_modal">실패 (2)</a>
+                                    <!-- 결과 레이어 팝업 -->
+                                    <div class="pop_modal">
+                                        <!-- layer_popup -->
+                                        <div class="layer_popup w400">
+                                            <h4>실패 (100)건</h4>
+                                            <span class="pop_close">×</span>
+
+                                            <!-- pop_inner -->
+                                            <div class="pop_inner">
+
+                                                <!-- pop_list -->
+                                                <ul class="pop_list">
+                                                    <li><label class="ckb" for="stuent01"><input type="checkbox" id="stuent01"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent02"><input type="checkbox" id="stuent02"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent03"><input type="checkbox" id="stuent03"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent04"><input type="checkbox" id="stuent04"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent05"><input type="checkbox" id="stuent05"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent06"><input type="checkbox" id="stuent06"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent07"><input type="checkbox" id="stuent07"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent08"><input type="checkbox" id="stuent08"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent09"><input type="checkbox" id="stuent09"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent10"><input type="checkbox" id="stuent10"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+
+                                                    <li><label class="ckb" for="stuent11"><input type="checkbox" id="stuent11"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent12"><input type="checkbox" id="stuent12"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent13"><input type="checkbox" id="stuent13"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent14"><input type="checkbox" id="stuent14"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent15"><input type="checkbox" id="stuent15"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent16"><input type="checkbox" id="stuent16"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent17"><input type="checkbox" id="stuent17"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent18"><input type="checkbox" id="stuent18"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent19"><input type="checkbox" id="stuent19"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent20"><input type="checkbox" id="stuent20"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                </ul>
+                                                <!--// pop_list -->
+
+                                                <ul class="pop_btn_zone">
+                                                    <li class="right">
+                                                        <a href="#" class="btn_w">취소</a>
+                                                        <a href="#" class="btn_b">재전송</a>
+                                                    </li>
+                                                </ul>
+
+                                            </div>
+                                            <!--// pop_inner -->
+                                        </div>
+                                        <!--// layer_popup -->
+                                    </div>
+                                    <!--// 결과 레이어 팝업 -->
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2020.07.20</td>
+                                <td>원장</td>
+                                <td>앱, 카카오톡, 문자</td>
+                                <td class="subject">
+                                    <a href="javascript:;" class="btn_modal">2020년 7월 수업료 안내 2020년 7월 수업료 안내 2020년 7월 수업료 안내  2020년 7월 수업료 안내 </a>
+                                    <!--  내용 레이어 팝업 -->
+                                    <div class="pop_modal">
+                                        <!-- layer_popup -->
+                                        <div class="layer_popup w400">
+                                            <h4>메세지 내용</h4>
+                                            <span class="pop_close">×</span>
+
+                                            <!-- pop_inner -->
+                                            <div class="pop_inner">
+
+                                                <!-- pop_text -->
+                                                <div class="pop_text">
+                                                    2020년 5월 수업료 안내<br /><br />
+                                                    %원생명%의 %수업업%의 수업비 %수강료 %를 <br />
+                                                    4월 30일까지 결제부탁드립니다.<br /><br />
+                                                    http://www.slfjskljflkdjfskljfdlk.comdjflkfsljfkdljskffljfkld결제경로
+
+                                                </div>
+                                                <!--// pop_text -->
+
+                                                <ul class="pop_btn_zone">
+                                                    <li class="right">
+                                                        <a href="#" class="btn_w">취소</a>
+                                                        <a href="#" class="btn_b">확인</a>
+                                                    </li>
+                                                </ul>
+
+                                            </div>
+                                            <!--// pop_inner -->
+                                        </div>
+                                        <!--// layer_popup -->
+                                    </div>
+                                    <!--//  내용 레이어 팝업 -->
+
+                                </td>
+                                <td>100건</td>
+                                <td>
+                                    <a href="javascript:;" class="btn_red btn_modal">성공 (124)</a>
+                                    <!-- 결과 레이어 팝업 -->
+                                    <div class="pop_modal">
+                                        <!-- layer_popup -->
+                                        <div class="layer_popup w400">
+                                            <h4>성공 (100)건</h4>
+                                            <span class="pop_close">×</span>
+
+                                            <!-- pop_inner -->
+                                            <div class="pop_inner">
+
+                                                <!-- pop_list -->
+                                                <ul class="pop_list">
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                </ul>
+                                                <!--// pop_list -->
+
+                                                <ul class="pop_btn_zone">
+                                                    <li class="right">
+                                                        <a href="#" class="btn_w">취소</a>
+                                                        <a href="#" class="btn_b">확인</a>
+                                                    </li>
+                                                </ul>
+
+                                            </div>
+                                            <!--// pop_inner -->
+                                        </div>
+                                        <!--// layer_popup -->
+                                    </div>
+                                    <!--// 결과 레이어 팝업 -->
+
+
+                                    <a href="javascript:;" class="btn_navy btn_modal">실패 (2)</a>
+                                    <!-- 결과 레이어 팝업 -->
+                                    <div class="pop_modal">
+                                        <!-- layer_popup -->
+                                        <div class="layer_popup w400">
+                                            <h4>실패 (100)건</h4>
+                                            <span class="pop_close">×</span>
+
+                                            <!-- pop_inner -->
+                                            <div class="pop_inner">
+
+                                                <!-- pop_list -->
+                                                <ul class="pop_list">
+                                                    <li><label class="ckb" for="stuent01"><input type="checkbox" id="stuent01"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent02"><input type="checkbox" id="stuent02"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent03"><input type="checkbox" id="stuent03"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent04"><input type="checkbox" id="stuent04"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent05"><input type="checkbox" id="stuent05"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent06"><input type="checkbox" id="stuent06"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent07"><input type="checkbox" id="stuent07"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent08"><input type="checkbox" id="stuent08"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent09"><input type="checkbox" id="stuent09"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent10"><input type="checkbox" id="stuent10"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+
+                                                    <li><label class="ckb" for="stuent11"><input type="checkbox" id="stuent11"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent12"><input type="checkbox" id="stuent12"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent13"><input type="checkbox" id="stuent13"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent14"><input type="checkbox" id="stuent14"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent15"><input type="checkbox" id="stuent15"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent16"><input type="checkbox" id="stuent16"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent17"><input type="checkbox" id="stuent17"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent18"><input type="checkbox" id="stuent18"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent19"><input type="checkbox" id="stuent19"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent20"><input type="checkbox" id="stuent20"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                </ul>
+                                                <!--// pop_list -->
+
+                                                <ul class="pop_btn_zone">
+                                                    <li class="right">
+                                                        <a href="#" class="btn_w">취소</a>
+                                                        <a href="#" class="btn_b">재전송</a>
+                                                    </li>
+                                                </ul>
+
+                                            </div>
+                                            <!--// pop_inner -->
+                                        </div>
+                                        <!--// layer_popup -->
+                                    </div>
+                                    <!--// 결과 레이어 팝업 -->
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2020.07.20</td>
+                                <td>원장</td>
+                                <td>앱, 카카오톡, 문자</td>
+                                <td class="subject">
+                                    <a href="javascript:;" class="btn_modal">2020년 7월 수업료 안내 2020년 7월 수업료 안내 2020년 7월 수업료 안내  2020년 7월 수업료 안내 </a>
+                                    <!--  내용 레이어 팝업 -->
+                                    <div class="pop_modal">
+                                        <!-- layer_popup -->
+                                        <div class="layer_popup w400">
+                                            <h4>메세지 내용</h4>
+                                            <span class="pop_close">×</span>
+
+                                            <!-- pop_inner -->
+                                            <div class="pop_inner">
+
+                                                <!-- pop_text -->
+                                                <div class="pop_text">
+                                                    2020년 5월 수업료 안내<br /><br />
+                                                    %원생명%의 %수업업%의 수업비 %수강료 %를 <br />
+                                                    4월 30일까지 결제부탁드립니다.<br /><br />
+                                                    http://www.slfjskljflkdjfskljfdlk.comdjflkfsljfkdljskffljfkld결제경로
+
+                                                </div>
+                                                <!--// pop_text -->
+
+                                                <ul class="pop_btn_zone">
+                                                    <li class="right">
+                                                        <a href="#" class="btn_w">취소</a>
+                                                        <a href="#" class="btn_b">확인</a>
+                                                    </li>
+                                                </ul>
+
+                                            </div>
+                                            <!--// pop_inner -->
+                                        </div>
+                                        <!--// layer_popup -->
+                                    </div>
+                                    <!--//  내용 레이어 팝업 -->
+
+                                </td>
+                                <td>100건</td>
+                                <td>
+                                    <a href="javascript:;" class="btn_red btn_modal">성공 (124)</a>
+                                    <!-- 결과 레이어 팝업 -->
+                                    <div class="pop_modal">
+                                        <!-- layer_popup -->
+                                        <div class="layer_popup w400">
+                                            <h4>성공 (100)건</h4>
+                                            <span class="pop_close">×</span>
+
+                                            <!-- pop_inner -->
+                                            <div class="pop_inner">
+
+                                                <!-- pop_list -->
+                                                <ul class="pop_list">
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                </ul>
+                                                <!--// pop_list -->
+
+                                                <ul class="pop_btn_zone">
+                                                    <li class="right">
+                                                        <a href="#" class="btn_w">취소</a>
+                                                        <a href="#" class="btn_b">확인</a>
+                                                    </li>
+                                                </ul>
+
+                                            </div>
+                                            <!--// pop_inner -->
+                                        </div>
+                                        <!--// layer_popup -->
+                                    </div>
+                                    <!--// 결과 레이어 팝업 -->
+
+
+                                    <a href="javascript:;" class="btn_navy btn_modal">실패 (2)</a>
+                                    <!-- 결과 레이어 팝업 -->
+                                    <div class="pop_modal">
+                                        <!-- layer_popup -->
+                                        <div class="layer_popup w400">
+                                            <h4>실패 (100)건</h4>
+                                            <span class="pop_close">×</span>
+
+                                            <!-- pop_inner -->
+                                            <div class="pop_inner">
+
+                                                <!-- pop_list -->
+                                                <ul class="pop_list">
+                                                    <li><label class="ckb" for="stuent01"><input type="checkbox" id="stuent01"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent02"><input type="checkbox" id="stuent02"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent03"><input type="checkbox" id="stuent03"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent04"><input type="checkbox" id="stuent04"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent05"><input type="checkbox" id="stuent05"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent06"><input type="checkbox" id="stuent06"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent07"><input type="checkbox" id="stuent07"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent08"><input type="checkbox" id="stuent08"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent09"><input type="checkbox" id="stuent09"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent10"><input type="checkbox" id="stuent10"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+
+                                                    <li><label class="ckb" for="stuent11"><input type="checkbox" id="stuent11"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent12"><input type="checkbox" id="stuent12"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent13"><input type="checkbox" id="stuent13"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent14"><input type="checkbox" id="stuent14"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent15"><input type="checkbox" id="stuent15"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent16"><input type="checkbox" id="stuent16"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent17"><input type="checkbox" id="stuent17"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent18"><input type="checkbox" id="stuent18"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent19"><input type="checkbox" id="stuent19"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent20"><input type="checkbox" id="stuent20"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                </ul>
+                                                <!--// pop_list -->
+
+                                                <ul class="pop_btn_zone">
+                                                    <li class="right">
+                                                        <a href="#" class="btn_w">취소</a>
+                                                        <a href="#" class="btn_b">재전송</a>
+                                                    </li>
+                                                </ul>
+
+                                            </div>
+                                            <!--// pop_inner -->
+                                        </div>
+                                        <!--// layer_popup -->
+                                    </div>
+                                    <!--// 결과 레이어 팝업 -->
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2020.07.20</td>
+                                <td>원장</td>
+                                <td>앱, 카카오톡, 문자</td>
+                                <td class="subject">
+                                    <a href="javascript:;" class="btn_modal">2020년 7월 수업료 안내 2020년 7월 수업료 안내 2020년 7월 수업료 안내  2020년 7월 수업료 안내 </a>
+                                    <!--  내용 레이어 팝업 -->
+                                    <div class="pop_modal">
+                                        <!-- layer_popup -->
+                                        <div class="layer_popup w400">
+                                            <h4>메세지 내용</h4>
+                                            <span class="pop_close">×</span>
+
+                                            <!-- pop_inner -->
+                                            <div class="pop_inner">
+
+                                                <!-- pop_text -->
+                                                <div class="pop_text">
+                                                    2020년 5월 수업료 안내<br /><br />
+                                                    %원생명%의 %수업업%의 수업비 %수강료 %를 <br />
+                                                    4월 30일까지 결제부탁드립니다.<br /><br />
+                                                    http://www.slfjskljflkdjfskljfdlk.comdjflkfsljfkdljskffljfkld결제경로
+
+                                                </div>
+                                                <!--// pop_text -->
+
+                                                <ul class="pop_btn_zone">
+                                                    <li class="right">
+                                                        <a href="#" class="btn_w">취소</a>
+                                                        <a href="#" class="btn_b">확인</a>
+                                                    </li>
+                                                </ul>
+
+                                            </div>
+                                            <!--// pop_inner -->
+                                        </div>
+                                        <!--// layer_popup -->
+                                    </div>
+                                    <!--//  내용 레이어 팝업 -->
+
+                                </td>
+                                <td>100건</td>
+                                <td>
+                                    <a href="javascript:;" class="btn_red btn_modal">성공 (124)</a>
+                                    <!-- 결과 레이어 팝업 -->
+                                    <div class="pop_modal">
+                                        <!-- layer_popup -->
+                                        <div class="layer_popup w400">
+                                            <h4>성공 (100)건</h4>
+                                            <span class="pop_close">×</span>
+
+                                            <!-- pop_inner -->
+                                            <div class="pop_inner">
+
+                                                <!-- pop_list -->
+                                                <ul class="pop_list">
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                </ul>
+                                                <!--// pop_list -->
+
+                                                <ul class="pop_btn_zone">
+                                                    <li class="right">
+                                                        <a href="#" class="btn_w">취소</a>
+                                                        <a href="#" class="btn_b">확인</a>
+                                                    </li>
+                                                </ul>
+
+                                            </div>
+                                            <!--// pop_inner -->
+                                        </div>
+                                        <!--// layer_popup -->
+                                    </div>
+                                    <!--// 결과 레이어 팝업 -->
+
+
+                                    <a href="javascript:;" class="btn_navy btn_modal">실패 (2)</a>
+                                    <!-- 결과 레이어 팝업 -->
+                                    <div class="pop_modal">
+                                        <!-- layer_popup -->
+                                        <div class="layer_popup w400">
+                                            <h4>실패 (100)건</h4>
+                                            <span class="pop_close">×</span>
+
+                                            <!-- pop_inner -->
+                                            <div class="pop_inner">
+
+                                                <!-- pop_list -->
+                                                <ul class="pop_list">
+                                                    <li><label class="ckb" for="stuent01"><input type="checkbox" id="stuent01"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent02"><input type="checkbox" id="stuent02"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent03"><input type="checkbox" id="stuent03"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent04"><input type="checkbox" id="stuent04"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent05"><input type="checkbox" id="stuent05"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent06"><input type="checkbox" id="stuent06"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent07"><input type="checkbox" id="stuent07"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent08"><input type="checkbox" id="stuent08"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent09"><input type="checkbox" id="stuent09"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent10"><input type="checkbox" id="stuent10"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+
+                                                    <li><label class="ckb" for="stuent11"><input type="checkbox" id="stuent11"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent12"><input type="checkbox" id="stuent12"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent13"><input type="checkbox" id="stuent13"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent14"><input type="checkbox" id="stuent14"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent15"><input type="checkbox" id="stuent15"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent16"><input type="checkbox" id="stuent16"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent17"><input type="checkbox" id="stuent17"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent18"><input type="checkbox" id="stuent18"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent19"><input type="checkbox" id="stuent19"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent20"><input type="checkbox" id="stuent20"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                </ul>
+                                                <!--// pop_list -->
+
+                                                <ul class="pop_btn_zone">
+                                                    <li class="right">
+                                                        <a href="#" class="btn_w">취소</a>
+                                                        <a href="#" class="btn_b">재전송</a>
+                                                    </li>
+                                                </ul>
+
+                                            </div>
+                                            <!--// pop_inner -->
+                                        </div>
+                                        <!--// layer_popup -->
+                                    </div>
+                                    <!--// 결과 레이어 팝업 -->
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2020.07.20</td>
+                                <td>원장</td>
+                                <td>앱, 카카오톡, 문자</td>
+                                <td class="subject">
+                                    <a href="javascript:;" class="btn_modal">2020년 7월 수업료 안내 2020년 7월 수업료 안내 2020년 7월 수업료 안내  2020년 7월 수업료 안내 </a>
+                                    <!--  내용 레이어 팝업 -->
+                                    <div class="pop_modal">
+                                        <!-- layer_popup -->
+                                        <div class="layer_popup w400">
+                                            <h4>메세지 내용</h4>
+                                            <span class="pop_close">×</span>
+
+                                            <!-- pop_inner -->
+                                            <div class="pop_inner">
+
+                                                <!-- pop_text -->
+                                                <div class="pop_text">
+                                                    2020년 5월 수업료 안내<br /><br />
+                                                    %원생명%의 %수업업%의 수업비 %수강료 %를 <br />
+                                                    4월 30일까지 결제부탁드립니다.<br /><br />
+                                                    http://www.slfjskljflkdjfskljfdlk.comdjflkfsljfkdljskffljfkld결제경로
+
+                                                </div>
+                                                <!--// pop_text -->
+
+                                                <ul class="pop_btn_zone">
+                                                    <li class="right">
+                                                        <a href="#" class="btn_w">취소</a>
+                                                        <a href="#" class="btn_b">확인</a>
+                                                    </li>
+                                                </ul>
+
+                                            </div>
+                                            <!--// pop_inner -->
+                                        </div>
+                                        <!--// layer_popup -->
+                                    </div>
+                                    <!--//  내용 레이어 팝업 -->
+
+                                </td>
+                                <td>100건</td>
+                                <td>
+                                    <a href="javascript:;" class="btn_red btn_modal">성공 (124)</a>
+                                    <!-- 결과 레이어 팝업 -->
+                                    <div class="pop_modal">
+                                        <!-- layer_popup -->
+                                        <div class="layer_popup w400">
+                                            <h4>성공 (100)건</h4>
+                                            <span class="pop_close">×</span>
+
+                                            <!-- pop_inner -->
+                                            <div class="pop_inner">
+
+                                                <!-- pop_list -->
+                                                <ul class="pop_list">
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                </ul>
+                                                <!--// pop_list -->
+
+                                                <ul class="pop_btn_zone">
+                                                    <li class="right">
+                                                        <a href="#" class="btn_w">취소</a>
+                                                        <a href="#" class="btn_b">확인</a>
+                                                    </li>
+                                                </ul>
+
+                                            </div>
+                                            <!--// pop_inner -->
+                                        </div>
+                                        <!--// layer_popup -->
+                                    </div>
+                                    <!--// 결과 레이어 팝업 -->
+
+
+                                    <a href="javascript:;" class="btn_navy btn_modal">실패 (2)</a>
+                                    <!-- 결과 레이어 팝업 -->
+                                    <div class="pop_modal">
+                                        <!-- layer_popup -->
+                                        <div class="layer_popup w400">
+                                            <h4>실패 (100)건</h4>
+                                            <span class="pop_close">×</span>
+
+                                            <!-- pop_inner -->
+                                            <div class="pop_inner">
+
+                                                <!-- pop_list -->
+                                                <ul class="pop_list">
+                                                    <li><label class="ckb" for="stuent01"><input type="checkbox" id="stuent01"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent02"><input type="checkbox" id="stuent02"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent03"><input type="checkbox" id="stuent03"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent04"><input type="checkbox" id="stuent04"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent05"><input type="checkbox" id="stuent05"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent06"><input type="checkbox" id="stuent06"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent07"><input type="checkbox" id="stuent07"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent08"><input type="checkbox" id="stuent08"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent09"><input type="checkbox" id="stuent09"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent10"><input type="checkbox" id="stuent10"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+
+                                                    <li><label class="ckb" for="stuent11"><input type="checkbox" id="stuent11"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent12"><input type="checkbox" id="stuent12"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent13"><input type="checkbox" id="stuent13"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent14"><input type="checkbox" id="stuent14"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent15"><input type="checkbox" id="stuent15"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent16"><input type="checkbox" id="stuent16"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent17"><input type="checkbox" id="stuent17"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent18"><input type="checkbox" id="stuent18"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent19"><input type="checkbox" id="stuent19"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent20"><input type="checkbox" id="stuent20"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                </ul>
+                                                <!--// pop_list -->
+
+                                                <ul class="pop_btn_zone">
+                                                    <li class="right">
+                                                        <a href="#" class="btn_w">취소</a>
+                                                        <a href="#" class="btn_b">재전송</a>
+                                                    </li>
+                                                </ul>
+
+                                            </div>
+                                            <!--// pop_inner -->
+                                        </div>
+                                        <!--// layer_popup -->
+                                    </div>
+                                    <!--// 결과 레이어 팝업 -->
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2020.07.20</td>
+                                <td>원장</td>
+                                <td>앱, 카카오톡, 문자</td>
+                                <td class="subject">
+                                    <a href="javascript:;" class="btn_modal">2020년 7월 수업료 안내 2020년 7월 수업료 안내 2020년 7월 수업료 안내  2020년 7월 수업료 안내 </a>
+                                    <!--  내용 레이어 팝업 -->
+                                    <div class="pop_modal">
+                                        <!-- layer_popup -->
+                                        <div class="layer_popup w400">
+                                            <h4>메세지 내용</h4>
+                                            <span class="pop_close">×</span>
+
+                                            <!-- pop_inner -->
+                                            <div class="pop_inner">
+
+                                                <!-- pop_text -->
+                                                <div class="pop_text">
+                                                    2020년 5월 수업료 안내<br /><br />
+                                                    %원생명%의 %수업업%의 수업비 %수강료 %를 <br />
+                                                    4월 30일까지 결제부탁드립니다.<br /><br />
+                                                    http://www.slfjskljflkdjfskljfdlk.comdjflkfsljfkdljskffljfkld결제경로
+
+                                                </div>
+                                                <!--// pop_text -->
+
+                                                <ul class="pop_btn_zone">
+                                                    <li class="right">
+                                                        <a href="#" class="btn_w">취소</a>
+                                                        <a href="#" class="btn_b">확인</a>
+                                                    </li>
+                                                </ul>
+
+                                            </div>
+                                            <!--// pop_inner -->
+                                        </div>
+                                        <!--// layer_popup -->
+                                    </div>
+                                    <!--//  내용 레이어 팝업 -->
+
+                                </td>
+                                <td>100건</td>
+                                <td>
+                                    <a href="javascript:;" class="btn_red btn_modal">성공 (124)</a>
+                                    <!-- 결과 레이어 팝업 -->
+                                    <div class="pop_modal">
+                                        <!-- layer_popup -->
+                                        <div class="layer_popup w400">
+                                            <h4>성공 (100)건</h4>
+                                            <span class="pop_close">×</span>
+
+                                            <!-- pop_inner -->
+                                            <div class="pop_inner">
+
+                                                <!-- pop_list -->
+                                                <ul class="pop_list">
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                    <li>홍길동 (0010-0000-1111)</li>
+                                                </ul>
+                                                <!--// pop_list -->
+
+                                                <ul class="pop_btn_zone">
+                                                    <li class="right">
+                                                        <a href="#" class="btn_w">취소</a>
+                                                        <a href="#" class="btn_b">확인</a>
+                                                    </li>
+                                                </ul>
+
+                                            </div>
+                                            <!--// pop_inner -->
+                                        </div>
+                                        <!--// layer_popup -->
+                                    </div>
+                                    <!--// 결과 레이어 팝업 -->
+
+
+                                    <a href="javascript:;" class="btn_navy btn_modal">실패 (2)</a>
+                                    <!-- 결과 레이어 팝업 -->
+                                    <div class="pop_modal">
+                                        <!-- layer_popup -->
+                                        <div class="layer_popup w400">
+                                            <h4>실패 (100)건</h4>
+                                            <span class="pop_close">×</span>
+
+                                            <!-- pop_inner -->
+                                            <div class="pop_inner">
+
+                                                <!-- pop_list -->
+                                                <ul class="pop_list">
+                                                    <li><label class="ckb" for="stuent01"><input type="checkbox" id="stuent01"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent02"><input type="checkbox" id="stuent02"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent03"><input type="checkbox" id="stuent03"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent04"><input type="checkbox" id="stuent04"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent05"><input type="checkbox" id="stuent05"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent06"><input type="checkbox" id="stuent06"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent07"><input type="checkbox" id="stuent07"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent08"><input type="checkbox" id="stuent08"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent09"><input type="checkbox" id="stuent09"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent10"><input type="checkbox" id="stuent10"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+
+                                                    <li><label class="ckb" for="stuent11"><input type="checkbox" id="stuent11"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent12"><input type="checkbox" id="stuent12"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent13"><input type="checkbox" id="stuent13"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent14"><input type="checkbox" id="stuent14"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent15"><input type="checkbox" id="stuent15"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent16"><input type="checkbox" id="stuent16"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent17"><input type="checkbox" id="stuent17"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent18"><input type="checkbox" id="stuent18"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent19"><input type="checkbox" id="stuent19"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                    <li><label class="ckb" for="stuent20"><input type="checkbox" id="stuent20"><span class="checkmark">홍길동 (0010-0000-1111)</span></input></label></li>
+                                                </ul>
+                                                <!--// pop_list -->
+
+                                                <ul class="pop_btn_zone">
+                                                    <li class="right">
+                                                        <a href="#" class="btn_w">취소</a>
+                                                        <a href="#" class="btn_b">재전송</a>
+                                                    </li>
+                                                </ul>
+
+                                            </div>
+                                            <!--// pop_inner -->
+                                        </div>
+                                        <!--// layer_popup -->
+                                    </div>
+                                    <!--// 결과 레이어 팝업 -->
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+
+
+                    <div class="paging">
+                        <a href="#"><img src="../images/paging_first.png" alt="처음페이지"></a>
+                        <a href="#"><img src="../images/paging_prev.png" alt="이전페이지"></a>
+                        <a href="#" class="on">1</a>
+                        <a href="#">2</a>
+                        <a href="#">3</a>
+                        <a href="#">4</a>
+                        <a href="#">5</a>
+                        <a href="#">6</a>
+                        <a href="#">7</a>
+                        <a href="#">8</a>
+                        <a href="#">9</a>
+                        <a href="#">10</a>
+                        <a href="#"><img src="../images/paging_next.png" alt="다음페이지"></a>
+                        <a href="#"><img src="../images/paging_last.png" alt="마지막페이지"></a>
+                    </div>
+
+
+                </div>
+                <!--// inner -->
+
+
+
+
+            </div>
+            <!--// contents -->
+
+        </div>
+        <!--// container -->
+
+    </div>
+    <!--// wrap -->
+
+
+</body>
+
+</html>

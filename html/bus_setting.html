@@ -1,0 +1,1615 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, minimum-scale=1.0, user-scalable=yes, target-densitydpi=medium-dpi">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../css/common.css">
+    <script type="text/javascript" src="../js/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="../js/jquery-ui.js"></script>
+    <script type="text/javascript" src="../js/common.js"></script>
+    <title>출결서비스</title>
+</head>
+
+<body>
+
+    <!-- wrap -->
+    <div class="wrap">
+
+        <!-- aside -->
+        <div class="aside">
+            <h1><img src="../images/logo.png" alt="K Tigers"></h1>
+
+            <ul class="gnb">
+                <li>
+                    <a href="#"><img src="../images/gnb_bl01.png" alt=""> 경영</a>
+                    <ul class="lnb">
+                        <li><a href="manage_receive.html">수납현황</a></li>
+                        <li><a href="manage_student.html">원생현황</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><img src="../images/gnb_bl02.png" alt=""> 출결</a>
+                    <ul class="lnb">
+                        <li><a href="attendance_state.html">출결현황</a></li>
+                        <li><a href="attendance_manage.html">출결관리</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><img src="../images/gnb_bl03.png" alt=""> 학생</a>
+                    <ul class="lnb">
+                        <li><a href="student_manage.html">원생관리</a></li>
+                        <li><a href="student_excel.html">엑셀등록</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><img src="../images/gnb_bl04.png" alt=""> 수업관리</a>
+                    <ul class="lnb">
+                        <li><a href="class_manage.html">수업관리</a></li>
+                        <li><a href="class_staff.html">강사(직원)관리</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><img src="../images/gnb_bl05.png" alt=""> 미디어</a>
+                    <ul class="lnb">
+                        <li><a href="media_list.html">공연영상</a></li>
+                        <li><a href="media_list.html">K팝 태권</a></li>
+                        <li><a href="media_list.html">방송활동</a></li>
+                        <li><a href="media_list.html">기술영상</a></li>
+                        <li><a href="media_list.html">활동영상</a></li>
+                        <li><a href="media_list.html">우리영상</a></li>
+                        <li><a href="media_list.html">우리사진</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><img src="../images/gnb_bl06.png" alt=""> 문자</a>
+                    <ul class="lnb">
+                        <li><a href="sms_send.html">문자발송</a></li>
+                        <li><a href="sms_history.html">발송내역</a></li>
+                        <li><a href="sms_setting.html">문자설정</a></li>
+                        <li><a href="sms_auto.html">자동발송설정</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><img src="../images/gnb_bl07.png" alt=""> 수납관리</a>
+                    <ul class="lnb">
+                        <li><a href="receive_state.html">수납현황</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><img src="../images/gnb_bl08.png" alt=""> 공지사항</a>
+                    <ul class="lnb">
+                        <li><a href="notice_list.html">공지사항</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><img src="../images/gnb_bl09.png" alt=""> 실시간 버스</a>
+                    <ul class="lnb">
+                        <li><a href="bus.html">셔틀버스</a></li>
+                        <li><a href="bus_setting.html" class="on">노선관리</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><img src="../images/gnb_bl10.png" alt=""> 설정</a>
+                    <ul class="lnb">
+                        <li><a href="setting_info.html">학원정보</a></li>
+                        <li><a href="setting_receive.html">수납설정</a></li>
+                        <li><a href="setting_point.html">포인트 충전</a></li>
+                        <li><a href="setting_proof.html">선택항목설정</a></li>
+                        <li><a href="setting_option.html">제출증빙서류</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <!--// aside -->
+
+
+        <!-- container -->
+        <div class="container">
+
+            <!-- header -->
+            <div class="header">
+                <span class="name">관장님</span>
+                <a href="login.html" class="btn_logout">로그아웃</a>
+            </div>
+            <!--// header -->
+
+
+            <!-- contents -->
+            <div class="contents">
+
+                <h2>셔틀버스</h2>
+
+                <!-- inner -->
+                <div class="inner">
+
+
+                <h3>버스 관리</h3>
+                <ul class="info">
+                    <li class="right">
+                        <a href="javascript:;" class="btn_b btn_modal">버스등록</a>
+
+                        <!-- 버스 관리 레이어 팝업 -->
+                        <div class="pop_modal">
+                            <!-- layer_popup -->
+                            <div class="layer_popup w600">
+                                <h4>버스 등록</h4>
+                                <span class="pop_close">×</span>
+
+                                <!-- pop_inner -->
+                                <div class="pop_inner">
+                                    <table class="table-row tl">
+                                        <colgroup>
+                                            <col width="30%">
+                                            <col>
+                                        </colgroup>
+                                        <tr>
+                                            <th>차량명 *</th>
+                                            <td><input type="text"></td>
+                                        </tr>
+                                        <tr>
+                                            <th>차량번호 *</th>
+                                            <td><input type="text" placeholder="000" size="3" class="tc"><input type="text" placeholder="가" size="2" class="tc"><input type="text" placeholder="0000" size="4" class="tc"></td>
+                                        </tr>
+                                        <tr>
+                                            <th>기사명</th>
+                                            <td><input type="text"></td>
+                                        </tr>
+                                        <tr>
+                                            <th>차종</th>
+                                            <td><input type="text"></td>
+                                        </tr>
+                                        <tr>
+                                            <th>인승</th>
+                                            <td><input type="number" class="tr" size="3">인승</td>
+                                        </tr>
+                                        <tr>
+                                            <th>메모</th>
+                                            <td><textarea name="" id="" cols="30" rows="5"></textarea></td>
+                                        </tr>
+                                    </table>
+
+                                    <ul class="pop_btn_zone">
+                                        <li class="right">
+                                            <a href="#" class="btn_w">취소</a>
+                                            <a href="#" class="btn_b">등록</a>
+                                        </li>
+                                    </ul>
+
+                                </div>
+                                <!--// pop_inner -->
+                            </div>
+                            <!--// layer_popup -->
+                        </div>
+                        <!--// 버스 관리 레이어 팝업 -->
+                    </li>
+                </ul>
+
+                <form action="" class="table_scroll">
+                <table class="table-col mt0">
+                    <caption>버스 관리 테이블</caption>
+                    <colgroup>
+                        <col width="30">
+                        <col>
+                        <col>
+                        <col>
+                        <col>
+                        <col>
+                        <col>
+                        <col width="80">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th><label class="ckb" for="all_check"><input type="checkbox" id="all_check"><span class="checkmark"></span></label></th>
+                            <th>차량명</th>
+                            <th>차량번호</th>
+                            <th>기사명</th>
+                            <th>차종</th>
+                            <th>인승</th>
+                            <th>메모</th>
+                            <th>관리</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><label class="ckb" for="check1_1"><input type="checkbox" id="check1_1"><span class="checkmark"></span></label></td>
+                            <td>오전반 1호차</td>
+                            <td>123 허 1234</td>
+                            <td>홍길동</td>
+                            <td>카니발</td>
+                            <td>9인승</td>
+                            <td class="tl">메모 메모 메모 메모 메모 </td>
+                            <td>
+                                <a href="javascript:;" class="bt btn_modal">수정</a>
+
+                                <!-- 버스 수정 레이어 팝업 -->
+                                <div class="pop_modal">
+                                    <!-- layer_popup -->
+                                    <div class="layer_popup w600">
+                                        <h4>버스 수정</h4>
+                                        <span class="pop_close">×</span>
+
+                                        <!-- pop_inner -->
+                                        <div class="pop_inner">
+                                            <table class="table-row">
+                                                <colgroup>
+                                                    <col width="30%">
+                                                    <col>
+                                                </colgroup>
+                                                <tr>
+                                                    <th>차량명 *</th>
+                                                    <td><input type="text"></td>
+                                                </tr>
+                                                <tr>
+                                                    <th>차량번호 *</th>
+                                                    <td><input type="text" placeholder="000" size="3" class="tc"><input type="text" placeholder="가" size="2" class="tc"><input type="text" placeholder="0000" size="4" class="tc"></td>
+                                                </tr>
+                                                <tr>
+                                                    <th>기사명</th>
+                                                    <td><input type="text"></td>
+                                                </tr>
+                                                <tr>
+                                                    <th>차종</th>
+                                                    <td><input type="text"></td>
+                                                </tr>
+                                                <tr>
+                                                    <th>인승</th>
+                                                    <td><input type="number" class="tr" size="3">인승</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>메모</th>
+                                                    <td><textarea name="" id="" cols="30" rows="5"></textarea></td>
+                                                </tr>
+                                            </table>
+
+                                            <ul class="pop_btn_zone">
+                                                <li class="right">
+                                                    <a href="javascript:;" class="btn_w">취소</a>
+                                                    <a href="javascript:;" class="btn_b">수정</a>
+                                                </li>
+                                            </ul>
+
+                                        </div>
+                                        <!--// pop_inner -->
+                                    </div>
+                                    <!--// layer_popup -->
+                                </div>
+                                <!--// 버스 수정 레이어 팝업 -->
+
+                            </td>
+                        </tr>
+                        <tr>
+                        <tr>
+                            <td><label class="ckb" for="check1_2"><input type="checkbox" id="check1_2"><span class="checkmark"></span></label></td>
+                            <td>오전반 2호차</td>
+                            <td>123 허 1234</td>
+                            <td>홍길동</td>
+                            <td>카니발</td>
+                            <td>9인승</td>
+                            <td class="tl">메모 메모 메모 메모 메모 </td>
+                            <td>
+                                <a href="javascript:;" class="bt btn_modal">수정</a>
+
+                                <!-- 버스 수정 레이어 팝업 -->
+                                <div class="pop_modal">
+                                    <!-- layer_popup -->
+                                    <div class="layer_popup w600">
+                                        <h4>버스 수정</h4>
+                                        <span class="pop_close">×</span>
+
+                                        <!-- pop_inner -->
+                                        <div class="pop_inner">
+                                            <table class="table-row">
+                                                <colgroup>
+                                                    <col width="30%">
+                                                    <col>
+                                                </colgroup>
+                                                <tr>
+                                                    <th>차량명 *</th>
+                                                    <td><input type="text"></td>
+                                                </tr>
+                                                <tr>
+                                                    <th>차량번호 *</th>
+                                                    <td><input type="text" placeholder="000" size="3" class="tc"><input type="text" placeholder="가" size="2" class="tc"><input type="text" placeholder="0000" size="4" class="tc"></td>
+                                                </tr>
+                                                <tr>
+                                                    <th>기사명</th>
+                                                    <td><input type="text"></td>
+                                                </tr>
+                                                <tr>
+                                                    <th>차종</th>
+                                                    <td><input type="text"></td>
+                                                </tr>
+                                                <tr>
+                                                    <th>인승</th>
+                                                    <td><input type="number" class="tr" size="3">인승</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>메모</th>
+                                                    <td><textarea name="" id="" cols="30" rows="5"></textarea></td>
+                                                </tr>
+                                            </table>
+
+                                            <ul class="pop_btn_zone">
+                                                <li class="right">
+                                                    <a href="#" class="btn_w">취소</a>
+                                                    <a href="#" class="btn_b">수정</a>
+                                                </li>
+                                            </ul>
+
+                                        </div>
+                                        <!--// pop_inner -->
+                                    </div>
+                                    <!--// layer_popup -->
+                                </div>
+                                <!--// 버스 수정 레이어 팝업 -->
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                </form>
+
+                <ul class="info mt10">
+                    <li class="left"><a href="javascript:;" class="btn_w">삭제</a></li>
+                </ul>
+
+
+                <br /><br />
+
+
+                <h3>코스 관리</h3>
+                <ul class="info">
+                    <li class="right">
+                        <a href="javascript:;" class="btn_b btn_modal">코스등록</a>
+
+                        <!-- 코스 등록 레이어 팝업 -->
+                        <div class="pop_modal">
+                            <!-- layer_popup -->
+                            <div class="layer_popup w600">
+
+                                <h4>코스 등록</h4>
+                                <span class="pop_close">×</span>
+
+                                <!-- pop_inner -->
+                                <div class="pop_inner">
+
+
+                                    <dl class="bus_regist">
+                                        <dt>등ㆍ하원 등록</dt>
+                                        <dd>
+                                            <label class="ckb" for="bus_in"><input type="checkbox" id="bus_in"><span class="checkmark">등원</span></label>
+                                            <label class="ckb" for="bus_out"><input type="checkbox" id="bus_out"><span class="checkmark">하원</span></label>
+                                        </dd>
+                                    </dl>
+
+
+
+                                    <h5>등원 버스</h5>
+
+                                    <table class="table-row">
+                                        <colgroup>
+                                            <col width="30%">
+                                            <col>
+                                        </colgroup>
+                                        <tr>
+                                            <th>코스명</th>
+                                            <td><input type="text"></td>
+                                        </tr>
+                                        <tr>
+                                            <th>운행요일</th>
+                                            <td>
+                                                <label class="ckb2" for="day_mon"><input type="checkbox" id="day_mon"><span class="checkmark">월</span></label>
+                                                <label class="ckb2" for="day_tue"><input type="checkbox" id="day_tue"><span class="checkmark">화</span></label>
+                                                <label class="ckb2" for="day_wed"><input type="checkbox" id="day_wed"><span class="checkmark">수</span></label>
+                                                <label class="ckb2" for="day_thu"><input type="checkbox" id="day_thu"><span class="checkmark">목</span></label>
+                                                <label class="ckb2" for="day_fri"><input type="checkbox" id="day_fri"><span class="checkmark">금</span></label>
+                                                <label class="ckb2" for="day_sat"><input type="checkbox" id="day_sat"><span class="checkmark">토</span></label>
+                                                <label class="ckb2" for="day_sun"><input type="checkbox" id="day_sun"><span class="checkmark">일</span></label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>노선</th>
+                                            <td>
+                                                <dl class="route busList">
+                                                    <dt>
+                                                        <ul class="info">
+                                                            <li class="right">
+                                                                <a href="javascript:;" class="btnAddBus">+ 운행노선추가</a>
+                                                            </li>
+                                                        </ul>
+                                                    </dt>
+                                                    <dd class="cloneList">
+                                                        <ul class="info">
+                                                            <li class="left">
+                                                                <a href="javascript:;" onclick="moveUp(this);"><img src="../images/move_up.png" alt="위로 이동"></a>
+                                                                <a href="javascript:;" onclick="moveDown(this);"><img src="../images/move_down.png" alt="아래로 이동"></a>
+                                                            </li>
+                                                            <li class="right">
+                                                                <a href="javascript:;" class="bt_del"><img src="../images/bl_del.png" alt="삭제"></a>
+                                                            </li>
+                                                        </ul>
+                                                        <!-- <label class="ckb" for="route01"><input type="checkbox" id="route01"><span class="checkmark"></span></label> -->
+                                                        <input type="text" class="route_name" placeholder="노선명">
+                                                        <input type="text" class="route_time" placeholder="00:00">
+                                                        <input type="text" class="route_memo" placeholder="메모">
+                                                    </dd>
+                                                </dl>
+                                            </td>
+                                        </tr>
+                                    </table>
+
+                                    <ul class="info">
+                                        <li class="left">
+                                            <label class="ckb" for="same"><input type="checkbox" id="same"><span class="checkmark">등원 동선과 동일하게 복사</span></label>
+                                        </li>
+                                    </ul>
+
+
+
+
+
+
+
+
+                                    <h5>하원 버스</h5>
+
+                                    <table class="table-row">
+                                        <colgroup>
+                                            <col width="30%">
+                                            <col>
+                                        </colgroup>
+                                        <tr>
+                                            <th>코스명</th>
+                                            <td><input type="text"></td>
+                                        </tr>
+                                        <tr>
+                                            <th>운행요일</th>
+                                            <td>
+                                                <label class="ckb2" for="day_mon"><input type="checkbox" id="day_mon"><span class="checkmark">월</span></label>
+                                                <label class="ckb2" for="day_tue"><input type="checkbox" id="day_tue"><span class="checkmark">화</span></label>
+                                                <label class="ckb2" for="day_wed"><input type="checkbox" id="day_wed"><span class="checkmark">수</span></label>
+                                                <label class="ckb2" for="day_thu"><input type="checkbox" id="day_thu"><span class="checkmark">목</span></label>
+                                                <label class="ckb2" for="day_fri"><input type="checkbox" id="day_fri"><span class="checkmark">금</span></label>
+                                                <label class="ckb2" for="day_sat"><input type="checkbox" id="day_sat"><span class="checkmark">토</span></label>
+                                                <label class="ckb2" for="day_sun"><input type="checkbox" id="day_sun"><span class="checkmark">일</span></label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>노선</th>
+                                            <td>
+                                                <dl class="route busList">
+                                                    <dt>
+                                                        <ul class="info">
+                                                            <li class="right">
+                                                                <a href="javascript:;" class="btnAddBus">+ 운행노선추가</a>
+                                                            </li>
+                                                        </ul>
+                                                    </dt>
+                                                    <dd class="cloneList">
+                                                        <ul class="info">
+                                                            <li class="left">
+                                                                <a href="javascript:;" onclick="moveUp(this);"><img src="../images/move_up.png" alt="위로 이동"></a>
+                                                                <a href="javascript:;" onclick="moveDown(this);"><img src="../images/move_down.png" alt="아래로 이동"></a>
+                                                            </li>
+                                                            <li class="right">
+                                                                <a href="javascript:;" class="bt_del"><img src="../images/bl_del.png" alt="삭제"></a>
+                                                            </li>
+                                                        </ul>
+                                                        <!-- <label class="ckb" for="route01"><input type="checkbox" id="route01"><span class="checkmark"></span></label> -->
+                                                        <input type="text" class="route_name" placeholder="노선명">
+                                                        <input type="text" class="route_time" placeholder="00:00">
+                                                        <input type="text" class="route_memo" placeholder="메모">
+                                                    </dd>
+                                                </dl>
+                                            </td>
+                                        </tr>
+                                    </table>
+
+
+                                    <ul class="pop_btn_zone">
+                                        <li class="right">
+                                            <a href="javascript:;" class="btn_w">취소</a>
+                                            <a href="javascript:;" class="btn_b">등록</a>
+                                        </li>
+                                    </ul>
+
+                                </div>
+                                <!--// pop_inner -->
+                            </div>
+                            <!--// layer_popup -->
+                        </div>
+                        <!--// 코스 등록 레이어 팝업 -->
+                    </li>
+                </ul>
+
+                <form action="" class="table_scroll">
+                <table class="table-col mt0">
+                    <caption>코스 관리 테이블</caption>
+                    <colgroup>
+                        <col width="30">
+                        <col width="150">
+                        <col width="150">
+                        <col>
+                        <col width="80">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th><label class="ckb" for="all_check2"><input type="checkbox" id="all_check2"><span class="checkmark"></span></label></th>
+                            <th>코스명</th>
+                            <th>요일</th>
+                            <th>코스</th>
+                            <th>관리</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><label class="ckb" for="check2_1"><input type="checkbox" id="check2_1"><span class="checkmark"></span></label></td>
+                            <td>A코스 10시</td>
+                            <td>월,화,수,목,금</td>
+                            <td class="tl">학원 - 을지로사거리 - 뱅뱅사거리 - 논현초등학교 - 래미안정문 - 후문 - 학원</td>
+                            <td>
+                                <a href="javascript:;" class="bt btn_modal">수정</a>
+
+                                <!-- 코스 수정 레이어 팝업 -->
+                                <div class="pop_modal">
+                                    <!-- layer_popup -->
+                                    <div class="layer_popup w600">
+
+                                        <h4>코스 수정</h4>
+                                        <span class="pop_close">×</span>
+
+                                        <!-- pop_inner -->
+                                        <div class="pop_inner">
+
+
+                                            <h5>등원 버스</h5>
+
+                                            <table class="table-row">
+                                                <colgroup>
+                                                    <col width="30%">
+                                                    <col>
+                                                </colgroup>
+                                                <tr>
+                                                    <th>코스명</th>
+                                                    <td><input type="text"></td>
+                                                </tr>
+                                                <tr>
+                                                    <th>운행요일</th>
+                                                    <td>
+                                                        <label class="ckb2" for="day_mon"><input type="checkbox" id="day_mon"><span class="checkmark">월</span></label>
+                                                        <label class="ckb2" for="day_tue"><input type="checkbox" id="day_tue"><span class="checkmark">화</span></label>
+                                                        <label class="ckb2" for="day_wed"><input type="checkbox" id="day_wed"><span class="checkmark">수</span></label>
+                                                        <label class="ckb2" for="day_thu"><input type="checkbox" id="day_thu"><span class="checkmark">목</span></label>
+                                                        <label class="ckb2" for="day_fri"><input type="checkbox" id="day_fri"><span class="checkmark">금</span></label>
+                                                        <label class="ckb2" for="day_sat"><input type="checkbox" id="day_sat"><span class="checkmark">토</span></label>
+                                                        <label class="ckb2" for="day_sun"><input type="checkbox" id="day_sun"><span class="checkmark">일</span></label>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>노선</th>
+                                                    <td>
+                                                        <dl class="route busList">
+                                                            <dt>
+                                                                <ul class="info">
+                                                                    <li class="right">
+                                                                        <a href="javascript:;" class="btnAddBus">+ 운행노선추가</a>
+                                                                    </li>
+                                                                </ul>
+                                                            </dt>
+                                                            <dd class="cloneList">
+                                                                <ul class="info">
+                                                                    <li class="left">
+                                                                        <a href="javascript:;" onclick="moveUp(this);"><img src="../images/move_up.png" alt="위로 이동"></a>
+                                                                        <a href="javascript:;" onclick="moveDown(this);"><img src="../images/move_down.png" alt="아래로 이동"></a>
+                                                                    </li>
+                                                                    <li class="right">
+                                                                        <a href="javascript:;" class="bt_del"><img src="../images/bl_del.png" alt="삭제"></a>
+                                                                    </li>
+                                                                </ul>
+                                                                <!-- <label class="ckb" for="route01"><input type="checkbox" id="route01"><span class="checkmark"></span></label> -->
+                                                                <input type="text" class="route_name" placeholder="노선명">
+                                                                <input type="text" class="route_time" placeholder="00:00">
+                                                                <input type="text" class="route_memo" placeholder="메모">
+                                                            </dd>
+                                                        </dl>
+                                                    </td>
+                                                </tr>
+                                            </table>
+
+
+
+
+
+
+
+                                            <ul class="pop_btn_zone">
+                                                <li class="right">
+                                                    <a href="javascript:;" class="btn_w">취소</a>
+                                                    <a href="javascript:;" class="btn_b">수정</a>
+                                                </li>
+                                            </ul>
+
+                                        </div>
+                                        <!--// pop_inner -->
+                                    </div>
+                                    <!--// layer_popup -->
+                                </div>
+                                <!--// 코스 수정 레이어 팝업 -->
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label class="ckb" for="check2_2"><input type="checkbox" id="check2_2"><span class="checkmark"></span></label></td>
+                            <td>A코스 10시</td>
+                            <td>월,수,금</td>
+                            <td class="tl">학원 - 을지로사거리 - 뱅뱅사거리 - 논현초등학교 - 레미안정문 - 레미안후문 - 자이정문 - 자이후문 - 푸르지오정문 - 푸르지오후문 - 학원</td>
+                            <td>
+                                <a href="javascript:;" class="bt btn_modal">수정</a>
+
+                                <!-- 코스 수정 레이어 팝업 -->
+                                <div class="pop_modal">
+                                    <!-- layer_popup -->
+                                    <div class="layer_popup w600">
+
+                                        <h4>코스 수정</h4>
+                                        <span class="pop_close">×</span>
+
+                                        <!-- pop_inner -->
+                                        <div class="pop_inner">
+
+
+
+
+
+                                            <h5>하원 버스</h5>
+
+                                            <table class="table-row">
+                                                <colgroup>
+                                                    <col width="30%">
+                                                    <col>
+                                                </colgroup>
+                                                <tr>
+                                                    <th>코스명</th>
+                                                    <td><input type="text"></td>
+                                                </tr>
+                                                <tr>
+                                                    <th>운행요일</th>
+                                                    <td>
+                                                        <label class="ckb2" for="day_mon"><input type="checkbox" id="day_mon"><span class="checkmark">월</span></label>
+                                                        <label class="ckb2" for="day_tue"><input type="checkbox" id="day_tue"><span class="checkmark">화</span></label>
+                                                        <label class="ckb2" for="day_wed"><input type="checkbox" id="day_wed"><span class="checkmark">수</span></label>
+                                                        <label class="ckb2" for="day_thu"><input type="checkbox" id="day_thu"><span class="checkmark">목</span></label>
+                                                        <label class="ckb2" for="day_fri"><input type="checkbox" id="day_fri"><span class="checkmark">금</span></label>
+                                                        <label class="ckb2" for="day_sat"><input type="checkbox" id="day_sat"><span class="checkmark">토</span></label>
+                                                        <label class="ckb2" for="day_sun"><input type="checkbox" id="day_sun"><span class="checkmark">일</span></label>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>노선</th>
+                                                    <td>
+                                                        <dl class="route busList">
+                                                            <dt>
+                                                                <ul class="info">
+                                                                    <li class="right">
+                                                                        <a href="javascript:;" class="btnAddBus">+ 운행노선추가</a>
+                                                                    </li>
+                                                                </ul>
+                                                            </dt>
+                                                            <dd class="cloneList">
+                                                                <ul class="info">
+                                                                    <li class="left">
+                                                                        <a href="javascript:;" onclick="moveUp(this);"><img src="../images/move_up.png" alt="위로 이동"></a>
+                                                                        <a href="javascript:;" onclick="moveDown(this);"><img src="../images/move_down.png" alt="아래로 이동"></a>
+                                                                    </li>
+                                                                    <li class="right">
+                                                                        <a href="javascript:;" class="bt_del"><img src="../images/bl_del.png" alt="삭제"></a>
+                                                                    </li>
+                                                                </ul>
+                                                                <!-- <label class="ckb" for="route01"><input type="checkbox" id="route01"><span class="checkmark"></span></label> -->
+                                                                <input type="text" class="route_name" placeholder="노선명">
+                                                                <input type="text" class="route_time" placeholder="00:00">
+                                                                <input type="text" class="route_memo" placeholder="메모">
+                                                            </dd>
+                                                        </dl>
+                                                    </td>
+                                                </tr>
+                                            </table>
+
+
+                                            <ul class="pop_btn_zone">
+                                                <li class="right">
+                                                    <a href="javascript:;" class="btn_w">취소</a>
+                                                    <a href="javascript:;" class="btn_b">수정</a>
+                                                </li>
+                                            </ul>
+
+                                        </div>
+                                        <!--// pop_inner -->
+                                    </div>
+                                    <!--// layer_popup -->
+                                </div>
+                                <!--// 코스 수정 레이어 팝업 -->
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label class="ckb" for="check2_3"><input type="checkbox" id="check2_3"><span class="checkmark"></span></label></td>
+                            <td>A코스 10시</td>
+                            <td>월,수,금</td>
+                            <td class="tl">학원 - 을지로사거리 - 뱅뱅사거리 - 논현초등학교 - 레미안정문 - 레미안후문 - 자이정문 - 자이후문 - 푸르지오정문 - 푸르지오후문 - 학원</td>
+                            <td>
+                                <a href="javascript:;" class="bt btn_modal">수정</a>
+
+                                <!-- 코스 수정 레이어 팝업 -->
+                                <div class="pop_modal">
+                                    <!-- layer_popup -->
+                                    <div class="layer_popup w600">
+
+                                        <h4>코스 수정</h4>
+                                        <span class="pop_close">×</span>
+
+                                        <!-- pop_inner -->
+                                        <div class="pop_inner">
+
+
+
+
+
+                                            <h5>등원 버스</h5>
+
+                                            <table class="table-row">
+                                                <colgroup>
+                                                    <col width="30%">
+                                                    <col>
+                                                </colgroup>
+                                                <tr>
+                                                    <th>코스명</th>
+                                                    <td><input type="text"></td>
+                                                </tr>
+                                                <tr>
+                                                    <th>운행요일</th>
+                                                    <td>
+                                                        <label class="ckb2" for="day_mon"><input type="checkbox" id="day_mon"><span class="checkmark">월</span></label>
+                                                        <label class="ckb2" for="day_tue"><input type="checkbox" id="day_tue"><span class="checkmark">화</span></label>
+                                                        <label class="ckb2" for="day_wed"><input type="checkbox" id="day_wed"><span class="checkmark">수</span></label>
+                                                        <label class="ckb2" for="day_thu"><input type="checkbox" id="day_thu"><span class="checkmark">목</span></label>
+                                                        <label class="ckb2" for="day_fri"><input type="checkbox" id="day_fri"><span class="checkmark">금</span></label>
+                                                        <label class="ckb2" for="day_sat"><input type="checkbox" id="day_sat"><span class="checkmark">토</span></label>
+                                                        <label class="ckb2" for="day_sun"><input type="checkbox" id="day_sun"><span class="checkmark">일</span></label>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>노선</th>
+                                                    <td>
+                                                        <dl class="route busList">
+                                                            <dt>
+                                                                <ul class="info">
+                                                                    <li class="right">
+                                                                        <a href="javascript:;" class="btnAddBus">+ 운행노선추가</a>
+                                                                    </li>
+                                                                </ul>
+                                                            </dt>
+                                                            <dd class="cloneList">
+                                                                <ul class="info">
+                                                                    <li class="left">
+                                                                        <a href="javascript:;" onclick="moveUp(this);"><img src="../images/move_up.png" alt="위로 이동"></a>
+                                                                        <a href="javascript:;" onclick="moveDown(this);"><img src="../images/move_down.png" alt="아래로 이동"></a>
+                                                                    </li>
+                                                                    <li class="right">
+                                                                        <a href="javascript:;" class="bt_del"><img src="../images/bl_del.png" alt="삭제"></a>
+                                                                    </li>
+                                                                </ul>
+                                                                <!-- <label class="ckb" for="route01"><input type="checkbox" id="route01"><span class="checkmark"></span></label> -->
+                                                                <input type="text" class="route_name" placeholder="노선명">
+                                                                <input type="text" class="route_time" placeholder="00:00">
+                                                                <input type="text" class="route_memo" placeholder="메모">
+                                                            </dd>
+                                                        </dl>
+                                                    </td>
+                                                </tr>
+                                            </table>
+
+
+
+                                            <ul class="pop_btn_zone">
+                                                <li class="right">
+                                                    <a href="javascript:;" class="btn_w">취소</a>
+                                                    <a href="javascript:;" class="btn_b">수정</a>
+                                                </li>
+                                            </ul>
+
+                                        </div>
+                                        <!--// pop_inner -->
+                                    </div>
+                                    <!--// layer_popup -->
+                                </div>
+                                <!--// 코스 수정 레이어 팝업 -->
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label class="ckb" for="check2_4"><input type="checkbox" id="check2_4"><span class="checkmark"></span></label></td>
+                            <td>A코스 10시</td>
+                            <td>월,수,금</td>
+                            <td class="tl">학원 - 을지로사거리 - 뱅뱅사거리 - 논현초등학교 - 레미안정문 - 레미안후문 - 자이정문 - 자이후문 - 푸르지오정문 - 푸르지오후문 - 학원</td>
+                            <td>
+                                <a href="javascript:;" class="bt btn_modal">수정</a>
+
+                                <!-- 코스 수정 레이어 팝업 -->
+                                <div class="pop_modal">
+                                    <!-- layer_popup -->
+                                    <div class="layer_popup w600">
+
+                                        <h4>코스 수정</h4>
+                                        <span class="pop_close">×</span>
+
+                                        <!-- pop_inner -->
+                                        <div class="pop_inner">
+
+
+
+                                            <h5>하원 버스</h5>
+
+                                            <table class="table-row">
+                                                <colgroup>
+                                                    <col width="30%">
+                                                    <col>
+                                                </colgroup>
+                                                <tr>
+                                                    <th>코스명</th>
+                                                    <td><input type="text"></td>
+                                                </tr>
+                                                <tr>
+                                                    <th>운행요일</th>
+                                                    <td>
+                                                        <label class="ckb2" for="day_mon"><input type="checkbox" id="day_mon"><span class="checkmark">월</span></label>
+                                                        <label class="ckb2" for="day_tue"><input type="checkbox" id="day_tue"><span class="checkmark">화</span></label>
+                                                        <label class="ckb2" for="day_wed"><input type="checkbox" id="day_wed"><span class="checkmark">수</span></label>
+                                                        <label class="ckb2" for="day_thu"><input type="checkbox" id="day_thu"><span class="checkmark">목</span></label>
+                                                        <label class="ckb2" for="day_fri"><input type="checkbox" id="day_fri"><span class="checkmark">금</span></label>
+                                                        <label class="ckb2" for="day_sat"><input type="checkbox" id="day_sat"><span class="checkmark">토</span></label>
+                                                        <label class="ckb2" for="day_sun"><input type="checkbox" id="day_sun"><span class="checkmark">일</span></label>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>노선</th>
+                                                    <td>
+                                                        <dl class="route busList">
+                                                            <dt>
+                                                                <ul class="info">
+                                                                    <li class="right">
+                                                                        <a href="javascript:;" class="btnAddBus">+ 운행노선추가</a>
+                                                                    </li>
+                                                                </ul>
+                                                            </dt>
+                                                            <dd class="cloneList">
+                                                                <ul class="info">
+                                                                    <li class="left">
+                                                                        <a href="javascript:;" onclick="moveUp(this);"><img src="../images/move_up.png" alt="위로 이동"></a>
+                                                                        <a href="javascript:;" onclick="moveDown(this);"><img src="../images/move_down.png" alt="아래로 이동"></a>
+                                                                    </li>
+                                                                    <li class="right">
+                                                                        <a href="javascript:;" class="bt_del"><img src="../images/bl_del.png" alt="삭제"></a>
+                                                                    </li>
+                                                                </ul>
+                                                                <!-- <label class="ckb" for="route01"><input type="checkbox" id="route01"><span class="checkmark"></span></label> -->
+                                                                <input type="text" class="route_name" placeholder="노선명">
+                                                                <input type="text" class="route_time" placeholder="00:00">
+                                                                <input type="text" class="route_memo" placeholder="메모">
+                                                            </dd>
+                                                        </dl>
+                                                    </td>
+                                                </tr>
+                                            </table>
+
+
+                                            <ul class="pop_btn_zone">
+                                                <li class="right">
+                                                    <a href="javascript:;" class="btn_w">취소</a>
+                                                    <a href="javascript:;" class="btn_b">수정</a>
+                                                </li>
+                                            </ul>
+
+                                        </div>
+                                        <!--// pop_inner -->
+                                    </div>
+                                    <!--// layer_popup -->
+                                </div>
+                                <!--// 코스 수정 레이어 팝업 -->
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label class="ckb" for="check2_5"><input type="checkbox" id="check2_5"><span class="checkmark"></span></label></td>
+                            <td>A코스 10시</td>
+                            <td>월,수,금</td>
+                            <td class="tl">학원 - 을지로사거리 - 뱅뱅사거리 - 논현초등학교 - 레미안정문 - 레미안후문 - 자이정문 - 자이후문 - 푸르지오정문 - 푸르지오후문 - 학원</td>
+                            <td>
+                                <a href="javascript:;" class="bt btn_modal">수정</a>
+
+                                <!-- 코스 수정 레이어 팝업 -->
+                                <div class="pop_modal">
+                                    <!-- layer_popup -->
+                                    <div class="layer_popup w600">
+
+                                        <h4>코스 수정</h4>
+                                        <span class="pop_close">×</span>
+
+                                        <!-- pop_inner -->
+                                        <div class="pop_inner">
+
+
+
+
+                                            <h5>등원 버스</h5>
+
+                                            <table class="table-row">
+                                                <colgroup>
+                                                    <col width="30%">
+                                                    <col>
+                                                </colgroup>
+                                                <tr>
+                                                    <th>코스명</th>
+                                                    <td><input type="text"></td>
+                                                </tr>
+                                                <tr>
+                                                    <th>운행요일</th>
+                                                    <td>
+                                                        <label class="ckb2" for="day_mon"><input type="checkbox" id="day_mon"><span class="checkmark">월</span></label>
+                                                        <label class="ckb2" for="day_tue"><input type="checkbox" id="day_tue"><span class="checkmark">화</span></label>
+                                                        <label class="ckb2" for="day_wed"><input type="checkbox" id="day_wed"><span class="checkmark">수</span></label>
+                                                        <label class="ckb2" for="day_thu"><input type="checkbox" id="day_thu"><span class="checkmark">목</span></label>
+                                                        <label class="ckb2" for="day_fri"><input type="checkbox" id="day_fri"><span class="checkmark">금</span></label>
+                                                        <label class="ckb2" for="day_sat"><input type="checkbox" id="day_sat"><span class="checkmark">토</span></label>
+                                                        <label class="ckb2" for="day_sun"><input type="checkbox" id="day_sun"><span class="checkmark">일</span></label>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>노선</th>
+                                                    <td>
+                                                        <dl class="route busList">
+                                                            <dt>
+                                                                <ul class="info">
+                                                                    <li class="right">
+                                                                        <a href="javascript:;" class="btnAddBus">+ 운행노선추가</a>
+                                                                    </li>
+                                                                </ul>
+                                                            </dt>
+                                                            <dd class="cloneList">
+                                                                <ul class="info">
+                                                                    <li class="left">
+                                                                        <a href="javascript:;" onclick="moveUp(this);"><img src="../images/move_up.png" alt="위로 이동"></a>
+                                                                        <a href="javascript:;" onclick="moveDown(this);"><img src="../images/move_down.png" alt="아래로 이동"></a>
+                                                                    </li>
+                                                                    <li class="right">
+                                                                        <a href="javascript:;" class="bt_del"><img src="../images/bl_del.png" alt="삭제"></a>
+                                                                    </li>
+                                                                </ul>
+                                                                <!-- <label class="ckb" for="route01"><input type="checkbox" id="route01"><span class="checkmark"></span></label> -->
+                                                                <input type="text" class="route_name" placeholder="노선명">
+                                                                <input type="text" class="route_time" placeholder="00:00">
+                                                                <input type="text" class="route_memo" placeholder="메모">
+                                                            </dd>
+                                                        </dl>
+                                                    </td>
+                                                </tr>
+                                            </table>
+
+                                            <ul class="info">
+                                                <li class="left">
+                                                    <label class="ckb" for="same"><input type="checkbox" id="same"><span class="checkmark">등원 동선과 동일하게 복사</span></label>
+                                                </li>
+                                            </ul>
+
+
+
+
+                                            <ul class="pop_btn_zone">
+                                                <li class="right">
+                                                    <a href="javascript:;" class="btn_w">취소</a>
+                                                    <a href="javascript:;" class="btn_b">수정</a>
+                                                </li>
+                                            </ul>
+
+                                        </div>
+                                        <!--// pop_inner -->
+                                    </div>
+                                    <!--// layer_popup -->
+                                </div>
+                                <!--// 코스 수정 레이어 팝업 -->
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label class="ckb" for="check2_6"><input type="checkbox" id="check2_6"><span class="checkmark"></span></label></td>
+                            <td>A코스 10시</td>
+                            <td>월,수,금</td>
+                            <td class="tl">학원 - 을지로사거리 - 뱅뱅사거리 - 논현초등학교 - 레미안정문 - 레미안후문 - 자이정문 - 자이후문 - 푸르지오정문 - 푸르지오후문 - 학원</td>
+                            <td>
+                                <a href="javascript:;" class="bt btn_modal">수정</a>
+
+                                <!-- 코스 수정 레이어 팝업 -->
+                                <div class="pop_modal">
+                                    <!-- layer_popup -->
+                                    <div class="layer_popup w600">
+
+                                        <h4>코스 수정</h4>
+                                        <span class="pop_close">×</span>
+
+                                        <!-- pop_inner -->
+                                        <div class="pop_inner">
+
+
+                                            <h5>하원 버스</h5>
+
+                                            <table class="table-row">
+                                                <colgroup>
+                                                    <col width="30%">
+                                                    <col>
+                                                </colgroup>
+                                                <tr>
+                                                    <th>코스명</th>
+                                                    <td><input type="text"></td>
+                                                </tr>
+                                                <tr>
+                                                    <th>운행요일</th>
+                                                    <td>
+                                                        <label class="ckb2" for="day_mon"><input type="checkbox" id="day_mon"><span class="checkmark">월</span></label>
+                                                        <label class="ckb2" for="day_tue"><input type="checkbox" id="day_tue"><span class="checkmark">화</span></label>
+                                                        <label class="ckb2" for="day_wed"><input type="checkbox" id="day_wed"><span class="checkmark">수</span></label>
+                                                        <label class="ckb2" for="day_thu"><input type="checkbox" id="day_thu"><span class="checkmark">목</span></label>
+                                                        <label class="ckb2" for="day_fri"><input type="checkbox" id="day_fri"><span class="checkmark">금</span></label>
+                                                        <label class="ckb2" for="day_sat"><input type="checkbox" id="day_sat"><span class="checkmark">토</span></label>
+                                                        <label class="ckb2" for="day_sun"><input type="checkbox" id="day_sun"><span class="checkmark">일</span></label>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>노선</th>
+                                                    <td>
+                                                        <dl class="route busList">
+                                                            <dt>
+                                                                <ul class="info">
+                                                                    <li class="right">
+                                                                        <a href="javascript:;" class="btnAddBus">+ 운행노선추가</a>
+                                                                    </li>
+                                                                </ul>
+                                                            </dt>
+                                                            <dd class="cloneList">
+                                                                <ul class="info">
+                                                                    <li class="left">
+                                                                        <a href="javascript:;" onclick="moveUp(this);"><img src="../images/move_up.png" alt="위로 이동"></a>
+                                                                        <a href="javascript:;" onclick="moveDown(this);"><img src="../images/move_down.png" alt="아래로 이동"></a>
+                                                                    </li>
+                                                                    <li class="right">
+                                                                        <a href="javascript:;" class="bt_del"><img src="../images/bl_del.png" alt="삭제"></a>
+                                                                    </li>
+                                                                </ul>
+                                                                <!-- <label class="ckb" for="route01"><input type="checkbox" id="route01"><span class="checkmark"></span></label> -->
+                                                                <input type="text" class="route_name" placeholder="노선명">
+                                                                <input type="text" class="route_time" placeholder="00:00">
+                                                                <input type="text" class="route_memo" placeholder="메모">
+                                                            </dd>
+                                                        </dl>
+                                                    </td>
+                                                </tr>
+                                            </table>
+
+
+                                            <ul class="pop_btn_zone">
+                                                <li class="right">
+                                                    <a href="javascript:;" class="btn_w">취소</a>
+                                                    <a href="javascript:;" class="btn_b">수정</a>
+                                                </li>
+                                            </ul>
+
+                                        </div>
+                                        <!--// pop_inner -->
+                                    </div>
+                                    <!--// layer_popup -->
+                                </div>
+                                <!--// 코스 수정 레이어 팝업 -->
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label class="ckb" for="check2_7"><input type="checkbox" id="check2_7"><span class="checkmark"></span></label></td>
+                            <td>A코스 10시</td>
+                            <td>월,수,금</td>
+                            <td class="tl">학원 - 을지로사거리 - 뱅뱅사거리 - 논현초등학교 - 레미안정문 - 레미안후문 - 자이정문 - 자이후문 - 푸르지오정문 - 푸르지오후문 - 학원</td>
+                            <td>
+                                <a href="javascript:;" class="bt btn_modal">수정</a>
+
+                                <!-- 코스 수정 레이어 팝업 -->
+                                <div class="pop_modal">
+                                    <!-- layer_popup -->
+                                    <div class="layer_popup w600">
+
+                                        <h4>코스 수정</h4>
+                                        <span class="pop_close">×</span>
+
+                                        <!-- pop_inner -->
+                                        <div class="pop_inner">
+
+
+                                            <dl class="bus_regist">
+                                                <dt>등ㆍ하원 등록</dt>
+                                                <dd>
+                                                    <label class="ckb" for="bus_in"><input type="checkbox" id="bus_in"><span class="checkmark">등원</span></label>
+                                                    <label class="ckb" for="bus_out"><input type="checkbox" id="bus_out"><span class="checkmark">하원</span></label>
+                                                </dd>
+                                            </dl>
+
+
+
+                                            <h5>등원 버스</h5>
+
+                                            <table class="table-row">
+                                                <colgroup>
+                                                    <col width="30%">
+                                                    <col>
+                                                </colgroup>
+                                                <tr>
+                                                    <th>코스명</th>
+                                                    <td><input type="text"></td>
+                                                </tr>
+                                                <tr>
+                                                    <th>운행요일</th>
+                                                    <td>
+                                                        <label class="ckb2" for="day_mon"><input type="checkbox" id="day_mon"><span class="checkmark">월</span></label>
+                                                        <label class="ckb2" for="day_tue"><input type="checkbox" id="day_tue"><span class="checkmark">화</span></label>
+                                                        <label class="ckb2" for="day_wed"><input type="checkbox" id="day_wed"><span class="checkmark">수</span></label>
+                                                        <label class="ckb2" for="day_thu"><input type="checkbox" id="day_thu"><span class="checkmark">목</span></label>
+                                                        <label class="ckb2" for="day_fri"><input type="checkbox" id="day_fri"><span class="checkmark">금</span></label>
+                                                        <label class="ckb2" for="day_sat"><input type="checkbox" id="day_sat"><span class="checkmark">토</span></label>
+                                                        <label class="ckb2" for="day_sun"><input type="checkbox" id="day_sun"><span class="checkmark">일</span></label>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>노선</th>
+                                                    <td>
+                                                        <dl class="route busList">
+                                                            <dt>
+                                                                <ul class="info">
+                                                                    <li class="right">
+                                                                        <a href="javascript:;" class="btnAddBus">+ 운행노선추가</a>
+                                                                    </li>
+                                                                </ul>
+                                                            </dt>
+                                                            <dd class="cloneList">
+                                                                <ul class="info">
+                                                                    <li class="left">
+                                                                        <a href="javascript:;" onclick="moveUp(this);"><img src="../images/move_up.png" alt="위로 이동"></a>
+                                                                        <a href="javascript:;" onclick="moveDown(this);"><img src="../images/move_down.png" alt="아래로 이동"></a>
+                                                                    </li>
+                                                                    <li class="right">
+                                                                        <a href="javascript:;" class="bt_del"><img src="../images/bl_del.png" alt="삭제"></a>
+                                                                    </li>
+                                                                </ul>
+                                                                <!-- <label class="ckb" for="route01"><input type="checkbox" id="route01"><span class="checkmark"></span></label> -->
+                                                                <input type="text" class="route_name" placeholder="노선명">
+                                                                <input type="text" class="route_time" placeholder="00:00">
+                                                                <input type="text" class="route_memo" placeholder="메모">
+                                                            </dd>
+                                                        </dl>
+                                                    </td>
+                                                </tr>
+                                            </table>
+
+
+
+
+                                            <ul class="pop_btn_zone">
+                                                <li class="right">
+                                                    <a href="javascript:;" class="btn_w">취소</a>
+                                                    <a href="javascript:;" class="btn_b">수정</a>
+                                                </li>
+                                            </ul>
+
+                                        </div>
+                                        <!--// pop_inner -->
+                                    </div>
+                                    <!--// layer_popup -->
+                                </div>
+                                <!--// 코스 수정 레이어 팝업 -->
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label class="ckb" for="check2_8"><input type="checkbox" id="check2_8"><span class="checkmark"></span></label></td>
+                            <td>A코스 10시</td>
+                            <td>월,수,금</td>
+                            <td class="tl">학원 - 을지로사거리 - 뱅뱅사거리 - 논현초등학교 - 레미안정문 - 레미안후문 - 자이정문 - 자이후문 - 푸르지오정문 - 푸르지오후문 - 학원</td>
+                            <td>
+                                <a href="javascript:;" class="bt btn_modal">수정</a>
+
+                                <!-- 코스 수정 레이어 팝업 -->
+                                <div class="pop_modal">
+                                    <!-- layer_popup -->
+                                    <div class="layer_popup w600">
+
+                                        <h4>코스 수정</h4>
+                                        <span class="pop_close">×</span>
+
+                                        <!-- pop_inner -->
+                                        <div class="pop_inner">
+
+
+                                            <dl class="bus_regist">
+                                                <dt>등ㆍ하원 등록</dt>
+                                                <dd>
+                                                    <label class="ckb" for="bus_in"><input type="checkbox" id="bus_in"><span class="checkmark">등원</span></label>
+                                                    <label class="ckb" for="bus_out"><input type="checkbox" id="bus_out"><span class="checkmark">하원</span></label>
+                                                </dd>
+                                            </dl>
+
+
+
+                                            <h5>등원 버스</h5>
+
+                                            <table class="table-row">
+                                                <colgroup>
+                                                    <col width="30%">
+                                                    <col>
+                                                </colgroup>
+                                                <tr>
+                                                    <th>코스명</th>
+                                                    <td><input type="text"></td>
+                                                </tr>
+                                                <tr>
+                                                    <th>운행요일</th>
+                                                    <td>
+                                                        <label class="ckb2" for="day_mon"><input type="checkbox" id="day_mon"><span class="checkmark">월</span></label>
+                                                        <label class="ckb2" for="day_tue"><input type="checkbox" id="day_tue"><span class="checkmark">화</span></label>
+                                                        <label class="ckb2" for="day_wed"><input type="checkbox" id="day_wed"><span class="checkmark">수</span></label>
+                                                        <label class="ckb2" for="day_thu"><input type="checkbox" id="day_thu"><span class="checkmark">목</span></label>
+                                                        <label class="ckb2" for="day_fri"><input type="checkbox" id="day_fri"><span class="checkmark">금</span></label>
+                                                        <label class="ckb2" for="day_sat"><input type="checkbox" id="day_sat"><span class="checkmark">토</span></label>
+                                                        <label class="ckb2" for="day_sun"><input type="checkbox" id="day_sun"><span class="checkmark">일</span></label>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>노선</th>
+                                                    <td>
+                                                        <dl class="route busList">
+                                                            <dt>
+                                                                <ul class="info">
+                                                                    <li class="right">
+                                                                        <a href="javascript:;" class="btnAddBus">+ 운행노선추가</a>
+                                                                    </li>
+                                                                </ul>
+                                                            </dt>
+                                                            <dd class="cloneList">
+                                                                <ul class="info">
+                                                                    <li class="left">
+                                                                        <a href="javascript:;" onclick="moveUp(this);"><img src="../images/move_up.png" alt="위로 이동"></a>
+                                                                        <a href="javascript:;" onclick="moveDown(this);"><img src="../images/move_down.png" alt="아래로 이동"></a>
+                                                                    </li>
+                                                                    <li class="right">
+                                                                        <a href="javascript:;" class="bt_del"><img src="../images/bl_del.png" alt="삭제"></a>
+                                                                    </li>
+                                                                </ul>
+                                                                <!-- <label class="ckb" for="route01"><input type="checkbox" id="route01"><span class="checkmark"></span></label> -->
+                                                                <input type="text" class="route_name" placeholder="노선명">
+                                                                <input type="text" class="route_time" placeholder="00:00">
+                                                                <input type="text" class="route_memo" placeholder="메모">
+                                                            </dd>
+                                                        </dl>
+                                                    </td>
+                                                </tr>
+                                            </table>
+
+
+                                            <ul class="pop_btn_zone">
+                                                <li class="right">
+                                                    <a href="javascript:;" class="btn_w">취소</a>
+                                                    <a href="javascript:;" class="btn_b">수정</a>
+                                                </li>
+                                            </ul>
+
+                                        </div>
+                                        <!--// pop_inner -->
+                                    </div>
+                                    <!--// layer_popup -->
+                                </div>
+                                <!--// 코스 수정 레이어 팝업 -->
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label class="ckb" for="check2_9"><input type="checkbox" id="check2_9"><span class="checkmark"></span></label></td>
+                            <td>A코스 10시</td>
+                            <td>월,수,금</td>
+                            <td class="tl">학원 - 을지로사거리 - 뱅뱅사거리 - 논현초등학교 - 레미안정문 - 레미안후문 - 자이정문 - 자이후문 - 푸르지오정문 - 푸르지오후문 - 학원</td>
+                            <td>
+                                <a href="javascript:;" class="bt btn_modal">수정</a>
+
+                                <!-- 코스 수정 레이어 팝업 -->
+                                <div class="pop_modal">
+                                    <!-- layer_popup -->
+                                    <div class="layer_popup w600">
+
+                                        <h4>코스 수정</h4>
+                                        <span class="pop_close">×</span>
+
+                                        <!-- pop_inner -->
+                                        <div class="pop_inner">
+
+
+
+
+                                            <h5>하원 버스</h5>
+
+                                            <table class="table-row">
+                                                <colgroup>
+                                                    <col width="30%">
+                                                    <col>
+                                                </colgroup>
+                                                <tr>
+                                                    <th>코스명</th>
+                                                    <td><input type="text"></td>
+                                                </tr>
+                                                <tr>
+                                                    <th>운행요일</th>
+                                                    <td>
+                                                        <label class="ckb2" for="day_mon"><input type="checkbox" id="day_mon"><span class="checkmark">월</span></label>
+                                                        <label class="ckb2" for="day_tue"><input type="checkbox" id="day_tue"><span class="checkmark">화</span></label>
+                                                        <label class="ckb2" for="day_wed"><input type="checkbox" id="day_wed"><span class="checkmark">수</span></label>
+                                                        <label class="ckb2" for="day_thu"><input type="checkbox" id="day_thu"><span class="checkmark">목</span></label>
+                                                        <label class="ckb2" for="day_fri"><input type="checkbox" id="day_fri"><span class="checkmark">금</span></label>
+                                                        <label class="ckb2" for="day_sat"><input type="checkbox" id="day_sat"><span class="checkmark">토</span></label>
+                                                        <label class="ckb2" for="day_sun"><input type="checkbox" id="day_sun"><span class="checkmark">일</span></label>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>노선</th>
+                                                    <td>
+                                                        <dl class="route busList">
+                                                            <dt>
+                                                                <ul class="info">
+                                                                    <li class="right">
+                                                                        <a href="javascript:;" class="btnAddBus">+ 운행노선추가</a>
+                                                                    </li>
+                                                                </ul>
+                                                            </dt>
+                                                            <dd class="cloneList">
+                                                                <ul class="info">
+                                                                    <li class="left">
+                                                                        <a href="javascript:;" onclick="moveUp(this);"><img src="../images/move_up.png" alt="위로 이동"></a>
+                                                                        <a href="javascript:;" onclick="moveDown(this);"><img src="../images/move_down.png" alt="아래로 이동"></a>
+                                                                    </li>
+                                                                    <li class="right">
+                                                                        <a href="javascript:;" class="bt_del"><img src="../images/bl_del.png" alt="삭제"></a>
+                                                                    </li>
+                                                                </ul>
+                                                                <!-- <label class="ckb" for="route01"><input type="checkbox" id="route01"><span class="checkmark"></span></label> -->
+                                                                <input type="text" class="route_name" placeholder="노선명">
+                                                                <input type="text" class="route_time" placeholder="00:00">
+                                                                <input type="text" class="route_memo" placeholder="메모">
+                                                            </dd>
+                                                        </dl>
+                                                    </td>
+                                                </tr>
+                                            </table>
+
+
+                                            <ul class="pop_btn_zone">
+                                                <li class="right">
+                                                    <a href="javascript:;" class="btn_w">취소</a>
+                                                    <a href="javascript:;" class="btn_b">수정</a>
+                                                </li>
+                                            </ul>
+
+                                        </div>
+                                        <!--// pop_inner -->
+                                    </div>
+                                    <!--// layer_popup -->
+                                </div>
+                                <!--// 코스 수정 레이어 팝업 -->
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label class="ckb" for="check2_10"><input type="checkbox" id="check2_10"><span class="checkmark"></span></label></td>
+                            <td>A코스 10시</td>
+                            <td>월,수,금</td>
+                            <td class="tl">학원 - 을지로사거리 - 뱅뱅사거리 - 논현초등학교 - 레미안정문 - 레미안후문 - 자이정문 - 자이후문 - 푸르지오정문 - 푸르지오후문 - 학원</td>
+                            <td>
+                                <a href="javascript:;" class="bt btn_modal">수정</a>
+
+                                <!-- 코스 수정 레이어 팝업 -->
+                                <div class="pop_modal">
+                                    <!-- layer_popup -->
+                                    <div class="layer_popup w600">
+
+                                        <h4>코스 수정</h4>
+                                        <span class="pop_close">×</span>
+
+                                        <!-- pop_inner -->
+                                        <div class="pop_inner">
+
+
+                                            <dl class="bus_regist">
+                                                <dt>등ㆍ하원 등록</dt>
+                                                <dd>
+                                                    <label class="ckb" for="bus_in"><input type="checkbox" id="bus_in"><span class="checkmark">등원</span></label>
+                                                    <label class="ckb" for="bus_out"><input type="checkbox" id="bus_out"><span class="checkmark">하원</span></label>
+                                                </dd>
+                                            </dl>
+
+
+
+                                            <h5>등원 버스</h5>
+
+                                            <table class="table-row">
+                                                <colgroup>
+                                                    <col width="30%">
+                                                    <col>
+                                                </colgroup>
+                                                <tr>
+                                                    <th>코스명</th>
+                                                    <td><input type="text"></td>
+                                                </tr>
+                                                <tr>
+                                                    <th>운행요일</th>
+                                                    <td>
+                                                        <label class="ckb2" for="day_mon"><input type="checkbox" id="day_mon"><span class="checkmark">월</span></label>
+                                                        <label class="ckb2" for="day_tue"><input type="checkbox" id="day_tue"><span class="checkmark">화</span></label>
+                                                        <label class="ckb2" for="day_wed"><input type="checkbox" id="day_wed"><span class="checkmark">수</span></label>
+                                                        <label class="ckb2" for="day_thu"><input type="checkbox" id="day_thu"><span class="checkmark">목</span></label>
+                                                        <label class="ckb2" for="day_fri"><input type="checkbox" id="day_fri"><span class="checkmark">금</span></label>
+                                                        <label class="ckb2" for="day_sat"><input type="checkbox" id="day_sat"><span class="checkmark">토</span></label>
+                                                        <label class="ckb2" for="day_sun"><input type="checkbox" id="day_sun"><span class="checkmark">일</span></label>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>노선</th>
+                                                    <td>
+                                                        <dl class="route busList">
+                                                            <dt>
+                                                                <ul class="info">
+                                                                    <li class="right">
+                                                                        <a href="javascript:;" class="btnAddBus">+ 운행노선추가</a>
+                                                                    </li>
+                                                                </ul>
+                                                            </dt>
+                                                            <dd class="cloneList">
+                                                                <ul class="info">
+                                                                    <li class="left">
+                                                                        <a href="javascript:;" onclick="moveUp(this);"><img src="../images/move_up.png" alt="위로 이동"></a>
+                                                                        <a href="javascript:;" onclick="moveDown(this);"><img src="../images/move_down.png" alt="아래로 이동"></a>
+                                                                    </li>
+                                                                    <li class="right">
+                                                                        <a href="javascript:;" class="bt_del"><img src="../images/bl_del.png" alt="삭제"></a>
+                                                                    </li>
+                                                                </ul>
+                                                                <!-- <label class="ckb" for="route01"><input type="checkbox" id="route01"><span class="checkmark"></span></label> -->
+                                                                <input type="text" class="route_name" placeholder="노선명">
+                                                                <input type="text" class="route_time" placeholder="00:00">
+                                                                <input type="text" class="route_memo" placeholder="메모">
+                                                            </dd>
+                                                        </dl>
+                                                    </td>
+                                                </tr>
+                                            </table>
+
+
+
+                                            <ul class="pop_btn_zone">
+                                                <li class="right">
+                                                    <a href="javascript:;" class="btn_w">취소</a>
+                                                    <a href="javascript:;" class="btn_b">수정</a>
+                                                </li>
+                                            </ul>
+
+                                        </div>
+                                        <!--// pop_inner -->
+                                    </div>
+                                    <!--// layer_popup -->
+                                </div>
+                                <!--// 코스 수정 레이어 팝업 -->
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                </form>
+                <ul class="info mt10">
+                    <li class="left"><a href="javascript:;" class="btn_w">삭제</a></li>
+                </ul>
+
+
+
+                <br /><br />
+
+                <h3>셔틀 관리</h3>
+
+                    <!-- 셔틀 매칭 -->
+                    <div class="matching">
+                        <select class="slt" name="">
+                            <option value="">차량명</option>
+                            <option value="">123 허 1234</option>
+                            <option value="">123 허 1235</option>
+                        </select>
+
+                        <select class="slt" name="">
+                            <option value="">등원 코스 선택</option>
+                            <option value="">선택안함</option>
+                            <option value="">A코스 10시</option>
+                            <option value="">A코스 11시</option>
+                        </select>
+
+                        <select class="slt" name="">
+                            <option value="">하원 코스 선택</option>
+                            <option value="">선택안함</option>
+                            <option value="">A코스 10시</option>
+                            <option value="">A코스 11시</option>
+                        </select>
+
+                        <a href="javascript:;" class="btn_mat">셔틀등록</a>
+                    </div>
+
+                    <!--// 셔틀 매칭 -->
+
+
+                    <form action="" class="table_scroll">
+                    <table class="table-col">
+                        <caption>셔틀 관리 테이블</caption>
+                        <colgroup>
+                            <col width="30">
+                            <col width="50">
+                            <col>
+                            <col>
+                            <col>
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th><label class="ckb" for="all_check3"><input type="checkbox" id="all_check3"><span class="checkmark"></span></label></th>
+                                <th>No</th>
+                                <th>차량명</th>
+                                <th>등ㆍ하원</th>
+                                <th>코스명</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><label class="ckb" for="check3_1"><input type="checkbox" id="check3_1"><span class="checkmark"></span></label></td>
+                                <td>1</td>
+                                <td>오전반 1호차</td>
+                                <td>등원</td>
+                                <td>A코스 10시</td>
+                            </tr>
+                            <tr>
+                                <td><label class="ckb" for="check3_2"><input type="checkbox" id="check3_2"><span class="checkmark"></span></label></td>
+                                <td>1</td>
+                                <td>오전반 1호차</td>
+                                <td>등원</td>
+                                <td>A코스 11시</td>
+                            </tr>
+                            <tr>
+                                <td><label class="ckb" for="check3_3"><input type="checkbox" id="check3_3"><span class="checkmark"></span></label></td>
+                                <td>1</td>
+                                <td>오전반 1호차</td>
+                                <td>하원</td>
+                                <td>A코스 12시</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    </form>
+                    <ul class="info mt10">
+                        <li class="left"><a href="javascript:;" class="btn_w">삭제</a></li>
+                    </ul>
+
+
+
+
+
+
+
+
+                </div>
+                <!--// inner -->
+
+            </div>
+            <!--// contents -->
+
+        </div>
+        <!--// container -->
+
+    </div>
+    <!--// wrap -->
+
+
+</body>
+
+</html>

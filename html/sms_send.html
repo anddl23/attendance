@@ -1,0 +1,1188 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, minimum-scale=1.0, user-scalable=yes, target-densitydpi=medium-dpi">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../css/common.css">
+    <script type="text/javascript" src="../js/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="../js/jquery-ui.js"></script>
+    <script type="text/javascript" src="../js/common.js"></script>
+    <title>출결서비스</title>
+</head>
+
+<body>
+
+    <!-- wrap -->
+    <div class="wrap">
+
+        <!-- aside -->
+        <div class="aside">
+            <h1><img src="../images/logo.png" alt="K Tigers"></h1>
+
+            <ul class="gnb">
+                <li>
+                    <a href="#"><img src="../images/gnb_bl01.png" alt=""> 경영</a>
+                    <ul class="lnb">
+                        <li><a href="manage_receive.html">수납현황</a></li>
+                        <li><a href="manage_student.html">원생현황</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><img src="../images/gnb_bl02.png" alt=""> 출결</a>
+                    <ul class="lnb">
+                        <li><a href="attendance_state.html">출결현황</a></li>
+                        <li><a href="attendance_manage.html">출결관리</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><img src="../images/gnb_bl03.png" alt=""> 학생</a>
+                    <ul class="lnb">
+                        <li><a href="student_manage.html">원생관리</a></li>
+                        <li><a href="student_excel.html">엑셀등록</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><img src="../images/gnb_bl04.png" alt=""> 수업관리</a>
+                    <ul class="lnb">
+                        <li><a href="class_manage.html">수업관리</a></li>
+                        <li><a href="class_staff.html">강사(직원)관리</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><img src="../images/gnb_bl05.png" alt=""> 미디어</a>
+                    <ul class="lnb">
+                        <li><a href="media_list.html">공연영상</a></li>
+                        <li><a href="media_list.html">K팝 태권</a></li>
+                        <li><a href="media_list.html">방송활동</a></li>
+                        <li><a href="media_list.html">기술영상</a></li>
+                        <li><a href="media_list.html">활동영상</a></li>
+                        <li><a href="media_list.html">우리영상</a></li>
+                        <li><a href="media_list.html">우리사진</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><img src="../images/gnb_bl06.png" alt=""> 문자</a>
+                    <ul class="lnb">
+                        <li><a href="sms_send.html" class="on">문자발송</a></li>
+                        <li><a href="sms_history.html">발송내역</a></li>
+                        <li><a href="sms_setting.html">문자설정</a></li>
+                        <li><a href="sms_auto.html">자동발송설정</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><img src="../images/gnb_bl07.png" alt=""> 수납관리</a>
+                    <ul class="lnb">
+                        <li><a href="receive_state.html">수납현황</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><img src="../images/gnb_bl08.png" alt=""> 공지사항</a>
+                    <ul class="lnb">
+                        <li><a href="notice_list.html">공지사항</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><img src="../images/gnb_bl09.png" alt=""> 실시간 버스</a>
+                    <ul class="lnb">
+                        <li><a href="bus.html">셔틀버스</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><img src="../images/gnb_bl10.png" alt=""> 설정</a>
+                    <ul class="lnb">
+                        <li><a href="setting_info.html">학원정보</a></li>
+                        <li><a href="setting_receive.html">수납설정</a></li>
+                        <li><a href="setting_point.html">포인트 충전</a></li>
+                        <li><a href="setting_proof.html">선택항목설정</a></li>
+                        <li><a href="setting_option.html">제출증빙서류</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <!--// aside -->
+
+
+        <!-- container -->
+        <div class="container">
+
+            <!-- header -->
+            <div class="header">
+                <span class="name">관장님</span>
+                <a href="login.html" class="btn_logout">로그아웃</a>
+            </div>
+            <!--// header -->
+
+
+            <!-- contents -->
+            <div class="contents">
+
+                <h2>문자발송</h2>
+
+                <!-- inner -->
+                <div class="inner">
+
+
+                    <!-- point -->
+                    <div class="point">
+                        <dl>
+                            <dt>충전된 금액 : <strong>36,000원</strong></dt>
+                            <dd>[단문, 2,214건 / 장문 830건 / 알림톡 3,690건]</dd>
+                        </dl>
+
+                        <a href="javascript:;" class="bt btn_modal">충전하기</a>
+                        <!-- 충전하기 레이어 팝업 -->
+                        <div class="pop_modal">
+                            <!-- layer_popup -->
+                            <div class="layer_popup w600">
+                                <h4>충전하기</h4>
+                                <span class="pop_close">×</span>
+
+                                <!-- pop_inner -->
+                                <div class="pop_inner">
+
+                                    <table class="table-row">
+                                        <colgroup>
+                                            <col width="30%">
+                                            <col>
+                                        </colgroup>
+                                        <tr>
+                                            <th>충전금액<br>(부가세 포함)</th>
+                                            <td>
+                                                <label class="rdo" for="money_1"><input type="radio" name="money" id="money_1"><span class="checkmark">10,000원</span></label>
+                                                <label class="rdo" for="money_2"><input type="radio" name="money" id="money_2"><span class="checkmark">20,000원</span></label>
+                                                <label class="rdo" for="money_3"><input type="radio" name="money" id="money_3"><span class="checkmark">30,000원</span></label>
+                                                <label class="rdo" for="money_5"><input type="radio" name="money" id="money_5"><span class="checkmark">50,000원</span></label>
+                                                <label class="rdo" for="money_10"><input type="radio" name="money" id="money_10"><span class="checkmark">100,000원<em>(+5% 추가지급)</em></span></label>
+                                                <label class="rdo" for="money_50"><input type="radio" name="money" id="money_50"><span class="checkmark">500,000원<em>(+5% 추가지급)</em></span></label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>카드번호</th>
+                                            <td>
+                                                <input type="number" class="tc middle" size="4"><input type="number" class="tc middle" size="4"><input type="number" class="tc middle" size="4"><input type="number" class="tc middle" size="4">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>유효기간</th>
+                                            <td>
+                                                <input type="number" class="tr short" size="2">년 <input type="number" class="tr short" size="2"> 월 (예:24년 09월)
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>비밀번호</th>
+                                            <td>
+                                                <input type="number" class="tr short" size="2">** (앞 2자리)
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>법정생년월일<br />(6자리)</th>
+                                            <td>
+                                                <input type="number" size="6">
+                                                <label class="ckb" for="biz_card"><input type="checkbox" name="biz_card" id="biz_card"><span class="checkmark">법인카드</span></label>
+                                            </td>
+                                        </tr>
+                                    </table>
+
+                                    <div class="box">
+                                        <form action="">
+                                        <ul>
+                                            <li>
+                                                <label class="ckb" for="all_check"><input type="checkbox" name="agree" id="all_check"><span class="checkmark">결제대행서비스 약관에 모두 동의합니다.</span></label>
+                                                <ul>
+                                                    <li><label class="ckb" for="check1"><input type="checkbox" name="agree" id="check1"><span class="checkmark">전자금융거래 이용약관 <a href="javascript:;" onclick="window.open('https://ssl.daoupay.com/agreement/pay_etc/agree_etc1.html','','width=450, height=600, scrollbars=yes, menubar=no, titlebar=no, location=no, toobar=no')">(전문확인)</a></span></label></li>
+                                                    <li><label class="ckb" for="check2"><input type="checkbox" name="agree" id="check2"><span class="checkmark">개인정보수집 이용약관 <a href="javascript:;" onclick="window.open('https://ssl.daoupay.com/agreement/pay_etc/agree_etc3.html','','width=420, height=600, scrollbars=no,  menubar=no, titlebar=no, location=no, toobar=no')">(전문확인)</a></span></label></li>
+                                                    <li><label class="ckb" for="check3"><input type="checkbox" name="agree" id="check3"><span class="checkmark">개인정보제공 이용약관 <a href="javascript:;" onclick="window.open('https://ssl.daoupay.com/agreement/pay_etc/agree_etc4.html','','width=420, height=600, scrollbars=no,  menubar=no, titlebar=no, location=no, toobar=no')">(전문확인)</a></span></label></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                        </form>
+                                    </div>
+
+                                    <ul class="pop_btn_zone">
+                                        <li class="right">
+                                            <a href="javascript:;" class="btn_b">등록</a>
+                                            <a href="javascript:;" class="btn_w">취소</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!--// pop_inner -->
+                            </div>
+                            <!--// layer_popup -->
+                        </div>
+                        <!--// 충전하기 레이어 팝업 -->
+                    </div>
+                    <!--// point -->
+
+
+
+                    <!-- sms_tab -->
+                    <div id="sms_tab" class="sms_tab">
+                        <ul class="tab">
+                            <li>
+                                <a href="#sms_tab-1">일반 메세지</a>
+                            </li>
+                            <li>
+                                <a href="#sms_tab-2">수납 메세지</a>
+                            </li>
+                        </ul>
+                        <!-- 탭1 :  -->
+                        <div id="sms_tab-1">
+
+                            <ul class="info">
+                                <li class="left">
+                                    <select name="" id="" class="slt">
+                                        <option value="">원생전체</option>
+                                        <option value="">재원생</option>
+                                        <option value="">휴원생</option>
+                                        <option value="">퇴원생</option>
+                                        <option value="">미등록생</option>
+                                    </select>
+                                    <select name="" id="" class="slt">
+                                        <option value="">수업명</option>
+                                        <option value=""></option>
+                                        <option value=""></option>
+                                        <option value=""></option>
+                                        <option value=""></option>
+                                        <option value=""></option>
+                                        <option value=""></option>
+                                    </select>
+                                    <select name="" id="" class="slt">
+                                        <option value="">수납상태</option>
+                                        <option value="">완납</option>
+                                        <option value="">미납</option>
+                                    </select>
+                                    <input type="text" placeholder="검색어 입력">
+                                    <a href="#" class="bt_search">검색</a>
+                                </li>
+                            </ul>
+
+
+                            <!-- sms -->
+                            <div class="sms">
+                                <!-- sms_left -->
+                                <div class="sms_left">
+
+                                    <!-- table-col -->
+                                    <form action="">
+                                        <table class="table-col">
+                                            <caption>문자발송 테이블</caption>
+                                            <colgroup>
+                                                <col width="30">
+                                                <col>
+                                                <col width="90">
+                                                <col>
+                                                <col>
+                                                <col>
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th><label class="ckb" for="basic_all_check"><input type="checkbox" id="basic_all_check"><span class="checkmark"></span></label></th>
+                                                    <th>수업명</th>
+                                                    <th>이름</th>
+                                                    <th>핸드폰번호</th>
+                                                    <th>보호자1 번호</th>
+                                                    <th>보호자2 번호</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td><label class="ckb" for=""><input type="checkbox" id=""><span class="checkmark"></span></label></td>
+                                                    <td>초등부</td>
+                                                    <td>홍길동</td>
+                                                    <td>010-0000-1111</td>
+                                                    <td>010-0000-1234</td>
+                                                    <td>010-0000-7890</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><label class="ckb" for=""><input type="checkbox" id=""><span class="checkmark"></span></label></td>
+                                                    <td>초등부</td>
+                                                    <td>홍길동</td>
+                                                    <td>010-0000-1111</td>
+                                                    <td>010-0000-1234</td>
+                                                    <td>010-0000-7890</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><label class="ckb" for=""><input type="checkbox" id=""><span class="checkmark"></span></label></td>
+                                                    <td>초등부</td>
+                                                    <td>홍길동</td>
+                                                    <td>010-0000-1111</td>
+                                                    <td>010-0000-1234</td>
+                                                    <td>010-0000-7890</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><label class="ckb" for=""><input type="checkbox" id=""><span class="checkmark"></span></label></td>
+                                                    <td>초등부</td>
+                                                    <td>홍길동</td>
+                                                    <td>010-0000-1111</td>
+                                                    <td>010-0000-1234</td>
+                                                    <td>010-0000-7890</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><label class="ckb" for=""><input type="checkbox" id=""><span class="checkmark"></span></label></td>
+                                                    <td>초등부</td>
+                                                    <td>홍길동</td>
+                                                    <td>010-0000-1111</td>
+                                                    <td>010-0000-1234</td>
+                                                    <td>010-0000-7890</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><label class="ckb" for=""><input type="checkbox" id=""><span class="checkmark"></span></label></td>
+                                                    <td>초등부</td>
+                                                    <td>홍길동</td>
+                                                    <td>010-0000-1111</td>
+                                                    <td>010-0000-1234</td>
+                                                    <td>010-0000-7890</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><label class="ckb" for=""><input type="checkbox" id=""><span class="checkmark"></span></label></td>
+                                                    <td>초등부</td>
+                                                    <td>홍길동</td>
+                                                    <td>010-0000-1111</td>
+                                                    <td>010-0000-1234</td>
+                                                    <td>010-0000-7890</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><label class="ckb" for=""><input type="checkbox" id=""><span class="checkmark"></span></label></td>
+                                                    <td>초등부</td>
+                                                    <td>홍길동</td>
+                                                    <td>010-0000-1111</td>
+                                                    <td>010-0000-1234</td>
+                                                    <td>010-0000-7890</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><label class="ckb" for=""><input type="checkbox" id=""><span class="checkmark"></span></label></td>
+                                                    <td>초등부</td>
+                                                    <td>홍길동</td>
+                                                    <td>010-0000-1111</td>
+                                                    <td>010-0000-1234</td>
+                                                    <td>010-0000-7890</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><label class="ckb" for=""><input type="checkbox" id=""><span class="checkmark"></span></label></td>
+                                                    <td>초등부</td>
+                                                    <td>홍길동</td>
+                                                    <td>010-0000-1111</td>
+                                                    <td>010-0000-1234</td>
+                                                    <td>010-0000-7890</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        </form>
+                                    <!--// table-col -->
+
+                                    <!-- sms_option -->
+                                    <dl class="sms_option">
+                                        <dt><span>추가옵션</span></dt>
+                                        <dd>
+                                            <label class="ckb" for="basic_student"><input type="checkbox" id="basic_student"><span class="checkmark">학생</span></label>
+                                            <label class="ckb" for="basic_guardian1"><input type="checkbox" id="basic_guardian1"><span class="checkmark">보호자1</span></label>
+                                            <label class="ckb" for="basic_guardian2"><input type="checkbox" id="basic_guardian2"><span class="checkmark">보호자2</span></label>
+
+                                            <a href="javascript:;" class="bt_bk">수신자목록 추가 +</a>
+                                        </dd>
+                                    </dl>
+                                    <!--// sms_option -->
+
+
+                                    <!-- sms_list -->
+                                    <dl class="sms_list">
+                                        <dt>
+                                            <h5>수신자 목록 <span class="red">[15명]</span></h5>
+
+                                            <input type="text" placeholder="검색어 입력">
+                                            <a href="#" class="bt_search">검색</a>
+                                        </dt>
+                                        <dd class="list">
+
+                                            <label class="ckb3" for="basic_list01"><input type="checkbox" id="basic_list01"><span class="checkmark">010-1234-4567</span></label>
+                                            <label class="ckb3" for="basic_list02"><input type="checkbox" id="basic_list02"><span class="checkmark">010-1234-4567</span></label>
+                                            <label class="ckb3" for="basic_list03"><input type="checkbox" id="basic_list03"><span class="checkmark">010-1234-4567</span></label>
+                                            <label class="ckb3" for="basic_list04"><input type="checkbox" id="basic_list04"><span class="checkmark">010-1234-4567</span></label>
+                                            <label class="ckb3" for="basic_list05"><input type="checkbox" id="basic_list05"><span class="checkmark">010-1234-4567</span></label>
+                                            <label class="ckb3" for="basic_list06"><input type="checkbox" id="basic_list06"><span class="checkmark">010-1234-4567</span></label>
+
+                                            <div class="btn_zone">
+                                                <a href="javascript:;" class="btn_w btn_delete">선택삭제</a>
+                                                <a href="javascript:;" class="btn_b btn_allcheck">전체삭제</a>
+                                            </div>
+
+                                        </dd>
+                                    </dl>
+                                    <!--// sms_list -->
+
+
+
+                                </div>
+                                <!--// sms_left -->
+
+                                <!-- sms_right -->
+                                <div class="sms_right">
+
+                                    <!-- type -->
+                                    <ul class="sms_type">
+                                        <li><label class="ckb" for=""><input type="checkbox" name="" id=""><span class="checkmark">문자</span></label></li>
+                                        <li><label class="ckb" for=""><input type="checkbox" name="" id=""><span class="checkmark">카카오톡</span></label></li>
+                                        <li><label class="ckb" for=""><input type="checkbox" name="" id=""><span class="checkmark">앱 푸시</span></label></li>
+                                        <li><label class="ckb" for=""><input type="checkbox" name="" id=""><span class="checkmark">앱 푸시 → 문자</span></label></li>
+                                    </ul>
+                                    <!--// type -->
+
+                                    <!-- text_area -->
+                                    <div class="sms_text">
+                                        <textarea name="name" rows="8" cols="80" placeholder="90byte 초과시 장문 문자로 자동 전환 됩니다."></textarea>
+                                        <span>0/2000bytes</span>
+
+                                        <a href="javascript:;" class="btn_modal">메시지 불러오기</a>
+
+                                        <!-- 불러오기 레이어 팝업 -->
+                                        <div class="pop_modal">
+                                            <!-- layer_popup -->
+                                            <div class="layer_popup w1000">
+                                                <h4>메시지 불러오기 (23건)</h4>
+                                                <span class="pop_close">×</span>
+
+                                                <!-- pop_inner -->
+                                                <div class="pop_inner">
+
+                                                    <!-- message -->
+                                                    <div class="message">
+
+                                                        <!-- msg -->
+                                                        <dl class="msg">
+                                                            <dt></dt>
+                                                            <dd>
+                                                                <a href="javascript:;">
+                                                                    2020년 7월부터 [학원명] [수업명]에 등록되었습니다.
+                                                                    감사합니다.
+                                                                </a>
+                                                            </dd>
+                                                        </dl>
+                                                        <!--// msg -->
+
+
+                                                        <!-- msg -->
+                                                        <dl class="msg">
+                                                            <dt></dt>
+                                                            <dd>
+                                                                <a href="javascript:;">
+                                                                    2020년 7월부터 [학원명] [수업명]에 등록되었습니다.
+                                                                    감사합니다.
+                                                                </a>
+                                                            </dd>
+                                                        </dl>
+                                                        <!--// msg -->
+
+
+
+                                                        <!-- msg -->
+                                                        <dl class="msg">
+                                                            <dt></dt>
+                                                            <dd>
+                                                                <a href="javascript:;">
+                                                                    2020년 7월부터 [학원명] [수업명]에 등록되었습니다.
+                                                                    감사합니다.
+                                                                </a>
+                                                            </dd>
+                                                        </dl>
+                                                        <!--// msg -->
+
+
+
+                                                        <!-- msg -->
+                                                        <dl class="msg">
+                                                            <dt></dt>
+                                                            <dd>
+                                                                <a href="javascript:;">
+                                                                    2020년 7월부터 [학원명] [수업명]에 등록되었습니다.
+                                                                    감사합니다.
+                                                                </a>
+                                                            </dd>
+                                                        </dl>
+                                                        <!--// msg -->
+
+
+
+                                                        <!-- msg -->
+                                                        <dl class="msg">
+                                                            <dt></dt>
+                                                            <dd>
+                                                                <a href="javascript:;">
+                                                                    2020년 7월부터 [학원명] [수업명]에 등록되었습니다.
+                                                                    감사합니다.
+                                                                </a>
+                                                            </dd>
+                                                        </dl>
+                                                        <!--// msg -->
+
+
+
+                                                        <!-- msg -->
+                                                        <dl class="msg">
+                                                            <dt></dt>
+                                                            <dd>
+                                                                <a href="javascript:;">
+                                                                    2020년 7월부터 [학원명] [수업명]에 등록되었습니다.
+                                                                    감사합니다.
+                                                                </a>
+                                                            </dd>
+                                                        </dl>
+                                                        <!--// msg -->
+
+                                                    </div>
+                                                    <!--// message -->
+
+
+
+
+                                                    <div class="paging">
+                                                        <a href="#"><img src="../images/paging_first.png" alt="처음페이지"></a>
+                                                        <a href="#"><img src="../images/paging_prev.png" alt="이전페이지"></a>
+                                                        <a href="#" class="on">1</a>
+                                                        <a href="#">2</a>
+                                                        <a href="#">3</a>
+                                                        <a href="#">4</a>
+                                                        <a href="#">5</a>
+                                                        <a href="#">6</a>
+                                                        <a href="#">7</a>
+                                                        <a href="#">8</a>
+                                                        <a href="#">9</a>
+                                                        <a href="#">10</a>
+                                                        <a href="#"><img src="../images/paging_next.png" alt="다음페이지"></a>
+                                                        <a href="#"><img src="../images/paging_last.png" alt="마지막페이지"></a>
+                                                    </div>
+
+
+
+
+
+                                                </div>
+                                                <!--// pop_inner -->
+                                            </div>
+                                            <!--// layer_popup -->
+                                        </div>
+                                        <!--// 불러오기 레이어 팝업 -->
+
+                                        <a href="javascript:;">메시지 저장하기</a>
+                                    </div>
+
+                                    <div class="sms_code">
+                                        <a href="javascript:;">학원명</a>
+                                        <a href="javascript:;">수업명</a>
+                                        <a href="javascript:;">학원명</a>
+                                    </div>
+                                    <!--// text_area -->
+
+                                    <ul class="sms_send">
+                                        <li class="bts">
+                                            <a href="javascript:;" class="btn_b">즉시발송</a>
+                                            <a href="javascript:;" class="btn_w">예약발송</a>
+                                        </li>
+                                        <li class="reserve">
+                                            <label for="reserve_date">예약 날짜</label>
+                                            <input type="text" class="datepicker">
+
+                                            <label for="reserve_time">예약 시간</label>
+                                            <select name="" id="" class="slt">
+                                                <option value="">00시</option>
+                                                <option value="">01시</option>
+                                                <option value="">02시</option>
+                                                <option value="">03시</option>
+                                                <option value="">04시</option>
+                                                <option value="">05시</option>
+                                                <option value="">06시</option>
+                                                <option value="">07시</option>
+                                                <option value="">08시</option>
+                                                <option value="">09시</option>
+                                                <option value="">10시</option>
+                                                <option value="">11시</option>
+                                                <option value="">12시</option>
+                                                <option value="">13시</option>
+                                                <option value="">14시</option>
+                                                <option value="">15시</option>
+                                                <option value="">16시</option>
+                                                <option value="">17시</option>
+                                                <option value="">18시</option>
+                                                <option value="">19시</option>
+                                                <option value="">20시</option>
+                                                <option value="">21시</option>
+                                                <option value="">22시</option>
+                                                <option value="">23시</option>
+                                            </select>
+
+                                            <select name="" id="" class="slt">
+                                                <option value="">00분</option>
+                                                <option value="">01분</option>
+                                                <option value="">02분</option>
+                                                <option value="">03분</option>
+                                                <option value="">04분</option>
+                                                <option value="">05분</option>
+                                                <option value="">06분</option>
+                                                <option value="">07분</option>
+                                                <option value="">08분</option>
+                                                <option value="">09분</option>
+                                                <option value="">10분</option>
+                                                <option value="">11분</option>
+                                                <option value="">12분</option>
+                                                <option value="">13분</option>
+                                                <option value="">14분</option>
+                                                <option value="">15분</option>
+                                                <option value="">16분</option>
+                                                <option value="">17분</option>
+                                                <option value="">18분</option>
+                                                <option value="">19분</option>
+                                                <option value="">20분</option>
+                                                <option value="">21분</option>
+                                                <option value="">22분</option>
+                                                <option value="">23분</option>
+                                                <option value="">24분</option>
+                                                <option value="">25분</option>
+                                                <option value="">26분</option>
+                                                <option value="">27분</option>
+                                                <option value="">28분</option>
+                                                <option value="">29분</option>
+                                                <option value="">30분</option>
+                                                <option value="">31분</option>
+                                                <option value="">32분</option>
+                                                <option value="">33분</option>
+                                                <option value="">34분</option>
+                                                <option value="">35분</option>
+                                                <option value="">36분</option>
+                                                <option value="">37분</option>
+                                                <option value="">38분</option>
+                                                <option value="">39분</option>
+                                                <option value="">40분</option>
+                                                <option value="">41분</option>
+                                                <option value="">42분</option>
+                                                <option value="">43분</option>
+                                                <option value="">44분</option>
+                                                <option value="">45분</option>
+                                                <option value="">46분</option>
+                                                <option value="">47분</option>
+                                                <option value="">48분</option>
+                                                <option value="">49분</option>
+                                                <option value="">50분</option>
+                                                <option value="">51분</option>
+                                                <option value="">52분</option>
+                                                <option value="">53분</option>
+                                                <option value="">54분</option>
+                                                <option value="">55분</option>
+                                                <option value="">56분</option>
+                                                <option value="">57분</option>
+                                                <option value="">58분</option>
+                                                <option value="">59분</option>
+                                            </select>
+                                        </li>
+                                        <li class="btn_send">
+                                            <a href="javascript:;">메세지 전송</a>
+                                        </li>
+                                    </ul>
+
+
+                                </div>
+                                <!--// sms_right -->
+                            </div>
+                            <!--// sms -->
+
+
+                        </div>
+                        <!--// 탭1 :  -->
+
+
+                        <!-- 탭2 :  -->
+                        <div id="sms_tab-2">
+
+
+                            <ul class="info">
+                                <li class="left">
+                                    <select name="" id="" class="slt">
+                                        <option value="">원생전체</option>
+                                        <option value="">재원생</option>
+                                        <option value="">휴원생</option>
+                                        <option value="">퇴원생</option>
+                                        <option value="">미등록생</option>
+                                    </select>
+                                    <select name="" id="" class="slt">
+                                        <option value="">수업명</option>
+                                        <option value=""></option>
+                                        <option value=""></option>
+                                        <option value=""></option>
+                                        <option value=""></option>
+                                        <option value=""></option>
+                                        <option value=""></option>
+                                    </select>
+                                    <select name="" id="" class="slt">
+                                        <option value="">수납상태</option>
+                                        <option value="">완납</option>
+                                        <option value="">미납</option>
+                                    </select>
+                                    <input type="text" placeholder="검색어 입력">
+                                    <a href="#" class="bt_search">검색</a>
+                                </li>
+                            </ul>
+
+
+                            <!-- sms -->
+                            <div class="sms">
+                                <!-- sms_left -->
+                                <div class="sms_left">
+
+                                    <!-- table-col -->
+                                    <form action="">
+                                        <table class="table-col">
+                                            <caption>문자발송 테이블</caption>
+                                            <colgroup>
+                                                <col width="30">
+                                                <col>
+                                                <col width="90">
+                                                <col>
+                                                <col>
+                                                <col>
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th><label class="ckb" for="pay_all_check"><input type="checkbox" id="pay_all_check"><span class="checkmark"></span></label></th>
+                                                    <th>수업명</th>
+                                                    <th>이름</th>
+                                                    <th>핸드폰번호</th>
+                                                    <th>보호자1 번호</th>
+                                                    <th>보호자2 번호</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td><label class="ckb" for=""><input type="checkbox" id=""><span class="checkmark"></span></label></td>
+                                                    <td>초등부</td>
+                                                    <td>홍길동</td>
+                                                    <td>010-0000-1111</td>
+                                                    <td>010-0000-1234</td>
+                                                    <td>010-0000-7890</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><label class="ckb" for=""><input type="checkbox" id=""><span class="checkmark"></span></label></td>
+                                                    <td>초등부</td>
+                                                    <td>홍길동</td>
+                                                    <td>010-0000-1111</td>
+                                                    <td>010-0000-1234</td>
+                                                    <td>010-0000-7890</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><label class="ckb" for=""><input type="checkbox" id=""><span class="checkmark"></span></label></td>
+                                                    <td>초등부</td>
+                                                    <td>홍길동</td>
+                                                    <td>010-0000-1111</td>
+                                                    <td>010-0000-1234</td>
+                                                    <td>010-0000-7890</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><label class="ckb" for=""><input type="checkbox" id=""><span class="checkmark"></span></label></td>
+                                                    <td>초등부</td>
+                                                    <td>홍길동</td>
+                                                    <td>010-0000-1111</td>
+                                                    <td>010-0000-1234</td>
+                                                    <td>010-0000-7890</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><label class="ckb" for=""><input type="checkbox" id=""><span class="checkmark"></span></label></td>
+                                                    <td>초등부</td>
+                                                    <td>홍길동</td>
+                                                    <td>010-0000-1111</td>
+                                                    <td>010-0000-1234</td>
+                                                    <td>010-0000-7890</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><label class="ckb" for=""><input type="checkbox" id=""><span class="checkmark"></span></label></td>
+                                                    <td>초등부</td>
+                                                    <td>홍길동</td>
+                                                    <td>010-0000-1111</td>
+                                                    <td>010-0000-1234</td>
+                                                    <td>010-0000-7890</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><label class="ckb" for=""><input type="checkbox" id=""><span class="checkmark"></span></label></td>
+                                                    <td>초등부</td>
+                                                    <td>홍길동</td>
+                                                    <td>010-0000-1111</td>
+                                                    <td>010-0000-1234</td>
+                                                    <td>010-0000-7890</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><label class="ckb" for=""><input type="checkbox" id=""><span class="checkmark"></span></label></td>
+                                                    <td>초등부</td>
+                                                    <td>홍길동</td>
+                                                    <td>010-0000-1111</td>
+                                                    <td>010-0000-1234</td>
+                                                    <td>010-0000-7890</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><label class="ckb" for=""><input type="checkbox" id=""><span class="checkmark"></span></label></td>
+                                                    <td>초등부</td>
+                                                    <td>홍길동</td>
+                                                    <td>010-0000-1111</td>
+                                                    <td>010-0000-1234</td>
+                                                    <td>010-0000-7890</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><label class="ckb" for=""><input type="checkbox" id=""><span class="checkmark"></span></label></td>
+                                                    <td>초등부</td>
+                                                    <td>홍길동</td>
+                                                    <td>010-0000-1111</td>
+                                                    <td>010-0000-1234</td>
+                                                    <td>010-0000-7890</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        </form>
+                                    <!--// table-col -->
+
+
+                                    <!-- sms_option -->
+                                    <dl class="sms_option">
+                                        <dt><span>추가옵션</span></dt>
+                                        <dd>
+                                            <label class="ckb" for="pay_guardian1"><input type="checkbox" id="pay_guardian1"><span class="checkmark">보호자1</span></label>
+                                            <label class="ckb" for="pay_guardian2"><input type="checkbox" id="pay_guardian2"><span class="checkmark">보호자2</span></label>
+
+                                            <a href="javascript:;" class="bt_bk">수신자목록 추가 +</a>
+                                        </dd>
+                                    </dl>
+                                    <!--// sms_option -->
+
+
+                                    <!-- sms_list -->
+                                    <dl class="sms_list">
+                                        <dt>
+                                            <h5>수신자 목록 <span class="red">[15명]</span></h5>
+
+                                            <input type="text" placeholder="검색어 입력">
+                                            <a href="#" class="bt_search">검색</a>
+                                        </dt>
+                                        <dd class="list">
+
+                                            <label class="ckb3" for="pay_list01"><input type="checkbox" id="pay_list01"><span class="checkmark">010-1234-4567</span></label>
+                                            <label class="ckb3" for="pay_list02"><input type="checkbox" id="pay_list02"><span class="checkmark">010-1234-4567</span></label>
+                                            <label class="ckb3" for="pay_list03"><input type="checkbox" id="pay_list03"><span class="checkmark">010-1234-4567</span></label>
+                                            <label class="ckb3" for="pay_list04"><input type="checkbox" id="pay_list0"><span class="checkmark">010-1234-4567</span></label>
+                                            <label class="ckb3" for="pay_list05"><input type="checkbox" id="pay_list05"><span class="checkmark">010-1234-4567</span></label>
+                                            <label class="ckb3" for="pay_list06"><input type="checkbox" id="pay_list06"><span class="checkmark">010-1234-4567</span></label>
+
+                                            <div class="btn_zone">
+                                                <a href="javascript:;" class="btn_w btn_delete">선택삭제</a>
+                                                <a href="javascript:;" class="btn_b btn_allcheck">전체삭제</a>
+                                            </div>
+
+                                        </dd>
+                                    </dl>
+                                    <!--// sms_list -->
+
+
+
+                                </div>
+                                <!--// sms_left -->
+
+                                <!-- sms_right -->
+                                <div class="sms_right">
+
+                                    <!-- type -->
+                                    <ul class="sms_type">
+                                        <li><label class="ckb" for=""><input type="checkbox" name="" id=""><span class="checkmark">문자</span></label></li>
+                                        <li><label class="ckb" for=""><input type="checkbox" name="" id=""><span class="checkmark">카카오톡</span></label></li>
+                                        <li><label class="ckb" for=""><input type="checkbox" name="" id=""><span class="checkmark">앱 푸시</span></label></li>
+                                        <li><label class="ckb" for=""><input type="checkbox" name="" id=""><span class="checkmark">앱 푸시 → 문자</span></label></li>
+                                    </ul>
+                                    <!--// type -->
+
+                                    <!-- text_area -->
+                                    <div class="sms_text">
+                                        <textarea name="name" rows="8" cols="80" placeholder="90byte 초과시 장문 문자로 자동 전환 됩니다."></textarea>
+                                        <span>0/2000bytes</span>
+
+                                        <a href="javascript:;" class="btn_modal">메시지 불러오기</a>
+
+
+                                        <!-- 불러오기 레이어 팝업 -->
+                                        <div class="pop_modal">
+                                            <!-- layer_popup -->
+                                            <div class="layer_popup w1000">
+                                                <h4>메시지 불러오기 (23건)</h4>
+                                                <span class="pop_close">×</span>
+
+                                                <!-- pop_inner -->
+                                                <div class="pop_inner">
+
+                                                    <!-- message -->
+                                                    <div class="message">
+
+                                                        <!-- msg -->
+                                                        <dl class="msg">
+                                                            <dt></dt>
+                                                            <dd>
+                                                                <a href="javascript:;">
+                                                                    2020년 7월부터 [학원명] [수업명]에 등록되었습니다.
+                                                                    감사합니다.
+                                                                </a>
+                                                            </dd>
+                                                        </dl>
+                                                        <!--// msg -->
+
+
+                                                        <!-- msg -->
+                                                        <dl class="msg">
+                                                            <dt></dt>
+                                                            <dd>
+                                                                <a href="javascript:;">
+                                                                    2020년 7월부터 [학원명] [수업명]에 등록되었습니다.
+                                                                    감사합니다.
+                                                                </a>
+                                                            </dd>
+                                                        </dl>
+                                                        <!--// msg -->
+
+
+
+                                                        <!-- msg -->
+                                                        <dl class="msg">
+                                                            <dt></dt>
+                                                            <dd>
+                                                                <a href="javascript:;">
+                                                                    2020년 7월부터 [학원명] [수업명]에 등록되었습니다.
+                                                                    감사합니다.
+                                                                </a>
+                                                            </dd>
+                                                        </dl>
+                                                        <!--// msg -->
+
+
+
+                                                        <!-- msg -->
+                                                        <dl class="msg">
+                                                            <dt></dt>
+                                                            <dd>
+                                                                <a href="javascript:;">
+                                                                    2020년 7월부터 [학원명] [수업명]에 등록되었습니다.
+                                                                    감사합니다.
+                                                                </a>
+                                                            </dd>
+                                                        </dl>
+                                                        <!--// msg -->
+
+
+
+                                                        <!-- msg -->
+                                                        <dl class="msg">
+                                                            <dt></dt>
+                                                            <dd>
+                                                                <a href="javascript:;">
+                                                                    2020년 7월부터 [학원명] [수업명]에 등록되었습니다.
+                                                                    감사합니다.
+                                                                </a>
+                                                            </dd>
+                                                        </dl>
+                                                        <!--// msg -->
+
+
+
+                                                        <!-- msg -->
+                                                        <dl class="msg">
+                                                            <dt></dt>
+                                                            <dd>
+                                                                <a href="javascript:;">
+                                                                    2020년 7월부터 [학원명] [수업명]에 등록되었습니다.
+                                                                    감사합니다.
+                                                                </a>
+                                                            </dd>
+                                                        </dl>
+                                                        <!--// msg -->
+
+                                                    </div>
+                                                    <!--// message -->
+
+
+
+
+                                                    <div class="paging">
+                                                        <a href="#"><img src="../images/paging_first.png" alt="처음페이지"></a>
+                                                        <a href="#"><img src="../images/paging_prev.png" alt="이전페이지"></a>
+                                                        <a href="#" class="on">1</a>
+                                                        <a href="#">2</a>
+                                                        <a href="#">3</a>
+                                                        <a href="#">4</a>
+                                                        <a href="#">5</a>
+                                                        <a href="#">6</a>
+                                                        <a href="#">7</a>
+                                                        <a href="#">8</a>
+                                                        <a href="#">9</a>
+                                                        <a href="#">10</a>
+                                                        <a href="#"><img src="../images/paging_next.png" alt="다음페이지"></a>
+                                                        <a href="#"><img src="../images/paging_last.png" alt="마지막페이지"></a>
+                                                    </div>
+
+
+
+
+
+                                                </div>
+                                                <!--// pop_inner -->
+                                            </div>
+                                            <!--// layer_popup -->
+                                        </div>
+                                        <!--// 불러오기 레이어 팝업 -->
+
+                                        <a href="javascript:;">메시지 저장하기</a>
+                                    </div>
+
+                                    <div class="sms_code">
+                                        <a href="javascript:;">학원명</a>
+                                        <a href="javascript:;">수업명</a>
+                                        <a href="javascript:;">학원명</a>
+                                        <a href="javascript:;">납부일</a>
+                                        <a href="javascript:;">납부액</a>
+                                        <a href="javascript:;">계좌</a>
+                                    </div>
+                                    <!--// text_area -->
+
+                                    <ul class="sms_send">
+                                        <li class="bts">
+                                            <a href="javascript:;" class="btn_b">즉시발송</a>
+                                            <a href="javascript:;" class="btn_w">예약발송</a>
+                                        </li>
+                                        <li class="reserve">
+                                            <label for="reserve_date">예약 날짜</label>
+                                            <input type="text" class="datepicker">
+
+                                            <label for="reserve_time">예약 시간</label>
+                                            <select name="" id="" class="slt">
+                                                <option value="">00시</option>
+                                                <option value="">01시</option>
+                                                <option value="">02시</option>
+                                                <option value="">03시</option>
+                                                <option value="">04시</option>
+                                                <option value="">05시</option>
+                                                <option value="">06시</option>
+                                                <option value="">07시</option>
+                                                <option value="">08시</option>
+                                                <option value="">09시</option>
+                                                <option value="">10시</option>
+                                                <option value="">11시</option>
+                                                <option value="">12시</option>
+                                                <option value="">13시</option>
+                                                <option value="">14시</option>
+                                                <option value="">15시</option>
+                                                <option value="">16시</option>
+                                                <option value="">17시</option>
+                                                <option value="">18시</option>
+                                                <option value="">19시</option>
+                                                <option value="">20시</option>
+                                                <option value="">21시</option>
+                                                <option value="">22시</option>
+                                                <option value="">23시</option>
+                                            </select>
+
+                                            <select name="" id="" class="slt">
+                                                <option value="">00분</option>
+                                                <option value="">01분</option>
+                                                <option value="">02분</option>
+                                                <option value="">03분</option>
+                                                <option value="">04분</option>
+                                                <option value="">05분</option>
+                                                <option value="">06분</option>
+                                                <option value="">07분</option>
+                                                <option value="">08분</option>
+                                                <option value="">09분</option>
+                                                <option value="">10분</option>
+                                                <option value="">11분</option>
+                                                <option value="">12분</option>
+                                                <option value="">13분</option>
+                                                <option value="">14분</option>
+                                                <option value="">15분</option>
+                                                <option value="">16분</option>
+                                                <option value="">17분</option>
+                                                <option value="">18분</option>
+                                                <option value="">19분</option>
+                                                <option value="">20분</option>
+                                                <option value="">21분</option>
+                                                <option value="">22분</option>
+                                                <option value="">23분</option>
+                                                <option value="">24분</option>
+                                                <option value="">25분</option>
+                                                <option value="">26분</option>
+                                                <option value="">27분</option>
+                                                <option value="">28분</option>
+                                                <option value="">29분</option>
+                                                <option value="">30분</option>
+                                                <option value="">31분</option>
+                                                <option value="">32분</option>
+                                                <option value="">33분</option>
+                                                <option value="">34분</option>
+                                                <option value="">35분</option>
+                                                <option value="">36분</option>
+                                                <option value="">37분</option>
+                                                <option value="">38분</option>
+                                                <option value="">39분</option>
+                                                <option value="">40분</option>
+                                                <option value="">41분</option>
+                                                <option value="">42분</option>
+                                                <option value="">43분</option>
+                                                <option value="">44분</option>
+                                                <option value="">45분</option>
+                                                <option value="">46분</option>
+                                                <option value="">47분</option>
+                                                <option value="">48분</option>
+                                                <option value="">49분</option>
+                                                <option value="">50분</option>
+                                                <option value="">51분</option>
+                                                <option value="">52분</option>
+                                                <option value="">53분</option>
+                                                <option value="">54분</option>
+                                                <option value="">55분</option>
+                                                <option value="">56분</option>
+                                                <option value="">57분</option>
+                                                <option value="">58분</option>
+                                                <option value="">59분</option>
+                                            </select>
+                                        </li>
+                                        <li class="btn_send">
+                                            <a href="javascript:;">메세지 전송</a>
+                                        </li>
+                                    </ul>
+
+
+                                </div>
+                                <!--// sms_right -->
+                            </div>
+                            <!--// sms -->
+
+                        </div>
+                        <!--// 탭2 :  -->
+                    </div>
+                    <!--// sms_tab -->
+
+
+
+
+
+                </div>
+                <!--// inner -->
+
+
+
+
+
+
+
+
+
+            </div>
+            <!--// contents -->
+
+        </div>
+        <!--// container -->
+
+    </div>
+    <!--// wrap -->
+
+
+</body>
+
+</html>

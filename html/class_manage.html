@@ -1,0 +1,2284 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, minimum-scale=1.0, user-scalable=yes, target-densitydpi=medium-dpi">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../css/common.css">
+    <script type="text/javascript" src="../js/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="../js/jquery-ui.js"></script>
+    <script type="text/javascript" src="../js/common.js"></script>
+    <title>출결서비스</title>
+</head>
+
+<body>
+
+    <!-- wrap -->
+    <div class="wrap">
+
+        <!-- aside -->
+        <div class="aside">
+            <h1><img src="../images/logo.png" alt="K Tigers"></h1>
+
+            <ul class="gnb">
+                <li>
+                    <a href="#"><img src="../images/gnb_bl01.png" alt=""> 경영</a>
+                    <ul class="lnb">
+                        <li><a href="manage_receive.html">수납현황</a></li>
+                        <li><a href="manage_student.html">원생현황</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><img src="../images/gnb_bl02.png" alt=""> 출결</a>
+                    <ul class="lnb">
+                        <li><a href="attendance_state.html">출결현황</a></li>
+                        <li><a href="attendance_manage.html">출결관리</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><img src="../images/gnb_bl03.png" alt=""> 학생</a>
+                    <ul class="lnb">
+                        <li><a href="student_manage.html">원생관리</a></li>
+                        <li><a href="student_excel.html">엑셀등록</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><img src="../images/gnb_bl04.png" alt=""> 수업관리</a>
+                    <ul class="lnb">
+                        <li><a href="class_manage.html" class="on">수업관리</a></li>
+                        <li><a href="class_staff.html">강사(직원)관리</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><img src="../images/gnb_bl05.png" alt=""> 미디어</a>
+                    <ul class="lnb">
+                        <li><a href="media_list.html">공연영상</a></li>
+                        <li><a href="media_list.html">K팝 태권</a></li>
+                        <li><a href="media_list.html">방송활동</a></li>
+                        <li><a href="media_list.html">기술영상</a></li>
+                        <li><a href="media_list.html">활동영상</a></li>
+                        <li><a href="media_list.html">우리영상</a></li>
+                        <li><a href="media_list.html">우리사진</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><img src="../images/gnb_bl06.png" alt=""> 문자</a>
+                    <ul class="lnb">
+                        <li><a href="sms_send.html">문자발송</a></li>
+                        <li><a href="sms_history.html">발송내역</a></li>
+                        <li><a href="sms_setting.html">문자설정</a></li>
+                        <li><a href="sms_auto.html">자동발송설정</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><img src="../images/gnb_bl07.png" alt=""> 수납관리</a>
+                    <ul class="lnb">
+                        <li><a href="receive_state.html">수납현황</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><img src="../images/gnb_bl08.png" alt=""> 공지사항</a>
+                    <ul class="lnb">
+                        <li><a href="notice_list.html">공지사항</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><img src="../images/gnb_bl09.png" alt=""> 실시간 버스</a>
+                    <ul class="lnb">
+                        <li><a href="bus.html">셔틀버스</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><img src="../images/gnb_bl10.png" alt=""> 설정</a>
+                    <ul class="lnb">
+                        <li><a href="setting_info.html">학원정보</a></li>
+                        <li><a href="setting_receive.html">수납설정</a></li>
+                        <li><a href="setting_point.html">포인트 충전</a></li>
+                        <li><a href="setting_proof.html">선택항목설정</a></li>
+                        <li><a href="setting_option.html">제출증빙서류</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <!--// aside -->
+
+
+        <!-- container -->
+        <div class="container">
+
+            <!-- header -->
+            <div class="header">
+                <span class="name">관장님</span>
+                <a href="login.html" class="btn_logout">로그아웃</a>
+            </div>
+            <!--// header -->
+
+
+            <!-- contents -->
+            <div class="contents">
+
+                <h2>수업관리</h2>
+
+                <!-- inner -->
+                <div class="inner">
+
+                    <h3>수업 시간표</h3>
+
+                    <!-- info -->
+                    <ul class="info">
+                        <li class="left">
+                            <select class="slt" name="">
+                                <option value="">2020년</option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                            </select>
+                            <select class="slt" name="">
+                                <option value="">01월</option>
+                                <option value="">02월</option>
+                                <option value="">03월</option>
+                                <option value="">04월</option>
+                                <option value="">05월</option>
+                                <option value="" selected="selected">06월</option>
+                                <option value="">07월</option>
+                                <option value="">08월</option>
+                                <option value="">09월</option>
+                                <option value="">10월</option>
+                                <option value="">11월</option>
+                                <option value="">12월</option>
+                            </select>
+                            <select class="slt" name="">
+                                <option value="">1째주</option>
+                                <option value="">2째주</option>
+                                <option value="">3째주</option>
+                                <option value="" selected="selected">4째주</option>
+                                <option value="">5째주</option>
+                            </select>
+                        </li>
+                    </ul>
+                    <!--// info -->
+
+
+
+                    <!-- 수업 시간표 테이블 -->
+                    <table class="table-col schedule">
+                        <caption>수업 시간표 테이블</caption>
+                        <colgroup>
+                            <col width="90">
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>시간</th>
+                                <th>월</th>
+                                <th>화</th>
+                                <th>수</th>
+                                <th>목</th>
+                                <th>금</th>
+                                <th>토</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td rowspan="2">12:00</td>
+                                <td>초등부 A반 <span>(202호)</span></td>
+                                <td>초등부 A반 <span>(202호)</span></td>
+                                <td>초등부 A반 <span>(202호)</span></td>
+                                <td>초등부 A반 <span>(202호)</span></td>
+                                <td>초등부 A반 <span>(202호)</span></td>
+                                <td>초등부 A반 <span>(202호)</span></td>
+                            </tr>
+                            <tr>
+                                <td>초등부 A반 <span>(202호)</span></td>
+                                <td>초등부 A반 <span>(202호)</span></td>
+                                <td>초등부 A반 <span>(202호)</span></td>
+                                <td>초등부 A반 <span>(202호)</span></td>
+                                <td>초등부 A반 <span>(202호)</span></td>
+                                <td>초등부 A반 <span>(202호)</span></td>
+                            </tr>
+                            <tr>
+                                <td>1:00</td>
+                                <td>초등부 A반 <span>(202호)</span></td>
+                                <td>초등부 A반 <span>(202호)</span></td>
+                                <td>초등부 A반 <span>(202호)</span></td>
+                                <td>초등부 A반 <span>(202호)</span></td>
+                                <td>초등부 A반 <span>(202호)</span></td>
+                                <td>초등부 A반 <span>(202호)</span></td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2">2:00</td>
+                                <td>초등부 A반 <span>(202호)</span></td>
+                                <td>초등부 A반 <span>(202호)</span></td>
+                                <td>초등부 A반 <span>(202호)</span></td>
+                                <td>초등부 A반 <span>(202호)</span></td>
+                                <td>초등부 A반 <span>(202호)</span></td>
+                                <td>초등부 A반 <span>(202호)</span></td>
+                            </tr>
+                            <tr>
+                                <td>초등부 A반 <span>(202호)</span></td>
+                                <td>초등부 A반 <span>(202호)</span></td>
+                                <td>초등부 A반 <span>(202호)</span></td>
+                                <td>초등부 A반 <span>(202호)</span></td>
+                                <td>초등부 A반 <span>(202호)</span></td>
+                                <td>초등부 A반 <span>(202호)</span></td>
+                            </tr>
+                            <tr>
+                                <td>3:00</td>
+                                <td>초등부 A반 <span>(202호)</span></td>
+                                <td>초등부 A반 <span>(202호)</span></td>
+                                <td>초등부 A반 <span>(202호)</span></td>
+                                <td>초등부 A반 <span>(202호)</span></td>
+                                <td>초등부 A반 <span>(202호)</span></td>
+                                <td>초등부 A반 <span>(202호)</span></td>
+                            </tr>
+                            <tr>
+                                <td>4:00</td>
+                                <td>초등부 A반 <span>(202호)</span></td>
+                                <td>초등부 A반 <span>(202호)</span></td>
+                                <td>초등부 A반 <span>(202호)</span></td>
+                                <td>초등부 A반 <span>(202호)</span></td>
+                                <td>초등부 A반 <span>(202호)</span></td>
+                                <td>초등부 A반 <span>(202호)</span></td>
+                            </tr>
+                            <tr>
+                                <td>5:00</td>
+                                <td>초등부 A반 <span>(202호)</span></td>
+                                <td>초등부 A반 <span>(202호)</span></td>
+                                <td>초등부 A반 <span>(202호)</span></td>
+                                <td>초등부 A반 <span>(202호)</span></td>
+                                <td>초등부 A반 <span>(202호)</span></td>
+                                <td>초등부 A반 <span>(202호)</span></td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2">6:00</td>
+                                <td>초등부 A반 <span>(202호)</span></td>
+                                <td>초등부 A반 <span>(202호)</span></td>
+                                <td>초등부 A반 <span>(202호)</span></td>
+                                <td>초등부 A반 <span>(202호)</span></td>
+                                <td>초등부 A반 <span>(202호)</span></td>
+                                <td>초등부 A반 <span>(202호)</span></td>
+                            </tr>
+                            <tr>
+                                <td>초등부 A반 <span>(202호)</span></td>
+                                <td>초등부 A반 <span>(202호)</span></td>
+                                <td>초등부 A반 <span>(202호)</span></td>
+                                <td>초등부 A반 <span>(202호)</span></td>
+                                <td>초등부 A반 <span>(202호)</span></td>
+                                <td>초등부 A반 <span>(202호)</span></td>
+                            </tr>
+                            <tr>
+                                <td>7:00</td>
+                                <td>초등부 A반 <span>(202호)</span></td>
+                                <td>초등부 A반 <span>(202호)</span></td>
+                                <td>초등부 A반 <span>(202호)</span></td>
+                                <td>초등부 A반 <span>(202호)</span></td>
+                                <td>초등부 A반 <span>(202호)</span></td>
+                                <td>초등부 A반 <span>(202호)</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!--// 수업 시간표 테이블 -->
+
+                    <br /><br /><br />
+
+
+                    <h3>수업 관리</h3>
+
+                    <!-- info -->
+                    <ul class="info">
+                        <li class="left">
+                            <select class="slt" name="">
+                                <option value="">상태</option>
+                                <option value="">수강</option>
+                                <option value="">종강</option>
+                            </select>
+                            <select class="slt" name="">
+                                <option value="">강사명</option>
+                                <option value=""></option>
+                            </select>
+                            <input type="text" placeholder="검색어 입력">
+                            <a href="#" class="bt_search">검색</a>
+                        </li>
+                        <li class="right">
+                            <a href="javascript:;" class="btn_b btn_modal">신규 생성</a>
+
+                            <!-- 수업 신규생성 레이어 팝업 -->
+                            <div class="pop_modal">
+                                <!-- layer_popup -->
+                                <div class="layer_popup w400">
+                                    <h4>수업 신규 생성</h4>
+                                    <span class="pop_close">×</span>
+
+                                    <!-- pop_inner -->
+                                    <div class="pop_inner">
+
+                                        <table class="table-row">
+                                            <colgroup>
+                                                <col width="30%">
+                                                <col>
+                                            </colgroup>
+                                            <tr>
+                                                <th>수업명</th>
+                                                <td><input type="text"></td>
+                                            </tr>
+                                            <tr>
+                                                <th>타입</th>
+                                                <td>
+                                                    <select class="slt auto" name="">
+                                                        <option value="" class="btn_regular">정규</option>
+                                                        <option value="" class="btn_special">특강</option>
+                                                    </select>
+
+                                                    <p class="pay_method">
+                                                        <label class="rdo" for="pay_lump"><input type="radio" name="pay" id="pay_lump"><span class="checkmark">일괄납부</span></label>
+                                                        <label class="rdo" for="pay_installment"><input type="radio" name="pay" id="pay_installment"><span class="checkmark">분할납부</span></label>
+                                                    </p>
+
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>강사</th>
+                                                <td>
+                                                    <select class="slt" name="">
+                                                        <option value="">선택</option>
+                                                        <option value="">홍길동</option>
+                                                        <option value=""></option>
+                                                        <option value=""></option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>정원</th>
+                                                <td><input type="number" class="tr">명</td>
+                                            </tr>
+                                            <tr>
+                                                <th>수업 요일</th>
+                                                <td>
+                                                    <label class="ckb2" for="mon"><input type="checkbox" name="dow" id="mon"><span class="checkmark">월</span></label>
+                                                    <label class="ckb2" for="tue"><input type="checkbox" name="dow" id="tue"><span class="checkmark">화</span></label>
+                                                    <label class="ckb2" for="wed"><input type="checkbox" name="dow" id="wed"><span class="checkmark">수</span></label>
+                                                    <label class="ckb2" for="thu"><input type="checkbox" name="dow" id="thu"><span class="checkmark">목</span></label>
+                                                    <label class="ckb2" for="fri"><input type="checkbox" name="dow" id="fri"><span class="checkmark">금</span></label>
+                                                    <label class="ckb2" for="sat"><input type="checkbox" name="dow" id="sat"><span class="checkmark">토</span></label>
+                                                    <label class="ckb2" for="sun"><input type="checkbox" name="dow" id="sun"><span class="checkmark">일</span></label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>수업 시간</th>
+                                                <td>
+                                                    시작
+                                                    <select class="slt auto" name="">
+                                                        <option value="">1시</option>
+                                                        <option value="">2시</option>
+                                                        <option value="">3시</option>
+                                                        <option value="">4시</option>
+                                                        <option value="">5시</option>
+                                                        <option value="">6시</option>
+                                                        <option value="">7시</option>
+                                                        <option value="">8시</option>
+                                                        <option value="">9시</option>
+                                                        <option value="">10시</option>
+                                                        <option value="">11시</option>
+                                                        <option value="">12시</option>
+                                                        <option value="">13시</option>
+                                                        <option value="">14시</option>
+                                                        <option value="">15시</option>
+                                                        <option value="">16시</option>
+                                                        <option value="">17시</option>
+                                                        <option value="">18시</option>
+                                                        <option value="">19시</option>
+                                                        <option value="">20시</option>
+                                                        <option value="">21시</option>
+                                                        <option value="">22시</option>
+                                                        <option value="">23시</option>
+                                                        <option value="">24시</option>
+                                                    </select>
+
+                                                    <select name="" id="">
+                                                        <option value="">00분</option>
+                                                        <option value="">01분</option>
+                                                        <option value="">02분</option>
+                                                        <option value="">03분</option>
+                                                        <option value="">04분</option>
+                                                        <option value="">05분</option>
+                                                        <option value="">06분</option>
+                                                        <option value="">07분</option>
+                                                        <option value="">08분</option>
+                                                        <option value="">09분</option>
+                                                        <option value="">10분</option>
+                                                        <option value="">11분</option>
+                                                        <option value="">12분</option>
+                                                        <option value="">13분</option>
+                                                        <option value="">14분</option>
+                                                        <option value="">15분</option>
+                                                        <option value="">16분</option>
+                                                        <option value="">17분</option>
+                                                        <option value="">18분</option>
+                                                        <option value="">19분</option>
+                                                        <option value="">20분</option>
+                                                        <option value="">21분</option>
+                                                        <option value="">22분</option>
+                                                        <option value="">23분</option>
+                                                        <option value="">24분</option>
+                                                        <option value="">25분</option>
+                                                        <option value="">26분</option>
+                                                        <option value="">27분</option>
+                                                        <option value="">28분</option>
+                                                        <option value="">29분</option>
+                                                        <option value="">30분</option>
+                                                        <option value="">31분</option>
+                                                        <option value="">32분</option>
+                                                        <option value="">33분</option>
+                                                        <option value="">34분</option>
+                                                        <option value="">35분</option>
+                                                        <option value="">36분</option>
+                                                        <option value="">37분</option>
+                                                        <option value="">38분</option>
+                                                        <option value="">39분</option>
+                                                        <option value="">40분</option>
+                                                        <option value="">41분</option>
+                                                        <option value="">42분</option>
+                                                        <option value="">43분</option>
+                                                        <option value="">44분</option>
+                                                        <option value="">45분</option>
+                                                        <option value="">46분</option>
+                                                        <option value="">47분</option>
+                                                        <option value="">48분</option>
+                                                        <option value="">49분</option>
+                                                        <option value="">50분</option>
+                                                        <option value="">51분</option>
+                                                        <option value="">52분</option>
+                                                        <option value="">53분</option>
+                                                        <option value="">54분</option>
+                                                        <option value="">55분</option>
+                                                        <option value="">56분</option>
+                                                        <option value="">57분</option>
+                                                        <option value="">58분</option>
+                                                        <option value="">59분</option>
+                                                    </select>
+
+                                                    <br />
+
+                                                    종료
+                                                    <select class="slt auto" name="">
+                                                        <option value="">1시</option>
+                                                        <option value="">2시</option>
+                                                        <option value="">3시</option>
+                                                        <option value="">4시</option>
+                                                        <option value="">5시</option>
+                                                        <option value="">6시</option>
+                                                        <option value="">7시</option>
+                                                        <option value="">8시</option>
+                                                        <option value="">9시</option>
+                                                        <option value="">10시</option>
+                                                        <option value="">11시</option>
+                                                        <option value="">12시</option>
+                                                        <option value="">13시</option>
+                                                        <option value="">14시</option>
+                                                        <option value="">15시</option>
+                                                        <option value="">16시</option>
+                                                        <option value="">17시</option>
+                                                        <option value="">18시</option>
+                                                        <option value="">19시</option>
+                                                        <option value="">20시</option>
+                                                        <option value="">21시</option>
+                                                        <option value="">22시</option>
+                                                        <option value="">23시</option>
+                                                        <option value="">24시</option>
+                                                    </select>
+
+                                                    <select name="" id="">
+                                                        <option value="">00분</option>
+                                                        <option value="">01분</option>
+                                                        <option value="">02분</option>
+                                                        <option value="">03분</option>
+                                                        <option value="">04분</option>
+                                                        <option value="">05분</option>
+                                                        <option value="">06분</option>
+                                                        <option value="">07분</option>
+                                                        <option value="">08분</option>
+                                                        <option value="">09분</option>
+                                                        <option value="">10분</option>
+                                                        <option value="">11분</option>
+                                                        <option value="">12분</option>
+                                                        <option value="">13분</option>
+                                                        <option value="">14분</option>
+                                                        <option value="">15분</option>
+                                                        <option value="">16분</option>
+                                                        <option value="">17분</option>
+                                                        <option value="">18분</option>
+                                                        <option value="">19분</option>
+                                                        <option value="">20분</option>
+                                                        <option value="">21분</option>
+                                                        <option value="">22분</option>
+                                                        <option value="">23분</option>
+                                                        <option value="">24분</option>
+                                                        <option value="">25분</option>
+                                                        <option value="">26분</option>
+                                                        <option value="">27분</option>
+                                                        <option value="">28분</option>
+                                                        <option value="">29분</option>
+                                                        <option value="">30분</option>
+                                                        <option value="">31분</option>
+                                                        <option value="">32분</option>
+                                                        <option value="">33분</option>
+                                                        <option value="">34분</option>
+                                                        <option value="">35분</option>
+                                                        <option value="">36분</option>
+                                                        <option value="">37분</option>
+                                                        <option value="">38분</option>
+                                                        <option value="">39분</option>
+                                                        <option value="">40분</option>
+                                                        <option value="">41분</option>
+                                                        <option value="">42분</option>
+                                                        <option value="">43분</option>
+                                                        <option value="">44분</option>
+                                                        <option value="">45분</option>
+                                                        <option value="">46분</option>
+                                                        <option value="">47분</option>
+                                                        <option value="">48분</option>
+                                                        <option value="">49분</option>
+                                                        <option value="">50분</option>
+                                                        <option value="">51분</option>
+                                                        <option value="">52분</option>
+                                                        <option value="">53분</option>
+                                                        <option value="">54분</option>
+                                                        <option value="">55분</option>
+                                                        <option value="">56분</option>
+                                                        <option value="">57분</option>
+                                                        <option value="">58분</option>
+                                                        <option value="">59분</option>
+                                                    </select>
+
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>강의실</th>
+                                                <td><input type="text"></td>
+                                            </tr>
+                                            <tr>
+                                                <th>개강일</th>
+                                                <td><input type="text" class="datepicker"></td>
+                                            </tr>
+                                            <tr>
+                                                <th>종강일</th>
+                                                <td><input type="text" class="datepicker"></td>
+                                            </tr>
+                                            <tr>
+                                                <th>수강료</th>
+                                                <td><input type="number" class="tr" size="8">원</td>
+                                            </tr>
+                                            <tr class="period">
+                                                <th>청구주기</th>
+                                                <td>
+                                                    <select class="slt" name="">
+                                                        <option value="">1개월</option>
+                                                        <option value="">2개월</option>
+                                                        <option value="">3개월</option>
+                                                        <option value="">4개월</option>
+                                                        <option value="">5개월</option>
+                                                        <option value="">6개월</option>
+                                                        <option value="">7개월</option>
+                                                        <option value="">8개월</option>
+                                                        <option value="">9개월</option>
+                                                        <option value="">10개월</option>
+                                                        <option value="">11개월</option>
+                                                        <option value="">12개월</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                        </table>
+
+                                        <ul class="pop_btn_zone">
+                                            <li class="right">
+                                                <a href="javascript:;" class="btn_w">취소</a>
+                                                <a href="javascript:;" class="btn_b">등록</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!--// pop_inner -->
+                                </div>
+                                <!--// layer_popup -->
+                            </div>
+                            <!--// 수업 신규생성 레이어 팝업 -->
+
+                        </li>
+                    </ul>
+                    <!--// info -->
+
+
+
+
+                    <table class="table-col">
+                        <caption>원생관리 테이블</caption>
+                        <colgroup>
+                            <col width="40">
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>No</th>
+                                <th>수업</th>
+                                <th>강사</th>
+                                <th>인원수</th>
+                                <th>수업 요일</th>
+                                <th>수업 시간</th>
+                                <th>강의실</th>
+                                <th>개설일</th>
+                                <th>수강료</th>
+                                <th>납부주기</th>
+                                <th>관리</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>초등 고학년</td>
+                                <td>홍길동, 홍동생</td>
+                                <td>55/60</td>
+                                <td>월,화,목,금</td>
+                                <td>1:00~2:00</td>
+                                <td>201호</td>
+                                <td>2020.07.01</td>
+                                <td>180,000원</td>
+                                <td>3개월</td>
+                                <td><a href="javascript:;" class="bt btn_modal">수정</a>
+                                    <!-- 수업 수정 레이어 팝업 -->
+                                    <div class="pop_modal">
+                                        <!-- layer_popup -->
+                                        <div class="layer_popup w400">
+                                            <h4>수업 수정</h4>
+                                            <span class="pop_close">×</span>
+
+                                            <!-- pop_inner -->
+                                            <div class="pop_inner">
+
+                                                <table class="table-row">
+                                                    <colgroup>
+                                                        <col width="30%">
+                                                        <col>
+                                                    </colgroup>
+                                                    <tr>
+                                                        <th>수업명</th>
+                                                        <td><input type="text"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>타입</th>
+                                                        <td>
+                                                            <select class="slt auto" name="">
+                                                                <option value="" class="btn_regular">정규</option>
+                                                                <option value="" class="btn_special">특강</option>
+                                                            </select>
+
+                                                            <p class="pay_method">
+                                                                <label class="rdo" for="pay_lump"><input type="radio" name="pay" id="pay_lump"><span class="checkmark">일괄납부</span></label>
+                                                                <label class="rdo" for="pay_installment"><input type="radio" name="pay" id="pay_installment"><span class="checkmark">분할납부</span></label>
+                                                            </p>
+
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>강사</th>
+                                                        <td>
+                                                            <select class="slt" name="">
+                                                                <option value="">선택</option>
+                                                                <option value="">홍길동</option>
+                                                                <option value=""></option>
+                                                                <option value=""></option>
+                                                            </select>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>정원</th>
+                                                        <td><input type="number" class="tr">명</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>수업 요일</th>
+                                                        <td>
+                                                            <label class="ckb2" for="mon"><input type="checkbox" name="dow" id="mon"><span class="checkmark">월</span></label>
+                                                            <label class="ckb2" for="tue"><input type="checkbox" name="dow" id="tue"><span class="checkmark">화</span></label>
+                                                            <label class="ckb2" for="wed"><input type="checkbox" name="dow" id="wed"><span class="checkmark">수</span></label>
+                                                            <label class="ckb2" for="thu"><input type="checkbox" name="dow" id="thu"><span class="checkmark">목</span></label>
+                                                            <label class="ckb2" for="fri"><input type="checkbox" name="dow" id="fri"><span class="checkmark">금</span></label>
+                                                            <label class="ckb2" for="sat"><input type="checkbox" name="dow" id="sat"><span class="checkmark">토</span></label>
+                                                            <label class="ckb2" for="sun"><input type="checkbox" name="dow" id="sun"><span class="checkmark">일</span></label>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>수업 시간</th>
+                                                        <td>
+                                                            <!-- 시작 <input type="text" placeholder="00:00" size="4" class="tc">~ 종료 <input type="text" placeholder="00:00" size="4" class="tc"> -->
+                                                            <select class="slt" name="">
+                                                                <!-- <option value="">00:00~00:50</option>
+                                                        <option value="">01:00~01:50</option>
+                                                        <option value="">02:00~02:50</option>
+                                                        <option value="">03:00~03:50</option>
+                                                        <option value="">04:00~04:50</option>
+                                                        <option value="">05:00~05:50</option>-->
+                                                                <option value="">06:00~06:50</option>
+                                                                <option value="">07:00~07:50</option>
+                                                                <option value="">08:00~08:50</option>
+                                                                <option value="">09:00~09:50</option>
+                                                                <option value="">10:00~10:50</option>
+                                                                <option value="">11:00~11:50</option>
+                                                                <option value="">12:00~12:50</option>
+                                                                <option value="">13:00~13:50</option>
+                                                                <option value="">14:00~14:50</option>
+                                                                <option value="">15:00~15:50</option>
+                                                                <option value="">16:00~16:50</option>
+                                                                <option value="">17:00~17:50</option>
+                                                                <option value="">18:00~18:50</option>
+                                                                <option value="">19:00~19:50</option>
+                                                                <option value="">20:00~20:50</option>
+                                                                <option value="">21:00~21:50</option>
+                                                                <option value="">22:00~22:50</option>
+                                                                <option value="">23:00~23:50</option>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>강의실</th>
+                                                        <td><input type="text"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>개강일</th>
+                                                        <td><input type="text" class="datepicker"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>종강일</th>
+                                                        <td><input type="text" class="datepicker"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>수강료</th>
+                                                        <td><input type="number" class="tr" size="8">원</td>
+                                                    </tr>
+                                                    <tr class="period">
+                                                        <th>청구주기</th>
+                                                        <td>
+                                                            <select class="slt" name="">
+                                                                <option value="">1개월</option>
+                                                                <option value="">2개월</option>
+                                                                <option value="">3개월</option>
+                                                                <option value="">4개월</option>
+                                                                <option value="">5개월</option>
+                                                                <option value="">6개월</option>
+                                                                <option value="">7개월</option>
+                                                                <option value="">8개월</option>
+                                                                <option value="">9개월</option>
+                                                                <option value="">10개월</option>
+                                                                <option value="">11개월</option>
+                                                                <option value="">12개월</option>
+                                                            </select>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+
+                                                <ul class="pop_btn_zone">
+                                                    <li class="left">
+                                                        <a href="javascript:;" class="btn_b">삭제</a>
+                                                        <a href="javascript:;" class="btn_b">종강</a>
+                                                    </li>
+                                                    <li class="right bt_big">
+                                                        <a href="javascript:;" class="btn_w">취소</a>
+                                                        <a href="javascript:;" class="btn_b">수정</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <!--// pop_inner -->
+                                        </div>
+                                        <!--// layer_popup -->
+                                    </div>
+                                    <!--// 수업 수정 레이어 팝업 -->
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>초등 고학년</td>
+                                <td>홍길동, 홍동생</td>
+                                <td>55/60</td>
+                                <td>월,화,목,금</td>
+                                <td>1:00~2:00</td>
+                                <td>201호</td>
+                                <td>2020.07.01</td>
+                                <td>180,000원</td>
+                                <td>3개월</td>
+                                <td><a href="javascript:;" class="bt btn_modal">수정</a>
+                                    <!-- 수업 수정 레이어 팝업 -->
+                                    <div class="pop_modal">
+                                        <!-- layer_popup -->
+                                        <div class="layer_popup w400">
+                                            <h4>수업 수정</h4>
+                                            <span class="pop_close">×</span>
+
+                                            <!-- pop_inner -->
+                                            <div class="pop_inner">
+
+                                                <table class="table-row">
+                                                    <colgroup>
+                                                        <col width="30%">
+                                                        <col>
+                                                    </colgroup>
+                                                    <tr>
+                                                        <th>수업명</th>
+                                                        <td><input type="text"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>타입</th>
+                                                        <td>
+                                                            <select class="slt auto" name="">
+                                                                <option value="" class="btn_regular">정규</option>
+                                                                <option value="" class="btn_special">특강</option>
+                                                            </select>
+
+                                                            <p class="pay_method">
+                                                                <label class="rdo" for="pay_lump"><input type="radio" name="pay" id="pay_lump"><span class="checkmark">일괄납부</span></label>
+                                                                <label class="rdo" for="pay_installment"><input type="radio" name="pay" id="pay_installment"><span class="checkmark">분할납부</span></label>
+                                                            </p>
+
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>강사</th>
+                                                        <td>
+                                                            <select class="slt" name="">
+                                                                <option value="">선택</option>
+                                                                <option value="">홍길동</option>
+                                                                <option value=""></option>
+                                                                <option value=""></option>
+                                                            </select>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>정원</th>
+                                                        <td><input type="number" class="tr">명</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>수업 요일</th>
+                                                        <td>
+                                                            <label class="ckb2" for="mon"><input type="checkbox" name="dow" id="mon"><span class="checkmark">월</span></label>
+                                                            <label class="ckb2" for="tue"><input type="checkbox" name="dow" id="tue"><span class="checkmark">화</span></label>
+                                                            <label class="ckb2" for="wed"><input type="checkbox" name="dow" id="wed"><span class="checkmark">수</span></label>
+                                                            <label class="ckb2" for="thu"><input type="checkbox" name="dow" id="thu"><span class="checkmark">목</span></label>
+                                                            <label class="ckb2" for="fri"><input type="checkbox" name="dow" id="fri"><span class="checkmark">금</span></label>
+                                                            <label class="ckb2" for="sat"><input type="checkbox" name="dow" id="sat"><span class="checkmark">토</span></label>
+                                                            <label class="ckb2" for="sun"><input type="checkbox" name="dow" id="sun"><span class="checkmark">일</span></label>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>수업 시간</th>
+                                                        <td>
+                                                            <!-- 시작 <input type="text" placeholder="00:00" size="4" class="tc">~ 종료 <input type="text" placeholder="00:00" size="4" class="tc"> -->
+                                                            <select class="slt" name="">
+                                                                <!-- <option value="">00:00~00:50</option>
+                                                        <option value="">01:00~01:50</option>
+                                                        <option value="">02:00~02:50</option>
+                                                        <option value="">03:00~03:50</option>
+                                                        <option value="">04:00~04:50</option>
+                                                        <option value="">05:00~05:50</option>-->
+                                                                <option value="">06:00~06:50</option>
+                                                                <option value="">07:00~07:50</option>
+                                                                <option value="">08:00~08:50</option>
+                                                                <option value="">09:00~09:50</option>
+                                                                <option value="">10:00~10:50</option>
+                                                                <option value="">11:00~11:50</option>
+                                                                <option value="">12:00~12:50</option>
+                                                                <option value="">13:00~13:50</option>
+                                                                <option value="">14:00~14:50</option>
+                                                                <option value="">15:00~15:50</option>
+                                                                <option value="">16:00~16:50</option>
+                                                                <option value="">17:00~17:50</option>
+                                                                <option value="">18:00~18:50</option>
+                                                                <option value="">19:00~19:50</option>
+                                                                <option value="">20:00~20:50</option>
+                                                                <option value="">21:00~21:50</option>
+                                                                <option value="">22:00~22:50</option>
+                                                                <option value="">23:00~23:50</option>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>강의실</th>
+                                                        <td><input type="text"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>개강일</th>
+                                                        <td><input type="text" class="datepicker"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>종강일</th>
+                                                        <td><input type="text" class="datepicker"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>수강료</th>
+                                                        <td><input type="number" class="tr" size="8">원</td>
+                                                    </tr>
+                                                    <tr class="period">
+                                                        <th>청구주기</th>
+                                                        <td>
+                                                            <select class="slt" name="">
+                                                                <option value="">1개월</option>
+                                                                <option value="">2개월</option>
+                                                                <option value="">3개월</option>
+                                                                <option value="">4개월</option>
+                                                                <option value="">5개월</option>
+                                                                <option value="">6개월</option>
+                                                                <option value="">7개월</option>
+                                                                <option value="">8개월</option>
+                                                                <option value="">9개월</option>
+                                                                <option value="">10개월</option>
+                                                                <option value="">11개월</option>
+                                                                <option value="">12개월</option>
+                                                            </select>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+
+                                                <ul class="pop_btn_zone">
+                                                    <li class="left">
+                                                        <a href="javascript:;" class="btn_b">삭제</a>
+                                                        <a href="javascript:;" class="btn_b">종강</a>
+                                                    </li>
+                                                    <li class="right bt_big">
+                                                        <a href="javascript:;" class="btn_w">취소</a>
+                                                        <a href="javascript:;" class="btn_b">수정</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <!--// pop_inner -->
+                                        </div>
+                                        <!--// layer_popup -->
+                                    </div>
+                                    <!--// 수업 수정 레이어 팝업 -->
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>초등 고학년</td>
+                                <td>홍길동, 홍동생</td>
+                                <td>55/60</td>
+                                <td>월,화,목,금</td>
+                                <td>1:00~2:00</td>
+                                <td>201호</td>
+                                <td>2020.07.01</td>
+                                <td>180,000원</td>
+                                <td>3개월</td>
+                                <td><a href="javascript:;" class="bt btn_modal">수정</a>
+                                    <!-- 수업 수정 레이어 팝업 -->
+                                    <div class="pop_modal">
+                                        <!-- layer_popup -->
+                                        <div class="layer_popup w400">
+                                            <h4>수업 수정</h4>
+                                            <span class="pop_close">×</span>
+
+                                            <!-- pop_inner -->
+                                            <div class="pop_inner">
+
+                                                <table class="table-row">
+                                                    <colgroup>
+                                                        <col width="30%">
+                                                        <col>
+                                                    </colgroup>
+                                                    <tr>
+                                                        <th>수업명</th>
+                                                        <td><input type="text"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>타입</th>
+                                                        <td>
+                                                            <select class="slt auto" name="">
+                                                                <option value="" class="btn_regular">정규</option>
+                                                                <option value="" class="btn_special">특강</option>
+                                                            </select>
+
+                                                            <p class="pay_method">
+                                                                <label class="rdo" for="pay_lump"><input type="radio" name="pay" id="pay_lump"><span class="checkmark">일괄납부</span></label>
+                                                                <label class="rdo" for="pay_installment"><input type="radio" name="pay" id="pay_installment"><span class="checkmark">분할납부</span></label>
+                                                            </p>
+
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>강사</th>
+                                                        <td>
+                                                            <select class="slt" name="">
+                                                                <option value="">선택</option>
+                                                                <option value="">홍길동</option>
+                                                                <option value=""></option>
+                                                                <option value=""></option>
+                                                            </select>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>정원</th>
+                                                        <td><input type="number" class="tr">명</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>수업 요일</th>
+                                                        <td>
+                                                            <label class="ckb2" for="mon"><input type="checkbox" name="dow" id="mon"><span class="checkmark">월</span></label>
+                                                            <label class="ckb2" for="tue"><input type="checkbox" name="dow" id="tue"><span class="checkmark">화</span></label>
+                                                            <label class="ckb2" for="wed"><input type="checkbox" name="dow" id="wed"><span class="checkmark">수</span></label>
+                                                            <label class="ckb2" for="thu"><input type="checkbox" name="dow" id="thu"><span class="checkmark">목</span></label>
+                                                            <label class="ckb2" for="fri"><input type="checkbox" name="dow" id="fri"><span class="checkmark">금</span></label>
+                                                            <label class="ckb2" for="sat"><input type="checkbox" name="dow" id="sat"><span class="checkmark">토</span></label>
+                                                            <label class="ckb2" for="sun"><input type="checkbox" name="dow" id="sun"><span class="checkmark">일</span></label>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>수업 시간</th>
+                                                        <td>
+                                                            <!-- 시작 <input type="text" placeholder="00:00" size="4" class="tc">~ 종료 <input type="text" placeholder="00:00" size="4" class="tc"> -->
+                                                            <select class="slt" name="">
+                                                                <!-- <option value="">00:00~00:50</option>
+                                                        <option value="">01:00~01:50</option>
+                                                        <option value="">02:00~02:50</option>
+                                                        <option value="">03:00~03:50</option>
+                                                        <option value="">04:00~04:50</option>
+                                                        <option value="">05:00~05:50</option>-->
+                                                                <option value="">06:00~06:50</option>
+                                                                <option value="">07:00~07:50</option>
+                                                                <option value="">08:00~08:50</option>
+                                                                <option value="">09:00~09:50</option>
+                                                                <option value="">10:00~10:50</option>
+                                                                <option value="">11:00~11:50</option>
+                                                                <option value="">12:00~12:50</option>
+                                                                <option value="">13:00~13:50</option>
+                                                                <option value="">14:00~14:50</option>
+                                                                <option value="">15:00~15:50</option>
+                                                                <option value="">16:00~16:50</option>
+                                                                <option value="">17:00~17:50</option>
+                                                                <option value="">18:00~18:50</option>
+                                                                <option value="">19:00~19:50</option>
+                                                                <option value="">20:00~20:50</option>
+                                                                <option value="">21:00~21:50</option>
+                                                                <option value="">22:00~22:50</option>
+                                                                <option value="">23:00~23:50</option>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>강의실</th>
+                                                        <td><input type="text"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>개강일</th>
+                                                        <td><input type="text" class="datepicker"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>종강일</th>
+                                                        <td><input type="text" class="datepicker"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>수강료</th>
+                                                        <td><input type="number" class="tr" size="8">원</td>
+                                                    </tr>
+                                                    <tr class="period">
+                                                        <th>청구주기</th>
+                                                        <td>
+                                                            <select class="slt" name="">
+                                                                <option value="">1개월</option>
+                                                                <option value="">2개월</option>
+                                                                <option value="">3개월</option>
+                                                                <option value="">4개월</option>
+                                                                <option value="">5개월</option>
+                                                                <option value="">6개월</option>
+                                                                <option value="">7개월</option>
+                                                                <option value="">8개월</option>
+                                                                <option value="">9개월</option>
+                                                                <option value="">10개월</option>
+                                                                <option value="">11개월</option>
+                                                                <option value="">12개월</option>
+                                                            </select>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+
+                                                <ul class="pop_btn_zone">
+                                                    <li class="left">
+                                                        <a href="javascript:;" class="btn_b">삭제</a>
+                                                        <a href="javascript:;" class="btn_b">종강</a>
+                                                    </li>
+                                                    <li class="right bt_big">
+                                                        <a href="javascript:;" class="btn_w">취소</a>
+                                                        <a href="javascript:;" class="btn_b">수정</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <!--// pop_inner -->
+                                        </div>
+                                        <!--// layer_popup -->
+                                    </div>
+                                    <!--// 수업 수정 레이어 팝업 -->
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>초등 고학년</td>
+                                <td>홍길동, 홍동생</td>
+                                <td>55/60</td>
+                                <td>월,화,목,금</td>
+                                <td>1:00~2:00</td>
+                                <td>201호</td>
+                                <td>2020.07.01</td>
+                                <td>180,000원</td>
+                                <td>3개월</td>
+                                <td><a href="javascript:;" class="bt btn_modal">수정</a>
+                                    <!-- 수업 수정 레이어 팝업 -->
+                                    <div class="pop_modal">
+                                        <!-- layer_popup -->
+                                        <div class="layer_popup w400">
+                                            <h4>수업 수정</h4>
+                                            <span class="pop_close">×</span>
+
+                                            <!-- pop_inner -->
+                                            <div class="pop_inner">
+
+                                                <table class="table-row">
+                                                    <colgroup>
+                                                        <col width="30%">
+                                                        <col>
+                                                    </colgroup>
+                                                    <tr>
+                                                        <th>수업명</th>
+                                                        <td><input type="text"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>타입</th>
+                                                        <td>
+                                                            <select class="slt auto" name="">
+                                                                <option value="" class="btn_regular">정규</option>
+                                                                <option value="" class="btn_special">특강</option>
+                                                            </select>
+
+                                                            <p class="pay_method">
+                                                                <label class="rdo" for="pay_lump"><input type="radio" name="pay" id="pay_lump"><span class="checkmark">일괄납부</span></label>
+                                                                <label class="rdo" for="pay_installment"><input type="radio" name="pay" id="pay_installment"><span class="checkmark">분할납부</span></label>
+                                                            </p>
+
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>강사</th>
+                                                        <td>
+                                                            <select class="slt" name="">
+                                                                <option value="">선택</option>
+                                                                <option value="">홍길동</option>
+                                                                <option value=""></option>
+                                                                <option value=""></option>
+                                                            </select>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>정원</th>
+                                                        <td><input type="number" class="tr">명</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>수업 요일</th>
+                                                        <td>
+                                                            <label class="ckb2" for="mon"><input type="checkbox" name="dow" id="mon"><span class="checkmark">월</span></label>
+                                                            <label class="ckb2" for="tue"><input type="checkbox" name="dow" id="tue"><span class="checkmark">화</span></label>
+                                                            <label class="ckb2" for="wed"><input type="checkbox" name="dow" id="wed"><span class="checkmark">수</span></label>
+                                                            <label class="ckb2" for="thu"><input type="checkbox" name="dow" id="thu"><span class="checkmark">목</span></label>
+                                                            <label class="ckb2" for="fri"><input type="checkbox" name="dow" id="fri"><span class="checkmark">금</span></label>
+                                                            <label class="ckb2" for="sat"><input type="checkbox" name="dow" id="sat"><span class="checkmark">토</span></label>
+                                                            <label class="ckb2" for="sun"><input type="checkbox" name="dow" id="sun"><span class="checkmark">일</span></label>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>수업 시간</th>
+                                                        <td>
+                                                            <!-- 시작 <input type="text" placeholder="00:00" size="4" class="tc">~ 종료 <input type="text" placeholder="00:00" size="4" class="tc"> -->
+                                                            <select class="slt" name="">
+                                                                <!-- <option value="">00:00~00:50</option>
+                                                        <option value="">01:00~01:50</option>
+                                                        <option value="">02:00~02:50</option>
+                                                        <option value="">03:00~03:50</option>
+                                                        <option value="">04:00~04:50</option>
+                                                        <option value="">05:00~05:50</option>-->
+                                                                <option value="">06:00~06:50</option>
+                                                                <option value="">07:00~07:50</option>
+                                                                <option value="">08:00~08:50</option>
+                                                                <option value="">09:00~09:50</option>
+                                                                <option value="">10:00~10:50</option>
+                                                                <option value="">11:00~11:50</option>
+                                                                <option value="">12:00~12:50</option>
+                                                                <option value="">13:00~13:50</option>
+                                                                <option value="">14:00~14:50</option>
+                                                                <option value="">15:00~15:50</option>
+                                                                <option value="">16:00~16:50</option>
+                                                                <option value="">17:00~17:50</option>
+                                                                <option value="">18:00~18:50</option>
+                                                                <option value="">19:00~19:50</option>
+                                                                <option value="">20:00~20:50</option>
+                                                                <option value="">21:00~21:50</option>
+                                                                <option value="">22:00~22:50</option>
+                                                                <option value="">23:00~23:50</option>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>강의실</th>
+                                                        <td><input type="text"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>개강일</th>
+                                                        <td><input type="text" class="datepicker"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>종강일</th>
+                                                        <td><input type="text" class="datepicker"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>수강료</th>
+                                                        <td><input type="number" class="tr" size="8">원</td>
+                                                    </tr>
+                                                    <tr class="period">
+                                                        <th>청구주기</th>
+                                                        <td>
+                                                            <select class="slt" name="">
+                                                                <option value="">1개월</option>
+                                                                <option value="">2개월</option>
+                                                                <option value="">3개월</option>
+                                                                <option value="">4개월</option>
+                                                                <option value="">5개월</option>
+                                                                <option value="">6개월</option>
+                                                                <option value="">7개월</option>
+                                                                <option value="">8개월</option>
+                                                                <option value="">9개월</option>
+                                                                <option value="">10개월</option>
+                                                                <option value="">11개월</option>
+                                                                <option value="">12개월</option>
+                                                            </select>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+
+                                                <ul class="pop_btn_zone">
+                                                    <li class="left">
+                                                        <a href="javascript:;" class="btn_b">삭제</a>
+                                                        <a href="javascript:;" class="btn_b">종강</a>
+                                                    </li>
+                                                    <li class="right bt_big">
+                                                        <a href="javascript:;" class="btn_w">취소</a>
+                                                        <a href="javascript:;" class="btn_b">수정</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <!--// pop_inner -->
+                                        </div>
+                                        <!--// layer_popup -->
+                                    </div>
+                                    <!--// 수업 수정 레이어 팝업 -->
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>초등 고학년</td>
+                                <td>홍길동, 홍동생</td>
+                                <td>55/60</td>
+                                <td>월,화,목,금</td>
+                                <td>1:00~2:00</td>
+                                <td>201호</td>
+                                <td>2020.07.01</td>
+                                <td>180,000원</td>
+                                <td>3개월</td>
+                                <td><a href="javascript:;" class="bt btn_modal">수정</a>
+                                    <!-- 수업 수정 레이어 팝업 -->
+                                    <div class="pop_modal">
+                                        <!-- layer_popup -->
+                                        <div class="layer_popup w400">
+                                            <h4>수업 수정</h4>
+                                            <span class="pop_close">×</span>
+
+                                            <!-- pop_inner -->
+                                            <div class="pop_inner">
+
+                                                <table class="table-row">
+                                                    <colgroup>
+                                                        <col width="30%">
+                                                        <col>
+                                                    </colgroup>
+                                                    <tr>
+                                                        <th>수업명</th>
+                                                        <td><input type="text"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>타입</th>
+                                                        <td>
+                                                            <select class="slt auto" name="">
+                                                                <option value="" class="btn_regular">정규</option>
+                                                                <option value="" class="btn_special">특강</option>
+                                                            </select>
+
+                                                            <p class="pay_method">
+                                                                <label class="rdo" for="pay_lump"><input type="radio" name="pay" id="pay_lump"><span class="checkmark">일괄납부</span></label>
+                                                                <label class="rdo" for="pay_installment"><input type="radio" name="pay" id="pay_installment"><span class="checkmark">분할납부</span></label>
+                                                            </p>
+
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>강사</th>
+                                                        <td>
+                                                            <select class="slt" name="">
+                                                                <option value="">선택</option>
+                                                                <option value="">홍길동</option>
+                                                                <option value=""></option>
+                                                                <option value=""></option>
+                                                            </select>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>정원</th>
+                                                        <td><input type="number" class="tr">명</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>수업 요일</th>
+                                                        <td>
+                                                            <label class="ckb2" for="mon"><input type="checkbox" name="dow" id="mon"><span class="checkmark">월</span></label>
+                                                            <label class="ckb2" for="tue"><input type="checkbox" name="dow" id="tue"><span class="checkmark">화</span></label>
+                                                            <label class="ckb2" for="wed"><input type="checkbox" name="dow" id="wed"><span class="checkmark">수</span></label>
+                                                            <label class="ckb2" for="thu"><input type="checkbox" name="dow" id="thu"><span class="checkmark">목</span></label>
+                                                            <label class="ckb2" for="fri"><input type="checkbox" name="dow" id="fri"><span class="checkmark">금</span></label>
+                                                            <label class="ckb2" for="sat"><input type="checkbox" name="dow" id="sat"><span class="checkmark">토</span></label>
+                                                            <label class="ckb2" for="sun"><input type="checkbox" name="dow" id="sun"><span class="checkmark">일</span></label>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>수업 시간</th>
+                                                        <td>
+                                                            <!-- 시작 <input type="text" placeholder="00:00" size="4" class="tc">~ 종료 <input type="text" placeholder="00:00" size="4" class="tc"> -->
+                                                            <select class="slt" name="">
+                                                                <!-- <option value="">00:00~00:50</option>
+                                                        <option value="">01:00~01:50</option>
+                                                        <option value="">02:00~02:50</option>
+                                                        <option value="">03:00~03:50</option>
+                                                        <option value="">04:00~04:50</option>
+                                                        <option value="">05:00~05:50</option>-->
+                                                                <option value="">06:00~06:50</option>
+                                                                <option value="">07:00~07:50</option>
+                                                                <option value="">08:00~08:50</option>
+                                                                <option value="">09:00~09:50</option>
+                                                                <option value="">10:00~10:50</option>
+                                                                <option value="">11:00~11:50</option>
+                                                                <option value="">12:00~12:50</option>
+                                                                <option value="">13:00~13:50</option>
+                                                                <option value="">14:00~14:50</option>
+                                                                <option value="">15:00~15:50</option>
+                                                                <option value="">16:00~16:50</option>
+                                                                <option value="">17:00~17:50</option>
+                                                                <option value="">18:00~18:50</option>
+                                                                <option value="">19:00~19:50</option>
+                                                                <option value="">20:00~20:50</option>
+                                                                <option value="">21:00~21:50</option>
+                                                                <option value="">22:00~22:50</option>
+                                                                <option value="">23:00~23:50</option>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>강의실</th>
+                                                        <td><input type="text"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>개강일</th>
+                                                        <td><input type="text" class="datepicker"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>종강일</th>
+                                                        <td><input type="text" class="datepicker"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>수강료</th>
+                                                        <td><input type="number" class="tr" size="8">원</td>
+                                                    </tr>
+                                                    <tr class="period">
+                                                        <th>청구주기</th>
+                                                        <td>
+                                                            <select class="slt" name="">
+                                                                <option value="">1개월</option>
+                                                                <option value="">2개월</option>
+                                                                <option value="">3개월</option>
+                                                                <option value="">4개월</option>
+                                                                <option value="">5개월</option>
+                                                                <option value="">6개월</option>
+                                                                <option value="">7개월</option>
+                                                                <option value="">8개월</option>
+                                                                <option value="">9개월</option>
+                                                                <option value="">10개월</option>
+                                                                <option value="">11개월</option>
+                                                                <option value="">12개월</option>
+                                                            </select>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+
+                                                <ul class="pop_btn_zone">
+                                                    <li class="left">
+                                                        <a href="javascript:;" class="btn_b">삭제</a>
+                                                        <a href="javascript:;" class="btn_b">종강</a>
+                                                    </li>
+                                                    <li class="right bt_big">
+                                                        <a href="javascript:;" class="btn_w">취소</a>
+                                                        <a href="javascript:;" class="btn_b">수정</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <!--// pop_inner -->
+                                        </div>
+                                        <!--// layer_popup -->
+                                    </div>
+                                    <!--// 수업 수정 레이어 팝업 -->
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>초등 고학년</td>
+                                <td>홍길동, 홍동생</td>
+                                <td>55/60</td>
+                                <td>월,화,목,금</td>
+                                <td>1:00~2:00</td>
+                                <td>201호</td>
+                                <td>2020.07.01</td>
+                                <td>180,000원</td>
+                                <td>3개월</td>
+                                <td><a href="javascript:;" class="bt btn_modal">수정</a>
+                                    <!-- 수업 수정 레이어 팝업 -->
+                                    <div class="pop_modal">
+                                        <!-- layer_popup -->
+                                        <div class="layer_popup w400">
+                                            <h4>수업 수정</h4>
+                                            <span class="pop_close">×</span>
+
+                                            <!-- pop_inner -->
+                                            <div class="pop_inner">
+
+                                                <table class="table-row">
+                                                    <colgroup>
+                                                        <col width="30%">
+                                                        <col>
+                                                    </colgroup>
+                                                    <tr>
+                                                        <th>수업명</th>
+                                                        <td><input type="text"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>타입</th>
+                                                        <td>
+                                                            <select class="slt auto" name="">
+                                                                <option value="" class="btn_regular">정규</option>
+                                                                <option value="" class="btn_special">특강</option>
+                                                            </select>
+
+                                                            <p class="pay_method">
+                                                                <label class="rdo" for="pay_lump"><input type="radio" name="pay" id="pay_lump"><span class="checkmark">일괄납부</span></label>
+                                                                <label class="rdo" for="pay_installment"><input type="radio" name="pay" id="pay_installment"><span class="checkmark">분할납부</span></label>
+                                                            </p>
+
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>강사</th>
+                                                        <td>
+                                                            <select class="slt" name="">
+                                                                <option value="">선택</option>
+                                                                <option value="">홍길동</option>
+                                                                <option value=""></option>
+                                                                <option value=""></option>
+                                                            </select>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>정원</th>
+                                                        <td><input type="number" class="tr">명</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>수업 요일</th>
+                                                        <td>
+                                                            <label class="ckb2" for="mon"><input type="checkbox" name="dow" id="mon"><span class="checkmark">월</span></label>
+                                                            <label class="ckb2" for="tue"><input type="checkbox" name="dow" id="tue"><span class="checkmark">화</span></label>
+                                                            <label class="ckb2" for="wed"><input type="checkbox" name="dow" id="wed"><span class="checkmark">수</span></label>
+                                                            <label class="ckb2" for="thu"><input type="checkbox" name="dow" id="thu"><span class="checkmark">목</span></label>
+                                                            <label class="ckb2" for="fri"><input type="checkbox" name="dow" id="fri"><span class="checkmark">금</span></label>
+                                                            <label class="ckb2" for="sat"><input type="checkbox" name="dow" id="sat"><span class="checkmark">토</span></label>
+                                                            <label class="ckb2" for="sun"><input type="checkbox" name="dow" id="sun"><span class="checkmark">일</span></label>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>수업 시간</th>
+                                                        <td>
+                                                            <!-- 시작 <input type="text" placeholder="00:00" size="4" class="tc">~ 종료 <input type="text" placeholder="00:00" size="4" class="tc"> -->
+                                                            <select class="slt" name="">
+                                                                <!-- <option value="">00:00~00:50</option>
+                                                        <option value="">01:00~01:50</option>
+                                                        <option value="">02:00~02:50</option>
+                                                        <option value="">03:00~03:50</option>
+                                                        <option value="">04:00~04:50</option>
+                                                        <option value="">05:00~05:50</option>-->
+                                                                <option value="">06:00~06:50</option>
+                                                                <option value="">07:00~07:50</option>
+                                                                <option value="">08:00~08:50</option>
+                                                                <option value="">09:00~09:50</option>
+                                                                <option value="">10:00~10:50</option>
+                                                                <option value="">11:00~11:50</option>
+                                                                <option value="">12:00~12:50</option>
+                                                                <option value="">13:00~13:50</option>
+                                                                <option value="">14:00~14:50</option>
+                                                                <option value="">15:00~15:50</option>
+                                                                <option value="">16:00~16:50</option>
+                                                                <option value="">17:00~17:50</option>
+                                                                <option value="">18:00~18:50</option>
+                                                                <option value="">19:00~19:50</option>
+                                                                <option value="">20:00~20:50</option>
+                                                                <option value="">21:00~21:50</option>
+                                                                <option value="">22:00~22:50</option>
+                                                                <option value="">23:00~23:50</option>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>강의실</th>
+                                                        <td><input type="text"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>개강일</th>
+                                                        <td><input type="text" class="datepicker"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>종강일</th>
+                                                        <td><input type="text" class="datepicker"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>수강료</th>
+                                                        <td><input type="number" class="tr" size="8">원</td>
+                                                    </tr>
+                                                    <tr class="period">
+                                                        <th>청구주기</th>
+                                                        <td>
+                                                            <select class="slt" name="">
+                                                                <option value="">1개월</option>
+                                                                <option value="">2개월</option>
+                                                                <option value="">3개월</option>
+                                                                <option value="">4개월</option>
+                                                                <option value="">5개월</option>
+                                                                <option value="">6개월</option>
+                                                                <option value="">7개월</option>
+                                                                <option value="">8개월</option>
+                                                                <option value="">9개월</option>
+                                                                <option value="">10개월</option>
+                                                                <option value="">11개월</option>
+                                                                <option value="">12개월</option>
+                                                            </select>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+
+                                                <ul class="pop_btn_zone">
+                                                    <li class="left">
+                                                        <a href="javascript:;" class="btn_b">삭제</a>
+                                                        <a href="javascript:;" class="btn_b">종강</a>
+                                                    </li>
+                                                    <li class="right bt_big">
+                                                        <a href="javascript:;" class="btn_w">취소</a>
+                                                        <a href="javascript:;" class="btn_b">수정</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <!--// pop_inner -->
+                                        </div>
+                                        <!--// layer_popup -->
+                                    </div>
+                                    <!--// 수업 수정 레이어 팝업 -->
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>초등 고학년</td>
+                                <td>홍길동, 홍동생</td>
+                                <td>55/60</td>
+                                <td>월,화,목,금</td>
+                                <td>1:00~2:00</td>
+                                <td>201호</td>
+                                <td>2020.07.01</td>
+                                <td>180,000원</td>
+                                <td>3개월</td>
+                                <td><a href="javascript:;" class="bt btn_modal">수정</a>
+                                    <!-- 수업 수정 레이어 팝업 -->
+                                    <div class="pop_modal">
+                                        <!-- layer_popup -->
+                                        <div class="layer_popup w400">
+                                            <h4>수업 수정</h4>
+                                            <span class="pop_close">×</span>
+
+                                            <!-- pop_inner -->
+                                            <div class="pop_inner">
+
+                                                <table class="table-row">
+                                                    <colgroup>
+                                                        <col width="30%">
+                                                        <col>
+                                                    </colgroup>
+                                                    <tr>
+                                                        <th>수업명</th>
+                                                        <td><input type="text"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>타입</th>
+                                                        <td>
+                                                            <select class="slt auto" name="">
+                                                                <option value="" class="btn_regular">정규</option>
+                                                                <option value="" class="btn_special">특강</option>
+                                                            </select>
+
+                                                            <p class="pay_method">
+                                                                <label class="rdo" for="pay_lump"><input type="radio" name="pay" id="pay_lump"><span class="checkmark">일괄납부</span></label>
+                                                                <label class="rdo" for="pay_installment"><input type="radio" name="pay" id="pay_installment"><span class="checkmark">분할납부</span></label>
+                                                            </p>
+
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>강사</th>
+                                                        <td>
+                                                            <select class="slt" name="">
+                                                                <option value="">선택</option>
+                                                                <option value="">홍길동</option>
+                                                                <option value=""></option>
+                                                                <option value=""></option>
+                                                            </select>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>정원</th>
+                                                        <td><input type="number" class="tr">명</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>수업 요일</th>
+                                                        <td>
+                                                            <label class="ckb2" for="mon"><input type="checkbox" name="dow" id="mon"><span class="checkmark">월</span></label>
+                                                            <label class="ckb2" for="tue"><input type="checkbox" name="dow" id="tue"><span class="checkmark">화</span></label>
+                                                            <label class="ckb2" for="wed"><input type="checkbox" name="dow" id="wed"><span class="checkmark">수</span></label>
+                                                            <label class="ckb2" for="thu"><input type="checkbox" name="dow" id="thu"><span class="checkmark">목</span></label>
+                                                            <label class="ckb2" for="fri"><input type="checkbox" name="dow" id="fri"><span class="checkmark">금</span></label>
+                                                            <label class="ckb2" for="sat"><input type="checkbox" name="dow" id="sat"><span class="checkmark">토</span></label>
+                                                            <label class="ckb2" for="sun"><input type="checkbox" name="dow" id="sun"><span class="checkmark">일</span></label>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>수업 시간</th>
+                                                        <td>
+                                                            <!-- 시작 <input type="text" placeholder="00:00" size="4" class="tc">~ 종료 <input type="text" placeholder="00:00" size="4" class="tc"> -->
+                                                            <select class="slt" name="">
+                                                                <!-- <option value="">00:00~00:50</option>
+                                                        <option value="">01:00~01:50</option>
+                                                        <option value="">02:00~02:50</option>
+                                                        <option value="">03:00~03:50</option>
+                                                        <option value="">04:00~04:50</option>
+                                                        <option value="">05:00~05:50</option>-->
+                                                                <option value="">06:00~06:50</option>
+                                                                <option value="">07:00~07:50</option>
+                                                                <option value="">08:00~08:50</option>
+                                                                <option value="">09:00~09:50</option>
+                                                                <option value="">10:00~10:50</option>
+                                                                <option value="">11:00~11:50</option>
+                                                                <option value="">12:00~12:50</option>
+                                                                <option value="">13:00~13:50</option>
+                                                                <option value="">14:00~14:50</option>
+                                                                <option value="">15:00~15:50</option>
+                                                                <option value="">16:00~16:50</option>
+                                                                <option value="">17:00~17:50</option>
+                                                                <option value="">18:00~18:50</option>
+                                                                <option value="">19:00~19:50</option>
+                                                                <option value="">20:00~20:50</option>
+                                                                <option value="">21:00~21:50</option>
+                                                                <option value="">22:00~22:50</option>
+                                                                <option value="">23:00~23:50</option>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>강의실</th>
+                                                        <td><input type="text"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>개강일</th>
+                                                        <td><input type="text" class="datepicker"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>종강일</th>
+                                                        <td><input type="text" class="datepicker"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>수강료</th>
+                                                        <td><input type="number" class="tr" size="8">원</td>
+                                                    </tr>
+                                                    <tr class="period">
+                                                        <th>청구주기</th>
+                                                        <td>
+                                                            <select class="slt" name="">
+                                                                <option value="">1개월</option>
+                                                                <option value="">2개월</option>
+                                                                <option value="">3개월</option>
+                                                                <option value="">4개월</option>
+                                                                <option value="">5개월</option>
+                                                                <option value="">6개월</option>
+                                                                <option value="">7개월</option>
+                                                                <option value="">8개월</option>
+                                                                <option value="">9개월</option>
+                                                                <option value="">10개월</option>
+                                                                <option value="">11개월</option>
+                                                                <option value="">12개월</option>
+                                                            </select>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+
+                                                <ul class="pop_btn_zone">
+                                                    <li class="left">
+                                                        <a href="javascript:;" class="btn_b">삭제</a>
+                                                        <a href="javascript:;" class="btn_b">종강</a>
+                                                    </li>
+                                                    <li class="right bt_big">
+                                                        <a href="javascript:;" class="btn_w">취소</a>
+                                                        <a href="javascript:;" class="btn_b">수정</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <!--// pop_inner -->
+                                        </div>
+                                        <!--// layer_popup -->
+                                    </div>
+                                    <!--// 수업 수정 레이어 팝업 -->
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td>초등 고학년</td>
+                                <td>홍길동, 홍동생</td>
+                                <td>55/60</td>
+                                <td>월,화,목,금</td>
+                                <td>1:00~2:00</td>
+                                <td>201호</td>
+                                <td>2020.07.01</td>
+                                <td>180,000원</td>
+                                <td>3개월</td>
+                                <td><a href="javascript:;" class="bt btn_modal">수정</a>
+                                    <!-- 수업 수정 레이어 팝업 -->
+                                    <div class="pop_modal">
+                                        <!-- layer_popup -->
+                                        <div class="layer_popup w400">
+                                            <h4>수업 수정</h4>
+                                            <span class="pop_close">×</span>
+
+                                            <!-- pop_inner -->
+                                            <div class="pop_inner">
+
+                                                <table class="table-row">
+                                                    <colgroup>
+                                                        <col width="30%">
+                                                        <col>
+                                                    </colgroup>
+                                                    <tr>
+                                                        <th>수업명</th>
+                                                        <td><input type="text"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>타입</th>
+                                                        <td>
+                                                            <select class="slt auto" name="">
+                                                                <option value="" class="btn_regular">정규</option>
+                                                                <option value="" class="btn_special">특강</option>
+                                                            </select>
+
+                                                            <p class="pay_method">
+                                                                <label class="rdo" for="pay_lump"><input type="radio" name="pay" id="pay_lump"><span class="checkmark">일괄납부</span></label>
+                                                                <label class="rdo" for="pay_installment"><input type="radio" name="pay" id="pay_installment"><span class="checkmark">분할납부</span></label>
+                                                            </p>
+
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>강사</th>
+                                                        <td>
+                                                            <select class="slt" name="">
+                                                                <option value="">선택</option>
+                                                                <option value="">홍길동</option>
+                                                                <option value=""></option>
+                                                                <option value=""></option>
+                                                            </select>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>정원</th>
+                                                        <td><input type="number" class="tr">명</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>수업 요일</th>
+                                                        <td>
+                                                            <label class="ckb2" for="mon"><input type="checkbox" name="dow" id="mon"><span class="checkmark">월</span></label>
+                                                            <label class="ckb2" for="tue"><input type="checkbox" name="dow" id="tue"><span class="checkmark">화</span></label>
+                                                            <label class="ckb2" for="wed"><input type="checkbox" name="dow" id="wed"><span class="checkmark">수</span></label>
+                                                            <label class="ckb2" for="thu"><input type="checkbox" name="dow" id="thu"><span class="checkmark">목</span></label>
+                                                            <label class="ckb2" for="fri"><input type="checkbox" name="dow" id="fri"><span class="checkmark">금</span></label>
+                                                            <label class="ckb2" for="sat"><input type="checkbox" name="dow" id="sat"><span class="checkmark">토</span></label>
+                                                            <label class="ckb2" for="sun"><input type="checkbox" name="dow" id="sun"><span class="checkmark">일</span></label>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>수업 시간</th>
+                                                        <td>
+                                                            <!-- 시작 <input type="text" placeholder="00:00" size="4" class="tc">~ 종료 <input type="text" placeholder="00:00" size="4" class="tc"> -->
+                                                            <select class="slt" name="">
+                                                                <!-- <option value="">00:00~00:50</option>
+                                                        <option value="">01:00~01:50</option>
+                                                        <option value="">02:00~02:50</option>
+                                                        <option value="">03:00~03:50</option>
+                                                        <option value="">04:00~04:50</option>
+                                                        <option value="">05:00~05:50</option>-->
+                                                                <option value="">06:00~06:50</option>
+                                                                <option value="">07:00~07:50</option>
+                                                                <option value="">08:00~08:50</option>
+                                                                <option value="">09:00~09:50</option>
+                                                                <option value="">10:00~10:50</option>
+                                                                <option value="">11:00~11:50</option>
+                                                                <option value="">12:00~12:50</option>
+                                                                <option value="">13:00~13:50</option>
+                                                                <option value="">14:00~14:50</option>
+                                                                <option value="">15:00~15:50</option>
+                                                                <option value="">16:00~16:50</option>
+                                                                <option value="">17:00~17:50</option>
+                                                                <option value="">18:00~18:50</option>
+                                                                <option value="">19:00~19:50</option>
+                                                                <option value="">20:00~20:50</option>
+                                                                <option value="">21:00~21:50</option>
+                                                                <option value="">22:00~22:50</option>
+                                                                <option value="">23:00~23:50</option>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>강의실</th>
+                                                        <td><input type="text"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>개강일</th>
+                                                        <td><input type="text" class="datepicker"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>종강일</th>
+                                                        <td><input type="text" class="datepicker"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>수강료</th>
+                                                        <td><input type="number" class="tr" size="8">원</td>
+                                                    </tr>
+                                                    <tr class="period">
+                                                        <th>청구주기</th>
+                                                        <td>
+                                                            <select class="slt" name="">
+                                                                <option value="">1개월</option>
+                                                                <option value="">2개월</option>
+                                                                <option value="">3개월</option>
+                                                                <option value="">4개월</option>
+                                                                <option value="">5개월</option>
+                                                                <option value="">6개월</option>
+                                                                <option value="">7개월</option>
+                                                                <option value="">8개월</option>
+                                                                <option value="">9개월</option>
+                                                                <option value="">10개월</option>
+                                                                <option value="">11개월</option>
+                                                                <option value="">12개월</option>
+                                                            </select>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+
+                                                <ul class="pop_btn_zone">
+                                                    <li class="left">
+                                                        <a href="javascript:;" class="btn_b">삭제</a>
+                                                        <a href="javascript:;" class="btn_b">종강</a>
+                                                    </li>
+                                                    <li class="right bt_big">
+                                                        <a href="javascript:;" class="btn_w">취소</a>
+                                                        <a href="javascript:;" class="btn_b">수정</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <!--// pop_inner -->
+                                        </div>
+                                        <!--// layer_popup -->
+                                    </div>
+                                    <!--// 수업 수정 레이어 팝업 -->
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>9</td>
+                                <td>초등 고학년</td>
+                                <td>홍길동, 홍동생</td>
+                                <td>55/60</td>
+                                <td>월,화,목,금</td>
+                                <td>1:00~2:00</td>
+                                <td>201호</td>
+                                <td>2020.07.01</td>
+                                <td>180,000원</td>
+                                <td>3개월</td>
+                                <td><a href="javascript:;" class="bt btn_modal">수정</a>
+                                    <!-- 수업 수정 레이어 팝업 -->
+                                    <div class="pop_modal">
+                                        <!-- layer_popup -->
+                                        <div class="layer_popup w400">
+                                            <h4>수업 수정</h4>
+                                            <span class="pop_close">×</span>
+
+                                            <!-- pop_inner -->
+                                            <div class="pop_inner">
+
+                                                <table class="table-row">
+                                                    <colgroup>
+                                                        <col width="30%">
+                                                        <col>
+                                                    </colgroup>
+                                                    <tr>
+                                                        <th>수업명</th>
+                                                        <td><input type="text"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>타입</th>
+                                                        <td>
+                                                            <select class="slt auto" name="">
+                                                                <option value="" class="btn_regular">정규</option>
+                                                                <option value="" class="btn_special">특강</option>
+                                                            </select>
+
+                                                            <p class="pay_method">
+                                                                <label class="rdo" for="pay_lump"><input type="radio" name="pay" id="pay_lump"><span class="checkmark">일괄납부</span></label>
+                                                                <label class="rdo" for="pay_installment"><input type="radio" name="pay" id="pay_installment"><span class="checkmark">분할납부</span></label>
+                                                            </p>
+
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>강사</th>
+                                                        <td>
+                                                            <select class="slt" name="">
+                                                                <option value="">선택</option>
+                                                                <option value="">홍길동</option>
+                                                                <option value=""></option>
+                                                                <option value=""></option>
+                                                            </select>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>정원</th>
+                                                        <td><input type="number" class="tr">명</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>수업 요일</th>
+                                                        <td>
+                                                            <label class="ckb2" for="mon"><input type="checkbox" name="dow" id="mon"><span class="checkmark">월</span></label>
+                                                            <label class="ckb2" for="tue"><input type="checkbox" name="dow" id="tue"><span class="checkmark">화</span></label>
+                                                            <label class="ckb2" for="wed"><input type="checkbox" name="dow" id="wed"><span class="checkmark">수</span></label>
+                                                            <label class="ckb2" for="thu"><input type="checkbox" name="dow" id="thu"><span class="checkmark">목</span></label>
+                                                            <label class="ckb2" for="fri"><input type="checkbox" name="dow" id="fri"><span class="checkmark">금</span></label>
+                                                            <label class="ckb2" for="sat"><input type="checkbox" name="dow" id="sat"><span class="checkmark">토</span></label>
+                                                            <label class="ckb2" for="sun"><input type="checkbox" name="dow" id="sun"><span class="checkmark">일</span></label>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>수업 시간</th>
+                                                        <td>
+                                                            <!-- 시작 <input type="text" placeholder="00:00" size="4" class="tc">~ 종료 <input type="text" placeholder="00:00" size="4" class="tc"> -->
+                                                            <select class="slt" name="">
+                                                                <!-- <option value="">00:00~00:50</option>
+                                                        <option value="">01:00~01:50</option>
+                                                        <option value="">02:00~02:50</option>
+                                                        <option value="">03:00~03:50</option>
+                                                        <option value="">04:00~04:50</option>
+                                                        <option value="">05:00~05:50</option>-->
+                                                                <option value="">06:00~06:50</option>
+                                                                <option value="">07:00~07:50</option>
+                                                                <option value="">08:00~08:50</option>
+                                                                <option value="">09:00~09:50</option>
+                                                                <option value="">10:00~10:50</option>
+                                                                <option value="">11:00~11:50</option>
+                                                                <option value="">12:00~12:50</option>
+                                                                <option value="">13:00~13:50</option>
+                                                                <option value="">14:00~14:50</option>
+                                                                <option value="">15:00~15:50</option>
+                                                                <option value="">16:00~16:50</option>
+                                                                <option value="">17:00~17:50</option>
+                                                                <option value="">18:00~18:50</option>
+                                                                <option value="">19:00~19:50</option>
+                                                                <option value="">20:00~20:50</option>
+                                                                <option value="">21:00~21:50</option>
+                                                                <option value="">22:00~22:50</option>
+                                                                <option value="">23:00~23:50</option>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>강의실</th>
+                                                        <td><input type="text"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>개강일</th>
+                                                        <td><input type="text" class="datepicker"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>종강일</th>
+                                                        <td><input type="text" class="datepicker"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>수강료</th>
+                                                        <td><input type="number" class="tr" size="8">원</td>
+                                                    </tr>
+                                                    <tr class="period">
+                                                        <th>청구주기</th>
+                                                        <td>
+                                                            <select class="slt" name="">
+                                                                <option value="">1개월</option>
+                                                                <option value="">2개월</option>
+                                                                <option value="">3개월</option>
+                                                                <option value="">4개월</option>
+                                                                <option value="">5개월</option>
+                                                                <option value="">6개월</option>
+                                                                <option value="">7개월</option>
+                                                                <option value="">8개월</option>
+                                                                <option value="">9개월</option>
+                                                                <option value="">10개월</option>
+                                                                <option value="">11개월</option>
+                                                                <option value="">12개월</option>
+                                                            </select>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+
+                                                <ul class="pop_btn_zone">
+                                                    <li class="left">
+                                                        <a href="javascript:;" class="btn_b">삭제</a>
+                                                        <a href="javascript:;" class="btn_b">종강</a>
+                                                    </li>
+                                                    <li class="right bt_big">
+                                                        <a href="javascript:;" class="btn_w">취소</a>
+                                                        <a href="javascript:;" class="btn_b">수정</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <!--// pop_inner -->
+                                        </div>
+                                        <!--// layer_popup -->
+                                    </div>
+                                    <!--// 수업 수정 레이어 팝업 -->
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>10</td>
+                                <td>초등 고학년</td>
+                                <td>홍길동, 홍동생</td>
+                                <td>55/60</td>
+                                <td>월,화,목,금</td>
+                                <td>1:00~2:00</td>
+                                <td>201호</td>
+                                <td>2020.07.01</td>
+                                <td>180,000원</td>
+                                <td>3개월</td>
+                                <td><a href="javascript:;" class="bt btn_modal">수정</a>
+                                    <!-- 수업 수정 레이어 팝업 -->
+                                    <div class="pop_modal">
+                                        <!-- layer_popup -->
+                                        <div class="layer_popup w400">
+                                            <h4>수업 수정</h4>
+                                            <span class="pop_close">×</span>
+
+                                            <!-- pop_inner -->
+                                            <div class="pop_inner">
+
+                                                <table class="table-row">
+                                                    <colgroup>
+                                                        <col width="30%">
+                                                        <col>
+                                                    </colgroup>
+                                                    <tr>
+                                                        <th>수업명</th>
+                                                        <td><input type="text"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>타입</th>
+                                                        <td>
+                                                            <select class="slt auto" name="">
+                                                                <option value="" class="btn_regular">정규</option>
+                                                                <option value="" class="btn_special">특강</option>
+                                                            </select>
+
+                                                            <p class="pay_method">
+                                                                <label class="rdo" for="pay_lump"><input type="radio" name="pay" id="pay_lump"><span class="checkmark">일괄납부</span></label>
+                                                                <label class="rdo" for="pay_installment"><input type="radio" name="pay" id="pay_installment"><span class="checkmark">분할납부</span></label>
+                                                            </p>
+
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>강사</th>
+                                                        <td>
+                                                            <select class="slt" name="">
+                                                                <option value="">선택</option>
+                                                                <option value="">홍길동</option>
+                                                                <option value=""></option>
+                                                                <option value=""></option>
+                                                            </select>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>정원</th>
+                                                        <td><input type="number" class="tr">명</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>수업 요일</th>
+                                                        <td>
+                                                            <label class="ckb2" for="mon"><input type="checkbox" name="dow" id="mon"><span class="checkmark">월</span></label>
+                                                            <label class="ckb2" for="tue"><input type="checkbox" name="dow" id="tue"><span class="checkmark">화</span></label>
+                                                            <label class="ckb2" for="wed"><input type="checkbox" name="dow" id="wed"><span class="checkmark">수</span></label>
+                                                            <label class="ckb2" for="thu"><input type="checkbox" name="dow" id="thu"><span class="checkmark">목</span></label>
+                                                            <label class="ckb2" for="fri"><input type="checkbox" name="dow" id="fri"><span class="checkmark">금</span></label>
+                                                            <label class="ckb2" for="sat"><input type="checkbox" name="dow" id="sat"><span class="checkmark">토</span></label>
+                                                            <label class="ckb2" for="sun"><input type="checkbox" name="dow" id="sun"><span class="checkmark">일</span></label>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>수업 시간</th>
+                                                        <td>
+                                                            <!-- 시작 <input type="text" placeholder="00:00" size="4" class="tc">~ 종료 <input type="text" placeholder="00:00" size="4" class="tc"> -->
+                                                            <select class="slt" name="">
+                                                                <!-- <option value="">00:00~00:50</option>
+                                                        <option value="">01:00~01:50</option>
+                                                        <option value="">02:00~02:50</option>
+                                                        <option value="">03:00~03:50</option>
+                                                        <option value="">04:00~04:50</option>
+                                                        <option value="">05:00~05:50</option>-->
+                                                                <option value="">06:00~06:50</option>
+                                                                <option value="">07:00~07:50</option>
+                                                                <option value="">08:00~08:50</option>
+                                                                <option value="">09:00~09:50</option>
+                                                                <option value="">10:00~10:50</option>
+                                                                <option value="">11:00~11:50</option>
+                                                                <option value="">12:00~12:50</option>
+                                                                <option value="">13:00~13:50</option>
+                                                                <option value="">14:00~14:50</option>
+                                                                <option value="">15:00~15:50</option>
+                                                                <option value="">16:00~16:50</option>
+                                                                <option value="">17:00~17:50</option>
+                                                                <option value="">18:00~18:50</option>
+                                                                <option value="">19:00~19:50</option>
+                                                                <option value="">20:00~20:50</option>
+                                                                <option value="">21:00~21:50</option>
+                                                                <option value="">22:00~22:50</option>
+                                                                <option value="">23:00~23:50</option>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>강의실</th>
+                                                        <td><input type="text"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>개강일</th>
+                                                        <td><input type="text" class="datepicker"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>종강일</th>
+                                                        <td><input type="text" class="datepicker"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>수강료</th>
+                                                        <td><input type="number" class="tr" size="8">원</td>
+                                                    </tr>
+                                                    <tr class="period">
+                                                        <th>청구주기</th>
+                                                        <td>
+                                                            <select class="slt" name="">
+                                                                <option value="">1개월</option>
+                                                                <option value="">2개월</option>
+                                                                <option value="">3개월</option>
+                                                                <option value="">4개월</option>
+                                                                <option value="">5개월</option>
+                                                                <option value="">6개월</option>
+                                                                <option value="">7개월</option>
+                                                                <option value="">8개월</option>
+                                                                <option value="">9개월</option>
+                                                                <option value="">10개월</option>
+                                                                <option value="">11개월</option>
+                                                                <option value="">12개월</option>
+                                                            </select>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+
+                                                <ul class="pop_btn_zone">
+                                                    <li class="left">
+                                                        <a href="javascript:;" class="btn_b">삭제</a>
+                                                        <a href="javascript:;" class="btn_b">종강</a>
+                                                    </li>
+                                                    <li class="right bt_big">
+                                                        <a href="javascript:;" class="btn_w">취소</a>
+                                                        <a href="javascript:;" class="btn_b">수정</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <!--// pop_inner -->
+                                        </div>
+                                        <!--// layer_popup -->
+                                    </div>
+                                    <!--// 수업 수정 레이어 팝업 -->
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="paging">
+                        <a href="#"><img src="../images/paging_first.png" alt="처음페이지"></a>
+                        <a href="#"><img src="../images/paging_prev.png" alt="이전페이지"></a>
+                        <a href="#" class="on">1</a>
+                        <a href="#">2</a>
+                        <a href="#">3</a>
+                        <a href="#">4</a>
+                        <a href="#">5</a>
+                        <a href="#">6</a>
+                        <a href="#">7</a>
+                        <a href="#">8</a>
+                        <a href="#">9</a>
+                        <a href="#">10</a>
+                        <a href="#"><img src="../images/paging_next.png" alt="다음페이지"></a>
+                        <a href="#"><img src="../images/paging_last.png" alt="마지막페이지"></a>
+                    </div>
+
+
+
+                </div>
+                <!--// inner -->
+
+
+
+
+
+
+            </div>
+            <!--// contents -->
+
+        </div>
+        <!--// container -->
+
+    </div>
+    <!--// wrap -->
+
+
+</body>
+
+</html>

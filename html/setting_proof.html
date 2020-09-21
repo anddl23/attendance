@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, minimum-scale=1.0, user-scalable=yes, target-densitydpi=medium-dpi">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../css/common.css">
+    <script type="text/javascript" src="../js/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="../js/jquery-ui.js"></script>
+    <script type="text/javascript" src="../js/common.js"></script>
+    <title>출결서비스</title>
+</head>
+
+<body>
+
+    <!-- wrap -->
+    <div class="wrap">
+
+        <!-- aside -->
+        <div class="aside">
+            <h1><img src="../images/logo.png" alt="K Tigers"></h1>
+
+            <ul class="gnb">
+                <li>
+                    <a href="#"><img src="../images/gnb_bl01.png" alt=""> 경영</a>
+                    <ul class="lnb">
+                        <li><a href="manage_receive.html">수납현황</a></li>
+                        <li><a href="manage_student.html">원생현황</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><img src="../images/gnb_bl02.png" alt=""> 출결</a>
+                    <ul class="lnb">
+                        <li><a href="attendance_state.html">출결현황</a></li>
+                        <li><a href="attendance_manage.html">출결관리</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><img src="../images/gnb_bl03.png" alt=""> 학생</a>
+                    <ul class="lnb">
+                        <li><a href="student_manage.html">원생관리</a></li>
+                        <li><a href="student_excel.html">엑셀등록</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><img src="../images/gnb_bl04.png" alt=""> 수업관리</a>
+                    <ul class="lnb">
+                        <li><a href="class_manage.html">수업관리</a></li>
+                        <li><a href="class_staff.html">강사(직원)관리</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><img src="../images/gnb_bl05.png" alt=""> 미디어</a>
+                    <ul class="lnb">
+                        <li><a href="media_list.html">공연영상</a></li>
+                        <li><a href="media_list.html">K팝 태권</a></li>
+                        <li><a href="media_list.html">방송활동</a></li>
+                        <li><a href="media_list.html">기술영상</a></li>
+                        <li><a href="media_list.html">활동영상</a></li>
+                        <li><a href="media_list.html">우리영상</a></li>
+                        <li><a href="media_list.html">우리사진</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><img src="../images/gnb_bl06.png" alt=""> 문자</a>
+                    <ul class="lnb">
+                        <li><a href="sms_send.html">문자발송</a></li>
+                        <li><a href="sms_history.html">발송내역</a></li>
+                        <li><a href="sms_setting.html">문자설정</a></li>
+                        <li><a href="sms_auto.html">자동발송설정</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><img src="../images/gnb_bl07.png" alt=""> 수납관리</a>
+                    <ul class="lnb">
+                        <li><a href="receive_state.html">수납현황</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><img src="../images/gnb_bl08.png" alt=""> 공지사항</a>
+                    <ul class="lnb">
+                        <li><a href="notice_list.html">공지사항</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><img src="../images/gnb_bl09.png" alt=""> 실시간 버스</a>
+                    <ul class="lnb">
+                        <li><a href="bus.html">셔틀버스</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><img src="../images/gnb_bl10.png" alt=""> 설정</a>
+                    <ul class="lnb">
+                        <li><a href="setting_info.html">학원정보</a></li>
+                        <li><a href="setting_receive.html">수납설정</a></li>
+                        <li><a href="setting_point.html">포인트 충전</a></li>
+                        <li><a href="setting_proof.html" class="on">선택항목설정</a></li>
+                        <li><a href="setting_option.html">제출증빙서류</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <!--// aside -->
+
+
+        <!-- container -->
+        <div class="container">
+
+            <!-- header -->
+            <div class="header">
+                <span class="name">관장님</span>
+                <a href="login.html" class="btn_logout">로그아웃</a>
+            </div>
+            <!--// header -->
+
+
+            <!-- contents -->
+            <div class="contents">
+
+                <h2>선택 항목 설정</h2>
+
+                <!-- inner -->
+                <div class="inner">
+
+
+
+                    <h3>학생 항목</h3>
+                    <!-- 학생 항목 테이블 -->
+                    <table class="table-row">
+                        <caption>학생 항목 테이블</caption>
+                        <colgroup>
+                            <col width="15%">
+                            <col>
+                        </colgroup>
+                        <tr>
+                            <th>학년구분</th>
+                            <td>
+                                <input type="text" class="proof"><a href="javascript:;" class="bt">추가</a> <br />
+                                <ul class="item">
+                                    <li><span>5세</span><a href="javascript:;" class="proof_del"><img src="../images/bl_del.png" alt="삭제"></a></li>
+                                    <li><span>6세</span><a href="javascript:;" class="proof_del"><img src="../images/bl_del.png" alt="삭제"></a></li>
+                                    <li><span>7세</span><a href="javascript:;" class="proof_del"><img src="../images/bl_del.png" alt="삭제"></a></li>
+                                    <li><span>8세</span><a href="javascript:;" class="proof_del"><img src="../images/bl_del.png" alt="삭제"></a></li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                    <!--// 학생 항목 테이블 -->
+
+
+
+
+
+
+
+                    <h3>수납 항목</h3>
+                    <!-- 수납 항목 테이블 -->
+                    <table class="table-row">
+                        <caption>수납 항목 테이블</caption>
+                        <colgroup>
+                            <col width="15%">
+                            <col>
+                        </colgroup>
+                        <tr>
+                            <th>청구항목</th>
+                            <td>
+                                <input type="text" class="proof"><a href="javascript:;" class="bt">추가</a><br />
+                                <ul class="item">
+                                    <li><span>수업료</span><a href="javascript:;" class="proof_del"><img src="../images/bl_del.png" alt="삭제"></a></li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>카드사 목록 관리</th>
+                            <td>
+                                <input type="text" class="proof"><a href="javascript:;" class="bt">추가</a><br />
+                                <ul class="item">
+                                    <li><span>비씨카드</span><a href="javascript:;" class="proof_del"><img src="../images/bl_del.png" alt="삭제"></a></li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>은행사 목록</th>
+                            <td>
+                                <input type="text" class="proof"><a href="javascript:;" class="bt">추가</a><br />
+                                <ul class="item">
+                                    <li><span>국민은행</span><a href="javascript:;" class="proof_del"><img src="../images/bl_del.png" alt="삭제"></a></li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                    <!--//수납 항목 테이블 -->
+
+
+
+
+
+                    <h3>강사(직원) 권한</h3>
+                    <!--강사(직원) 권한 테이블 -->
+                    <table class="table-row">
+                        <caption>강사(직원) 권한 테이블</caption>
+                        <colgroup>
+                            <col width="15%">
+                            <col>
+                        </colgroup>
+                        <tr>
+                            <th>권한명</th>
+                            <td>
+                                <input type="text" class="proof"><a href="javascript:;" class="bt">추가</a><br />
+                                <ul class="item">
+                                    <li><span>최고 관리자</span><a href="javascript:;" class="proof_del"><img src="../images/bl_del.png" alt="삭제"></a></li>
+                                </ul>
+                                <a href="javascript:;" class="bt bt_detail">세부권한설정</a>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <!--// 강사(직원) 권한 테이블 -->
+
+                    <!-- 권한설정 테이블 -->
+                    <table class="table-row">
+                        <caption>권한설정 테이블</caption>
+                        <colgroup>
+                            <col width="15%">
+                            <col>
+                        </colgroup>
+                        <tr>
+                            <th>최고 관리자</th>
+                            <td>
+                                <label class="ckb" for="authority_a01"><input type="checkbox" id="authority_a01"><span class="checkmark">경영</span></label>
+                                <label class="ckb" for="authority_a02"><input type="checkbox" id="authority_a02"><span class="checkmark">출결</span></label>
+                                <label class="ckb" for="authority_a03"><input type="checkbox" id="authority_a03"><span class="checkmark">학생</span></label>
+                                <label class="ckb" for="authority_a04"><input type="checkbox" id="authority_a04"><span class="checkmark">수업</span></label>
+                                <label class="ckb" for="authority_a05"><input type="checkbox" id="authority_a05"><span class="checkmark">미디어</span></label>
+                                <label class="ckb" for="authority_a06"><input type="checkbox" id="authority_a06"><span class="checkmark">문자</span></label>
+                                <label class="ckb" for="authority_a07"><input type="checkbox" id="authority_a07"><span class="checkmark">수납</span></label>
+                                <label class="ckb" for="authority_a08"><input type="checkbox" id="authority_a08"><span class="checkmark">공지</span></label>
+                                <label class="ckb" for="authority_a09"><input type="checkbox" id="authority_a09"><span class="checkmark">버스</span></label>
+                                <label class="ckb" for="authority_a10"><input type="checkbox" id="authority_a10"><span class="checkmark">설정</span></label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>사범</th>
+                            <td>
+                                <label class="ckb" for="authority_b01"><input type="checkbox" id="authority_b01"><span class="checkmark">경영</span></label>
+                                <label class="ckb" for="authority_b02"><input type="checkbox" id="authority_b02"><span class="checkmark">출결</span></label>
+                                <label class="ckb" for="authority_b03"><input type="checkbox" id="authority_b03"><span class="checkmark">학생</span></label>
+                                <label class="ckb" for="authority_b04"><input type="checkbox" id="authority_b04"><span class="checkmark">수업</span></label>
+                                <label class="ckb" for="authority_b05"><input type="checkbox" id="authority_b05"><span class="checkmark">미디어</span></label>
+                                <label class="ckb" for="authority_b06"><input type="checkbox" id="authority_b06"><span class="checkmark">문자</span></label>
+                                <label class="ckb" for="authority_b07"><input type="checkbox" id="authority_b07"><span class="checkmark">수납</span></label>
+                                <label class="ckb" for="authority_b08"><input type="checkbox" id="authority_b08"><span class="checkmark">공지</span></label>
+                                <label class="ckb" for="authority_b09"><input type="checkbox" id="authority_b09"><span class="checkmark">버스</span></label>
+                                <label class="ckb" for="authority_b10"><input type="checkbox" id="authority_b10"><span class="checkmark">설정</span></label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>강사</th>
+                            <td>
+                                <label class="ckb" for="authority_c01"><input type="checkbox" id="authority_c01"><span class="checkmark">경영</span></label>
+                                <label class="ckb" for="authority_c02"><input type="checkbox" id="authority_c02"><span class="checkmark">출결</span></label>
+                                <label class="ckb" for="authority_c03"><input type="checkbox" id="authority_c03"><span class="checkmark">학생</span></label>
+                                <label class="ckb" for="authority_c04"><input type="checkbox" id="authority_c04"><span class="checkmark">수업</span></label>
+                                <label class="ckb" for="authority_c05"><input type="checkbox" id="authority_c05"><span class="checkmark">미디어</span></label>
+                                <label class="ckb" for="authority_c06"><input type="checkbox" id="authority_c06"><span class="checkmark">문자</span></label>
+                                <label class="ckb" for="authority_c07"><input type="checkbox" id="authority_c07"><span class="checkmark">수납</span></label>
+                                <label class="ckb" for="authority_c08"><input type="checkbox" id="authority_c08"><span class="checkmark">공지</span></label>
+                                <label class="ckb" for="authority_c09"><input type="checkbox" id="authority_c09"><span class="checkmark">버스</span></label>
+                                <label class="ckb" for="authority_c10"><input type="checkbox" id="authority_c10"><span class="checkmark">설정</span></label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>알바</th>
+                            <td>
+                                <label class="ckb" for="authority_d01"><input type="checkbox" id="authority_d01"><span class="checkmark">경영</span></label>
+                                <label class="ckb" for="authority_d02"><input type="checkbox" id="authority_d02"><span class="checkmark">출결</span></label>
+                                <label class="ckb" for="authority_d03"><input type="checkbox" id="authority_d03"><span class="checkmark">학생</span></label>
+                                <label class="ckb" for="authority_d04"><input type="checkbox" id="authority_d04"><span class="checkmark">수업</span></label>
+                                <label class="ckb" for="authority_d05"><input type="checkbox" id="authority_d05"><span class="checkmark">미디어</span></label>
+                                <label class="ckb" for="authority_d06"><input type="checkbox" id="authority_d06"><span class="checkmark">문자</span></label>
+                                <label class="ckb" for="authority_d07"><input type="checkbox" id="authority_d07"><span class="checkmark">수납</span></label>
+                                <label class="ckb" for="authority_d08"><input type="checkbox" id="authority_d08"><span class="checkmark">공지</span></label>
+                                <label class="ckb" for="authority_d09"><input type="checkbox" id="authority_d09"><span class="checkmark">버스</span></label>
+                                <label class="ckb" for="authority_d10"><input type="checkbox" id="authority_d10"><span class="checkmark">설정</span></label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>기타</th>
+                            <td>
+                                <label class="ckb" for="authority_e01"><input type="checkbox" id="authority_e01"><span class="checkmark">경영</span></label>
+                                <label class="ckb" for="authority_e02"><input type="checkbox" id="authority_e02"><span class="checkmark">출결</span></label>
+                                <label class="ckb" for="authority_e03"><input type="checkbox" id="authority_e03"><span class="checkmark">학생</span></label>
+                                <label class="ckb" for="authority_e04"><input type="checkbox" id="authority_e04"><span class="checkmark">수업</span></label>
+                                <label class="ckb" for="authority_e05"><input type="checkbox" id="authority_e05"><span class="checkmark">미디어</span></label>
+                                <label class="ckb" for="authority_e06"><input type="checkbox" id="authority_e06"><span class="checkmark">문자</span></label>
+                                <label class="ckb" for="authority_e07"><input type="checkbox" id="authority_e07"><span class="checkmark">수납</span></label>
+                                <label class="ckb" for="authority_e08"><input type="checkbox" id="authority_e08"><span class="checkmark">공지</span></label>
+                                <label class="ckb" for="authority_e09"><input type="checkbox" id="authority_e09"><span class="checkmark">버스</span></label>
+                                <label class="ckb" for="authority_e10"><input type="checkbox" id="authority_e10"><span class="checkmark">설정</span></label>
+                            </td>
+                        </tr>
+                    </table>
+                    <!--// 권한설정 테이블 -->
+
+
+
+
+
+
+
+                    <ul class="info">
+                        <li class="right">
+                            <a href="javascript:;" class="btn_w">취소</a>
+                            <a href="javascript:;" class="btn_b">저장</a
+                        </li>
+                    </ul>
+
+
+
+                </div>
+                <!--// inner -->
+
+
+
+
+
+
+
+
+
+
+            </div>
+            <!--// contents -->
+
+        </div>
+        <!--// container -->
+
+    </div>
+    <!--// wrap -->
+
+
+</body>
+
+</html>
